@@ -1,0 +1,112 @@
+.shortInform_wrapper {
+    background-color: #f6f6f6;
+    max-height: 19px;
+    padding: 6px 0 5px;
+    margin: 0 0 24px;
+}
+
+.shortInform {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    max-width: 1170px;
+    margin: 0 auto 24px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    transition: .5s linear;
+}
+
+.shortInform_number {
+    display: flex;
+    font-weight: 400;
+}
+
+.shortInform_numberLink {
+    font-size: 14px;
+}
+
+.shortInform_panel {
+    display: flex;
+    font-weight: 500;
+}
+
+.shortInform_panelItem {
+    margin: 2px 0 0 21px;
+}
+
+
+.searchMenu_wrapper {
+    max-height: 55px;
+    padding: 6px 0 5px;
+}
+
+.searchMenu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    max-width: 1170px;
+    margin: 0 auto 24px;
+}
+
+.searchMenu_inputWrapper {
+    position: relative;
+    max-width: 509px;
+
+}
+
+.searchMenu_input {
+    border: none;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    padding: 20.5px 35px 20.5px 25px;
+    width: 440px;
+}
+
+.searchMenu_inputButton {
+    position: absolute;
+    top: 2px;
+    right: 13px;
+    font: 400 14px/52px "Montserrat";
+    border: none;
+    background-color: #f6f6f6;
+}
+
+.searchMenu_logoWrapper{
+    width: 300px;
+}
+
+.searchMenu_AddButtons_Wrapper {
+    display: flex;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.searchMenu_AddButtons {
+    background-color: #E8CABA;
+    padding: 14px 5px 5px 20px;
+    max-width: 140px;
+    max-height: 55px;
+    color: #fff;
+    margin-left: 18px;
+    border-radius: 6px;
+}
+
+.shortInform_panelItem a,
+.shortInform_numberLink {
+    color: #000;
+}
+
+.shortInform_panelItem a:hover,
+.shortInform_numberLink:hover {
+    color: #E8CABA;
+}
