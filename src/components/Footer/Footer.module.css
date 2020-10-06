@@ -1,0 +1,33 @@
+
+.footerInform_wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto 24px;
+    font-size: 14px;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: .7px;
+    font-weight: 300;
+}
+
+h3 {
+    font: 400 14px/24px "Montserrat", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+}
+
+.footerInform_ul li {
+    padding: 4px 0;
+
+}
+
+.footerInform_ul li a {
+    font-family: 'Hind', sans-serif;
+    color: #000000;
+}
+
+.footerInform_ul li a:hover {
+    color: #E8CABA;
+}

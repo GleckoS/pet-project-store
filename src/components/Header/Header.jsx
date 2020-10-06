@@ -18,10 +18,10 @@ const Header = () => {
                             <span>USD</span>
                         </div>
                         <div className={style.shortInform_panelItem}>
-                            <span><a href="#">Личный кабинет</a></span>
+                            <span><a href="#">My account</a></span>
                         </div>
                         <div className={style.shortInform_panelItem}>
-                            <span><a href="#">Закладки</a></span>
+                            <span><a href="#">Wishlist</a></span>
                         </div>
                     </div>
                 </div>
@@ -52,10 +52,26 @@ const Header = () => {
                             <li className={style.navBar_navList_dropDown}>
                                 <a className={style.navBar_navList_dropDown_btn} href="#">BRAS</a>
                                 <div className={style.navBar_navList_dropDown_content}>
-                                    <a>BRA SETS</a>
-                                    <a>PANTIES</a>
-                                    <a>BRA SEPARATES</a>
-                                    <a>BUSTIERS</a>
+                                    <div className={style.row}>
+                                        <div className={style.column}>
+                                            <h3>Category 1</h3>
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                        <div className={style.column}>
+                                            <h3>Category 2</h3>
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                        <div className={style.column}>
+                                            <h3>Category 3</h3>
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li>
