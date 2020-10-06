@@ -39,25 +39,24 @@ const Header = () => {
                         </form>
                     </div>
                     <div className={style.searchMenu_AddButtons_Wrapper}>
-
-                            <a className={style.searchMenu_AddButtons} href="#">Free Shipping WORLDWIDE</a>
-
-
-                            <a className={style.searchMenu_AddButtons} href="#">Daily Deals & Offers</a>
-
+                        <a className={style.searchMenu_AddButtons} href="#">Free Shipping WORLDWIDE</a>
+                        <a className={style.searchMenu_AddButtons} href="#">Daily Deals & Offers</a>
                     </div>
                 </div>
             </section>
             {/* Деление */}
-           {/* <sectin>
-                <div>
-                    <nav>
-                        <ul>
-                            <li><a href="#">BRAS<i className="fa fa-angle-down"></i></a>
-                                <ul className="submenu">
-                                    <li><a href="">Item 1</a></li>
-                                    <li><a href="">Item 2</a></li>
-                                </ul>
+            <sectin>
+                <div className={style.navBar}>
+                    <nav className={style.navBar_nav}>
+                        <ul className={style.navBar_navList}>
+                            <li className={style.navBar_navList_dropDown}>
+                                <a className={style.navBar_navList_dropDown_btn} href="#">BRAS</a>
+                                <div className={style.navBar_navList_dropDown_content}>
+                                    <a>BRA SETS</a>
+                                    <a>PANTIES</a>
+                                    <a>BRA SEPARATES</a>
+                                    <a>BUSTIERS</a>
+                                </div>
                             </li>
                             <li>
                                 <a href="#">PANTIES</a>
@@ -81,12 +80,13 @@ const Header = () => {
                                 <a href="#">ACCESSORIES</a>
                             </li>
                         </ul>
+                        <span>
+                            <a href="#">0 Item(s)</a>
+                        </span>
                     </nav>
-                    <div>
 
-                    </div>
                 </div>
-            </sectin>*/}
+            </sectin>
             {/* Деление */}
         </header>
     )

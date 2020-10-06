@@ -1,3 +1,6 @@
+header{
+    margin-bottom: 30px;
+}
 .shortInform_wrapper {
     background-color: #f6f6f6;
     max-height: 19px;
@@ -47,6 +50,7 @@ a {
 .searchMenu_wrapper {
     max-height: 55px;
     padding: 6px 0 5px;
+    margin-bottom: 24px;
 }
 
 .searchMenu {
@@ -109,4 +113,51 @@ a {
 .shortInform_panelItem a:hover,
 .shortInform_numberLink:hover {
     color: #E8CABA;
+}
+.navBar{
+    max-height: 47px;
+    background-color: #E8CABA;
+}
+.navBar_nav{
+    padding: 12px 0 8px;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto 24px;
+}
+.navBar_navList li{
+    display: inline;
+    font-size: 14px;
+    margin: 0 35px -10px 0;
+}
+.navBar_nav span a,
+.navBar_navList li a{
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 18px;
+    padding-top: 18px;
+}
+.navBar_nav span a:hover,
+.navBar_navList li a:hover{
+    color: #000;
+}
+.navBar_navList_dropDown{
+    position: relative;
+}
+.navBar_navList_dropDown_content{
+    display: none;
+    position: absolute;
+    left: -20px;
+    margin-top: 16px;
+}
+.navBar_navList_dropDown_content a {
+    display: block;
+    background-color: #E8CABA;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+.navBar_navList_dropDown:hover .navBar_navList_dropDown_content{
+    display: block;
 }
