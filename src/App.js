@@ -13,12 +13,13 @@ function App() {
   return (
       <Router>
           <Header/>
-          <Footer/>
+
           <Switch>
-              <Route path="/index">
+              <Route path="/">
                   <MainPage/>
               </Route>
           </Switch>
+          <Footer/>
       </Router>
   );
 }

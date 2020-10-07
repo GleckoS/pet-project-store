@@ -2,3 +2,26 @@ body{
     padding: 0;
     margin: 0;
 }
+.slick-dots{
+    bottom: 10px !important;
+}
+.slick-dots li {
+    margin: 0 !important;
+}
+.slick-dots li button:before {
+    color: #000 !important;
+}
+.slick-dots li.slick-active button:before{
+    color: #DBAD94 !important;
+}
+.slick-dots li button:before{
+    font-size: 9px !important;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before{
+    opacity: 1 !important;
+}
+.slick-dots li:hover button:before{
+    color: #E8CABA !important;
+    transition: .2s ease-out;
+}
