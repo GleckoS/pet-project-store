@@ -45,7 +45,7 @@ const Header = () => {
                 </div>
             </section>
             {/* Деление */}
-            <sectin>
+            <section>
                 <div className={style.navBar}>
                     <nav className={style.navBar_nav}>
                         <ul className={style.navBar_navList}>
@@ -102,7 +102,7 @@ const Header = () => {
                     </nav>
 
                 </div>
-            </sectin>
+            </section>
             {/* Деление */}
         </header>
     )

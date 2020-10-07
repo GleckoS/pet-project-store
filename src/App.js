@@ -19,6 +19,7 @@ function App() {
                   <MainPage/>
               </Route>
           </Switch>
+
           <Footer/>
       </Router>
   );
