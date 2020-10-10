@@ -1,13 +1,15 @@
 import React from "react";
 import style from "./MainPage.module.css"
-import SliderSecondPart from "./SliderSecondPart/SliderSecondPart";
 import SliderFirstPart from "./SliderFirstPart/SliderFirstPart";
+import SliderSecondPart from "./SliderSecondPart/SliderSecondPart";
+import SliderThirdPart from "./SliderThirdPart/SliderThirdPart";
 
-const MainPage = () => {
+const MainPage = (props) => {
     return (
         <div className={style.d}>
-            <SliderFirstPart />
-            <SliderSecondPart />
+            <SliderFirstPart SliderFirstPartData={props.SliderFirstPartData}/>
+            <SliderSecondPart SliderSecondPartData={props.SliderSecondPartData} />
+            <SliderThirdPart />
         </div>
     )
 }

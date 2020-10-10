@@ -7,7 +7,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import MainPage from "./components/MainContent/MainPage/MainPage";
+import MainPageContainer from "./components/MainContent/MainPage/MainPageContainer";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
 
           <Switch>
               <Route path="/">
-                  <MainPage/>
+                  <MainPageContainer/>
               </Route>
           </Switch>
 
