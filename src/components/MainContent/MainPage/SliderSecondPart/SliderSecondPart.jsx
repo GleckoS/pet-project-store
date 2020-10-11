@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./SliderSecondPart.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -45,6 +44,14 @@ const SliderSecondPart = (props) => {
       background-color: #E8CABA;
       transition: .3s linear;
       }
+      &:hover{
+         color: #E8CABA;
+         &::after{
+            width: 60px;
+         height: 2px;
+         transition: .3s linear;
+         }
+      }  
 `
     const ASliderItemLink = styled.a`
     display: flex;
@@ -55,11 +62,21 @@ const SliderSecondPart = (props) => {
     margin: 10px;
     padding-top: 10px;
     transition: .3s linear;
-       &:hover > ${H3SliderText} {
-          color: #E8CABA;
-       }
+    
 `
-    /*Решение верхней проблемы*/
+    /*
+    &:hover ${H3SliderText}{
+        color: #E8CABA;
+    }
+     &:hover{
+      ${H3SliderText}{
+        color: #E8CABA;
+      }
+    }
+    &:hover ${H3SliderText}{
+        color: #E8CABA;
+    }
+    */
 
     const ButtonSlider = styled.button`
     border: none;

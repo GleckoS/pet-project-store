@@ -1,8 +1,0 @@
-.mainPage_slider_Item a:hover .mainPage_slider_text{
-    color: #E8CABA;
-}
-.mainPage_slider_Item a:hover .mainPage_slider_text::after{
-    width: 60px;
-    height: 2px;
-    transition: .3s linear;
-}
