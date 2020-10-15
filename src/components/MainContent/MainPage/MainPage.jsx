@@ -9,7 +9,7 @@ const MainPage = (props) => {
         <div className={style.d}>
             <SliderFirstPart SliderFirstPartData={props.SliderFirstPartData}/>
             <SliderSecondPart SliderSecondPartData={props.SliderSecondPartData} />
-            <SliderThirdPart />
+            <SliderThirdPart SliderThirdPartData={props.SliderThirdPartData}/>
         </div>
     )
 }
