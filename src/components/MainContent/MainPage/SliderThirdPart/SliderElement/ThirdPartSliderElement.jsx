@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 const DivSliderItem = styled.div`
-    margin-top: 25px;
+    margin: 25px auto;
     height: 390px;
     width: 270px;
     display: flex!important;

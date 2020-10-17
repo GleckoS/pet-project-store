@@ -2,6 +2,7 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     outline: none;
+
 }
 
 ul {
@@ -24,16 +25,19 @@ footer {
     color: black !important;
     display: none;
 }
-.slick-next {
-    right: 20px !important;
-}
+.slick-next,
 .slick-prev{
-    left: 20px !important;
     z-index: 2;
+
 }
 .slick-slider{
 }
 .slick-slider:hover .slick-prev:before,
 .slick-slider:hover .slick-next:before{
     display: block !important;
+}
+html,
+body{
+    padding: 0;
+    margin: 0;
 }

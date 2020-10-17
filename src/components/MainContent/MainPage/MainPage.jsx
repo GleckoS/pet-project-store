@@ -1,16 +1,17 @@
 import React from "react";
-import style from "./MainPage.module.css"
 import SliderFirstPart from "./SliderFirstPart/SliderFirstPart";
 import SliderSecondPart from "./SliderSecondPart/SliderSecondPart";
 import SliderThirdPart from "./SliderThirdPart/SliderThirdPart";
+import SliderFourthPart from "./SliderFourthPart/SliderFourthPart";
 
 const MainPage = (props) => {
     return (
-        <div className={style.d}>
+        <React.Fragment>
             <SliderFirstPart SliderFirstPartData={props.SliderFirstPartData}/>
             <SliderSecondPart SliderSecondPartData={props.SliderSecondPartData} />
             <SliderThirdPart SliderThirdPartData={props.SliderThirdPartData}/>
-        </div>
+            <SliderFourthPart SliderFourthPartData={props.SliderFourthPartData}/>
+        </React.Fragment>
     )
 }
 export default MainPage
