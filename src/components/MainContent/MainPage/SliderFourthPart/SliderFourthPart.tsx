@@ -3,15 +3,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
 
-const SliderFourthPart = (props) => {
+const newsTitle = "Last Day",
+    newsText = "FREE SHIPPING ON $50*",
+    newsButton = "USE CODE J56S3X",
+    informTitle = "DEAL OF THE DAY",
+    informText = "WHITE COLLECTION FROM $15.90",
+    informButton = "SHOP NOW",
+    sliderTitle = "BROWSE BY TYPE"
 
-    const newsTitle = "Last Day"
-    const newsText = "FREE SHIPPING ON $50*"
-    const newsButton = "USE CODE J56S3X"
-    const informTitle = "DEAL OF THE DAY"
-    const informText = "WHITE COLLECTION FROM $15.90"
-    const informButton = "SHOP NOW"
-    const sliderTitle = "BROWSE BY TYPE"
+const backgroundURL = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-aside-270x380.jpg",
+    newsInformImg = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/deal-bg-870x299.jpg"
+
+const SliderFourthPart = (props: any) => {
 
     const DivMainPageInnerWrapper = styled.div`
     width: 1170px;
@@ -23,7 +26,7 @@ const SliderFourthPart = (props) => {
     justify-content: space-between;
 `
     const DivNewsActionWrapper = styled.div`
-    background: url("https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-aside-270x380.jpg");
+    background: url(${backgroundURL});
     border-radius: 10px;
     width: 270px;
     height: 380px;
@@ -75,6 +78,9 @@ const SliderFourthPart = (props) => {
     background-color: #222222;
     color: #fff;
     border: none;
+    & :hover{
+        background-color: #000000;
+    }
 `
     const DivInformTextWrapper = styled.div`
     padding: 19px 29px 23px 29px;
@@ -147,19 +153,20 @@ const SliderFourthPart = (props) => {
 `
     return (
         <DivMainPageInnerWrapper>
+
             <DivNewsWindow>
                 <DivNewsActionWrapper>
                     <ANewsActionCall>
                         <H5NewsActionTitle>{newsTitle}</H5NewsActionTitle>
                         <PNewsActionText>{newsText}</PNewsActionText>
-                        <ButtonNewsActionLink href="#">{newsButton}</ButtonNewsActionLink>
+                        <ButtonNewsActionLink>{newsButton}</ButtonNewsActionLink>
                     </ANewsActionCall>
                 </DivNewsActionWrapper>
                 <DivNewsInformWrapper>
                     <div className={"timer"}>
                     </div>
                     <ImgNewsInform
-                        src="https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/deal-bg-870x299.jpg"/>
+                        src={newsInformImg}/>
                     <DivNewsInformBottom>
                         <DivInformTextWrapper>
                             <H3NewsInformTitle>
@@ -169,21 +176,22 @@ const SliderFourthPart = (props) => {
                                 {informText}
                             </PNewsInformText>
                         </DivInformTextWrapper>
-                        <ButtonInform href="#">
+                        <ButtonInform>
                             {informButton}
                         </ButtonInform>
                     </DivNewsInformBottom>
                 </DivNewsInformWrapper>
             </DivNewsWindow>
+
             <DivCategorySlider>
                 <DivCategoryTitle>
                     <p>{sliderTitle}</p>
                 </DivCategoryTitle>
                 <DivCategoryWrapper>
-                    {props.SliderFourthPartData.map(dialog =>
-                            <ACategoryItem href={dialog.link}>
-                                <h4>{dialog.text}</h4>
-                            </ACategoryItem>
+                    {props.SliderFourthPartData.map((dialog: {[key: string]: string}) =>
+                        <ACategoryItem href={dialog.link}>
+                            <h4>{dialog.text}</h4>
+                        </ACategoryItem>
                     )}
                 </DivCategoryWrapper>
             </DivCategorySlider>

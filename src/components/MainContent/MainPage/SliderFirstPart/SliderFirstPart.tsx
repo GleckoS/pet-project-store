@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
 
+const buttonText = "SHOP COLLECTION"
+
 const SliderFirstPart = (props: any) => {
     const settings = {
         dots: true,
@@ -50,7 +52,7 @@ const SliderFirstPart = (props: any) => {
                 {props.SliderFirstPartData.map((dialog: { [key: string]: string }) =>
                     <DivSliderWrapper img={dialog.img}>
                         <H3SliderText>{dialog.text}</H3SliderText>
-                        <ASliderButton href="#">SHOP COLLECTION</ASliderButton>
+                        <ASliderButton href="#">{buttonText}</ASliderButton>
                     </DivSliderWrapper>
                 )}
             </Slider>

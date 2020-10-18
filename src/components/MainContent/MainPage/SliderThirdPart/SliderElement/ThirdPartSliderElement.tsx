@@ -1,11 +1,18 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Button from "../../../../../common/selectors/Button";
 
 interface imgData {
     [key: string]: string
 }
 
-const DivSliderItem = styled.div`
+const newText = "NEW!",
+    saleText = "SALE!"
+
+
+const ThirdPartSliderElement = (props: any) => {
+
+    const DivSliderItem = styled.div`
     margin: 25px auto;
     height: 390px;
     width: 270px;
@@ -14,7 +21,7 @@ const DivSliderItem = styled.div`
     align-items: center;
     justify-content: center;
 `
-const DivSliderImg = styled.div`
+    const DivSliderImg = styled.div`
     align-self: center;
     margin: 0 auto;
     position: relative;
@@ -25,7 +32,7 @@ const DivSliderImg = styled.div`
         background-image: url(${(props: imgData) => props.hover});
     }
 `
-const H3SliderText = styled.h3`
+    const H3SliderText = styled.h3`
     font-size: 16px;
     color: #000000;
     letter-spacing: .7px;
@@ -36,14 +43,14 @@ const H3SliderText = styled.h3`
          color: #E8CABA;
       }  
 `
-const H4SliderPrice = styled.h4`
+    const H4SliderPrice = styled.h4`
     font-size: 14px;
     color: #000000;
     margin: 0 0 16px;
     line-height: 16px;
     font-weight: 400;
 `
-const ASliderItemLink = styled.a`
+    const ASliderItemLink = styled.a`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,23 +62,8 @@ const ASliderItemLink = styled.a`
     border-radius: 10px;
 
 `
-const ButtonSlider = styled.button`
-    border: none;
-    outline: none;
-    color: #ffffff;
-    font-weight: 600;
-    background-color: #E8CABA;
-    padding: 7px 20px;
-    border-radius: 4px;
-    transition: .3s linear;
-    cursor: pointer;
-    margin-bottom: 40px;
-      &:hover{
-        background-color: #DBAD94;
-      }
-    
-`
-const PAdditionalNEW = styled.p`
+
+    const PAdditionalNEW = styled.p`
     position: absolute;
     top: 8px;
     transform: translateX(300%);
@@ -81,7 +73,7 @@ const PAdditionalNEW = styled.p`
     border-radius: 3px;
     color: #ffffff;
 `
-const PAdditionalSALE = styled.p`
+    const PAdditionalSALE = styled.p`
     position: absolute;
     top: 8px;
     transform: translateX(-300%);
@@ -92,18 +84,16 @@ const PAdditionalSALE = styled.p`
     color: #ffffff;
 `
 
-
-const ThirdPartSliderElement = (props: any) => {
     return (
         <DivSliderItem>
             <ASliderItemLink href="#">
-                {props.new ? <PAdditionalNEW>NEW!</PAdditionalNEW> : null}
-                {props.discount ? <PAdditionalSALE>SALE!</PAdditionalSALE> : null}
+                {props.new ? <PAdditionalNEW>{newText}</PAdditionalNEW> : null}
+                {props.discount ? <PAdditionalSALE>{saleText}</PAdditionalSALE> : null}
                 <DivSliderImg img={props.img} hover={props.hoverImg}/>
             </ASliderItemLink>
             <H3SliderText>{props.text}</H3SliderText>
             <H4SliderPrice>{props.price}</H4SliderPrice>
-            <ButtonSlider>SHOP NOW</ButtonSlider>
+            <Button>SHOP NOW</Button>
         </DivSliderItem>
     )
 }

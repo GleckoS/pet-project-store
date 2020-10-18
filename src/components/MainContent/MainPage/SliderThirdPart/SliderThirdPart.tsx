@@ -89,22 +89,22 @@ const SliderThirdPart = (props: any) => {
                 <UlChangeSliderList>
                     <li className={`${current === 1 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 1)}>
-                        <button type='button'>New Arrivals
+                        <button>New Arrivals
                         </button>
                     </li>
                     <li className={`${current === 2 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 2)}>
-                        <button type='button'>Bestsellers
+                        <button>Bestsellers
                         </button>
                     </li>
                     <li className={`${current === 3 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 3)}>
-                        <button type='button'>Featured
+                        <button>Featured
                         </button>
                     </li>
                     <li className={`${current === 4 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 4)}>
-                        <button type='button'>Specials
+                        <button>Specials
                         </button>
                     </li>
                 </UlChangeSliderList>
