@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
 import ThirdSliderElement from "./SliderElement/ThirdPartSliderElement";
 
-const SliderThirdPart = (props) => {
+const SliderThirdPart = (props: any) => {
     const settings = {
         infinite: false,
         speed: 600,
@@ -63,18 +63,22 @@ const SliderThirdPart = (props) => {
 `
     let [current, setCurrent] = useState(1);
 
-    const filtredByNew = props.SliderThirdPartData.filter(item => item.new)
-    const filtredBySale = props.SliderThirdPartData.filter(item => item.discount)
+    interface dialogData {
+        [key: string]: string
+    }
 
     const currentSlider = () => {
         if (current === 1) {
-            return props.SliderThirdPartData.map(dialog => <ThirdSliderElement {...dialog}/>)
+            return props.SliderThirdPartData.map((dialog: dialogData) => <ThirdSliderElement {...dialog}/>)
         } else if (current === 2) {
-            return props.SliderThirdPartData.map(dialog => dialog.new ? <ThirdSliderElement {...dialog}/> : null)
+            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.new ?
+                <ThirdSliderElement {...dialog}/> : null)
         } else if (current === 3) {
-            return props.SliderThirdPartData.map(dialog => dialog.new && dialog.discount ? <ThirdSliderElement {...dialog}/> : null)
+            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.new && dialog.discount ?
+                <ThirdSliderElement {...dialog}/> : null)
         } else if (current === 4) {
-            return props.SliderThirdPartData.map(dialog => dialog.discount ? <ThirdSliderElement {...dialog}/> : null)
+            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.discount ?
+                <ThirdSliderElement {...dialog}/> : null)
         }
     }
 

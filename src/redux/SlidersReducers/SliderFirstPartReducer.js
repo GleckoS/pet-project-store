@@ -1,5 +1,3 @@
-import React from "react";
-
 let initialSliderState = {
     SliderData: [
         {text: "The Hottest Collection", img: "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/slide-1-1170x584.jpg"},

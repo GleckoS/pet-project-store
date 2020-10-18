@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+interface imgData {
+    [key: string]: string
+}
+
 const DivSliderItem = styled.div`
     margin: 25px auto;
     height: 390px;
@@ -10,10 +14,16 @@ const DivSliderItem = styled.div`
     align-items: center;
     justify-content: center;
 `
-const ImgSlider = styled.img`
+const DivSliderImg = styled.div`
     align-self: center;
     margin: 0 auto;
     position: relative;
+    width: 270px;
+    height: 280px;
+    background-image: url(${(props: imgData) => props.img});
+    &:hover{
+        background-image: url(${(props: imgData) => props.hover});
+    }
 `
 const H3SliderText = styled.h3`
     font-size: 16px;
@@ -83,17 +93,17 @@ const PAdditionalSALE = styled.p`
 `
 
 
-const ThirdPartSliderElement = (props) => {
+const ThirdPartSliderElement = (props: any) => {
     return (
         <DivSliderItem>
             <ASliderItemLink href="#">
                 {props.new ? <PAdditionalNEW>NEW!</PAdditionalNEW> : null}
                 {props.discount ? <PAdditionalSALE>SALE!</PAdditionalSALE> : null}
-                <ImgSlider src={props.img}/>
+                <DivSliderImg img={props.img} hover={props.hoverImg}/>
             </ASliderItemLink>
             <H3SliderText>{props.text}</H3SliderText>
             <H4SliderPrice>{props.price}</H4SliderPrice>
-            <ButtonSlider href="#">SHOP NOW</ButtonSlider>
+            <ButtonSlider>SHOP NOW</ButtonSlider>
         </DivSliderItem>
     )
 }

@@ -4,15 +4,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
 
-const SliderSecondPart = (props) => {
+const SliderSecondPart = (props: any) => {
     const settings = {
         infinite: false,
         speed: 600,
         slidesToShow: 4,
         slidesToScroll: 1,
         draggable: false
-    };
-
+    }
+    interface DialogData {
+        [key: string]: string
+    }
     const DivMainPageInnerWrapper = styled.div`
     width: 1170px;
     margin: 0 auto;
@@ -68,7 +70,7 @@ const SliderSecondPart = (props) => {
     &:hover ${H3SliderText}{
         color: #E8CABA;
     }
-     &:hover{
+    &:hover{
       ${H3SliderText}{
         color: #E8CABA;
       }
@@ -99,12 +101,12 @@ const SliderSecondPart = (props) => {
     return (
         <DivMainPageInnerWrapper>
             <Slider {...settings}>
-                {props.SliderSecondPartData.map(dialog =>
+                {props.SliderSecondPartData.map((dialog: DialogData) =>
                     <DivSliderItem>
                         <ASliderItemLink href="#">
                             <ImgSlider src={dialog.img}/>
                             <H3SliderText>{dialog.text}</H3SliderText>
-                            <ButtonSlider href="#">SHOP NOW</ButtonSlider>
+                            <ButtonSlider>SHOP NOW</ButtonSlider>
                         </ASliderItemLink>
                     </DivSliderItem>
                 )}

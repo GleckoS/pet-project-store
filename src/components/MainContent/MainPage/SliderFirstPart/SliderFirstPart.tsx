@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
 
-const SliderFirstPart = (props) => {
+const SliderFirstPart = (props: any) => {
     const settings = {
         dots: true,
         arrows: false,
@@ -12,12 +12,13 @@ const SliderFirstPart = (props) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 1,
-    };
+    }
+
     const DivSliderWrapper = styled.div`
     width: 1170px;
     height: 584px;
     border-radius: 10px;
-    background-image: url(${props => props.img});
+    background-image: url( ${(props: { img: string }) => props.img});
 `
     const DivMainPageInnerWrapper = styled.div`
     width: 1170px;
@@ -42,10 +43,11 @@ const SliderFirstPart = (props) => {
             background-color: #DBAD94;
         }
 `
+
     return (
         <DivMainPageInnerWrapper>
             <Slider {...settings}>
-                {props.SliderFirstPartData.map(dialog =>
+                {props.SliderFirstPartData.map((dialog: { [key: string]: string }) =>
                     <DivSliderWrapper img={dialog.img}>
                         <H3SliderText>{dialog.text}</H3SliderText>
                         <ASliderButton href="#">SHOP COLLECTION</ASliderButton>
