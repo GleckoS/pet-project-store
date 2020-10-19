@@ -29,7 +29,7 @@ const Header = () => {
             <section className={style.searchMenu_wrapper}>
                 <div className={style.searchMenu}>
                     <div className={style.searchMenu_logoWrapper}>
-                        <NavLink to="/"><img src={"./logo-175x47.png"}/></NavLink>
+                        <NavLink to="/"><img src={"https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/logo-175x47.png"}/></NavLink>
                     </div>
                     <div>
                         <form className={style.searchMenu_inputWrapper}>
