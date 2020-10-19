@@ -17,8 +17,9 @@ let mapStateToProps = (state) => {
     return {
         SliderFirstPartData: state.sFirstPartR.SliderData,
         SliderSecondPartData: state.sSecondPartR.SliderData,
-        SliderThirdPartData: state.sThirdPartR.SliderData,
+        SliderThirdPartData: state.sThirdPartR,
         SliderFourthPartData: state.sFourthPartR.SliderData,
+        SliderFifthPartData: state.sFifthPartR
     }
 }
 

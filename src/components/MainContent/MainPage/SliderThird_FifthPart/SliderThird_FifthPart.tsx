@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
-import ThirdSliderElement from "./SliderElement/ThirdPartSliderElement";
+import SliderElement from "../../../../common/components/SliderElement";
 
 const SliderThirdPart = (props: any) => {
     const settings = {
@@ -13,20 +13,20 @@ const SliderThirdPart = (props: any) => {
         slidesToScroll: 1,
         draggable: false
     };
-
-    const DivMainPageInnerWrapper = styled.div`
+    debugger
+    const MainPageInnerWrapper = styled.div`
     width: 1170px;
     margin: 0 auto;
     padding-top: 5px;
     
 `
-    const DivChangeSliderList = styled.div`
+    const ChangeSliderContainer = styled.div`
     position: relative;
     border-bottom: 1px solid #F3D8C7;
     display: flex;
     justify-content: space-between;
 `
-    const UlChangeSliderList = styled.ul`
+    const ChangeSliderList = styled.ul`
     display: flex;
     right: 0;
     top: 5px;
@@ -57,7 +57,7 @@ const SliderThirdPart = (props: any) => {
             }
         }
 `
-    const PChangeSliderTitle = styled.p`
+    const ChangeSliderTitle = styled.p`
     font-size: 12px;
     margin-bottom: 5px;
 `
@@ -69,24 +69,24 @@ const SliderThirdPart = (props: any) => {
 
     const currentSlider = () => {
         if (current === 1) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => <ThirdSliderElement {...dialog}/>)
+            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => <SliderElement {...dialog}/>)
         } else if (current === 2) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.new ?
-                <ThirdSliderElement {...dialog}/> : null)
+            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => dialog.bestsellers ?
+                <SliderElement {...dialog}/> : null)
         } else if (current === 3) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.new && dialog.discount ?
-                <ThirdSliderElement {...dialog}/> : null)
+            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => dialog.featured ?
+                <SliderElement {...dialog}/> : null)
         } else if (current === 4) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.discount ?
-                <ThirdSliderElement {...dialog}/> : null)
+            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => dialog.discount ?
+                <SliderElement {...dialog}/> : null)
         }
     }
 
     return (
-        <DivMainPageInnerWrapper>
-            <DivChangeSliderList>
-                <PChangeSliderTitle>NEW IN</PChangeSliderTitle>
-                <UlChangeSliderList>
+        <MainPageInnerWrapper>
+            <ChangeSliderContainer>
+                <ChangeSliderTitle>{props.SliderThirdPartData.text}</ChangeSliderTitle>
+                <ChangeSliderList>
                     <li className={`${current === 1 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 1)}>
                         <button>New Arrivals
@@ -107,14 +107,14 @@ const SliderThirdPart = (props: any) => {
                         <button>Specials
                         </button>
                     </li>
-                </UlChangeSliderList>
-            </DivChangeSliderList>
+                </ChangeSliderList>
+            </ChangeSliderContainer>
             <Slider {...settings}>
                 {
                     currentSlider()
                 }
             </Slider>
-        </DivMainPageInnerWrapper>
+        </MainPageInnerWrapper>
     )
 }
 

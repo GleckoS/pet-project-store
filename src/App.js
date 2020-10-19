@@ -8,21 +8,21 @@ import {
     Route,
 } from "react-router-dom";
 import MainPageContainer from "./components/MainContent/MainPage/MainPageContainer";
+import About from "./components/MainContent/AdditionalPage/About";
 
 function App() {
-  return (
-      <Router>
-          <Header/>
+    return (
+        <Router>
+            <Header/>
 
-          <Switch>
-              <Route path="/">
-                  <MainPageContainer/>
-              </Route>
-          </Switch>
+            <Switch>
+                <Route exact path="/" render={() => <MainPageContainer/>}/>
+                <Route path="/about" render={() => <About/>}/>
+            </Switch>
 
-          <Footer/>
-      </Router>
-  );
+            <Footer/>
+        </Router>
+    );
 }
 
 export default App;

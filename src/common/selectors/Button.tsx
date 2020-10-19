@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled";
 
-const Button = styled.div`
+const Button = styled.a`
     border: none;
     outline: none;
     color: #ffffff;

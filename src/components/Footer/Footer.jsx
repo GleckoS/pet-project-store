@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Footer.module.css"
+import {NavLink} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -11,13 +12,13 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className={style.footerInform_ul}>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Delivery Information</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="#">Delivery Information</NavLink></li>
+                            <li><NavLink to="#">Privacy Policy</NavLink></li>
+                            <li><NavLink to="#">Terms & Conditions</NavLink></li>
+                            <li><NavLink to="#">Contact us</NavLink></li>
+                            <li><NavLink to="#">Returns</NavLink></li>
+                            <li><NavLink to="#">Blog</NavLink></li>
                         </ul>
                     </div>
                 </section>
@@ -27,11 +28,11 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className={style.footerInform_ul}>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Order History</a></li>
-                            <li><a href="#">Gift Certificates</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Site map</a></li>
+                            <li><NavLink to="#">My Account</NavLink></li>
+                            <li><NavLink to="#">Order History</NavLink></li>
+                            <li><NavLink to="#">Gift Certificates</NavLink></li>
+                            <li><NavLink to="#">Affiliates</NavLink></li>
+                            <li><NavLink to="#">Site map</NavLink></li>
                         </ul>
                     </div>
                 </section>
@@ -41,10 +42,10 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className={style.footerInform_ul}>
-                            <li><a href="#">My Company Glasgow D04 89GR</a></li>
-                            <li><a href="#">(800) 123-4567</a></li>
-                            <li><a href="#">livedemo-admin@templatemonster.me</a></li>
-                            <li><a href="#">7 Days a week from 9:00 am to 7:00 pm</a></li>
+                            <li><NavLink to="#">My Company Glasgow D04 89GR</NavLink></li>
+                            <li><NavLink to="#">(800) 123-4567</NavLink></li>
+                            <li><NavLink to="#">livedemo-admin@templatemonster.me</NavLink></li>
+                            <li><NavLink to="#">7 Days a week from 9:00 am to 7:00 pm</NavLink></li>
                         </ul>
                     </div>
                 </section>
@@ -54,8 +55,8 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className={style.footerInform_ul}>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Find a Wish List</a></li>
+                            <li><NavLink to="#">Find a Store</NavLink></li>
+                            <li><NavLink to="#">Find a Wish List</NavLink></li>
                         </ul>
                     </div>
                 </section>

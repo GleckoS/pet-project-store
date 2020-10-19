@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Header.module.css"
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
         <header>
-            {/* Деление */}
             <section className={style.shortInform_wrapper}>
                 <div className={style.shortInform}>
                     <div className={style.shortInform_number}>
@@ -26,11 +26,10 @@ const Header = () => {
                     </div>
                 </div>
             </section>
-            {/* Деление */}
             <section className={style.searchMenu_wrapper}>
                 <div className={style.searchMenu}>
                     <div className={style.searchMenu_logoWrapper}>
-                        <a className={style.searchMenu_logo}><img src={"./logo-175x47.png"}/></a>
+                        <NavLink to="/"><img src={"./logo-175x47.png"}/></NavLink>
                     </div>
                     <div>
                         <form className={style.searchMenu_inputWrapper}>
@@ -44,7 +43,6 @@ const Header = () => {
                     </div>
                 </div>
             </section>
-            {/* Деление */}
             <section>
                 <div className={style.navBar}>
                     <nav className={style.navBar_nav}>

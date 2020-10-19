@@ -2,6 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
+import Button from "../../../../common/selectors/Button";
 
 const newsTitle = "Last Day",
     newsText = "FREE SHIPPING ON $50*",
@@ -21,121 +22,92 @@ const SliderFourthPart = (props: any) => {
     margin: 0 auto;
     padding-top: 5px;
 `
-    const DivNewsWindow = styled.div`
+    const NewsContainer = styled.div`
     display: flex;
     justify-content: space-between;
 `
-    const DivNewsActionWrapper = styled.div`
-    background: url(${backgroundURL});
-    border-radius: 10px;
+    const LeftContainer = styled.div`
     width: 270px;
     height: 380px;
     position: relative;
+    text-align: center;
 `
-
-    const DivNewsInformWrapper = styled.div`
-    border-radius: 10px;
-    height: 380px;
+    const NewsBackGround = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 6px;
+`
+    const NewsTitle = styled.h5`
+    font-size: 11px;
+    margin: 100px 0 0 0;
+`
+    const NewsText = styled.p`
+    padding: 0 20px;
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: 200;
+`
+    const NewsButton = styled(Button)`
+    font-weight: 700;
+    letter-spacing: .8px;
+    padding: 12px 20px;
+`
+    const RightContainer = styled.div`
     position: relative;
 `
-    const DivNewsInformBottom = styled.div`
+    const TimerImage = styled.img`
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+`
+    const TimerInformWrapper = styled.div`
     background-color: #E8CABA;
+    position: absolute;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    bottom: 0;
     height: 81px;
     width: 870px;
+`
+    const TimerTitle = styled.h5`
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 20px 0 0 15px;
+`
+    const TimerText = styled.p`
+    color: #ffffff;
+    margin: 0 0 0 15px;
+    font-size: 22px;
+    font-weight: 600;
+ 
+`
+    const TimerButton = styled(Button)`
     position: absolute;
-    bottom: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-`
-    const PNewsInformText = styled.p`
-    font-size: 18px;
-    letter-spacing: .7px;
-    font-weight: 700;
-    margin-top: 3px;
-    margin-bottom: 0;
-    line-height: 20px;
-`
-    const H3NewsInformTitle = styled.h3`
-    font-size: 13px;
-    letter-spacing: -.4px;
-    font-weight: 700;
-    margin-top: 3px;
-    margin-bottom: 0;
-    line-height: 15px;
-`
-    const ImgNewsInform = styled.img`
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-`
-    const ButtonInform = styled.button`
-    margin: auto 30px;
-    height: 30px;
-    padding: 0 10px;
-    border-radius: 4px;
-    font-weight: 700;
-    background-color: #222222;
-    color: #fff;
-    border: none;
-    & :hover{
+    right: 20px;
+    top: 26px;
+    background-color: #333333;
+    margin: 0;
+    &:hover{
         background-color: #000000;
     }
 `
-    const DivInformTextWrapper = styled.div`
-    padding: 19px 29px 23px 29px;
-    letter-spacing: -.4px;
-    color: #fff;
-    line-height: 22px;
-`
-    const ANewsActionCall = styled.a`
-    position: absolute;
-    top: 20%;
-    width: 270px;
-    height: 380px;
-    text-align: center;
-`
-    const PNewsActionText = styled.div`
-    margin: 0 auto;
-    width: 240px;
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: .7px;
-    padding: 10px 0;
-`
-    const H5NewsActionTitle = styled.div`
-    font-size: 14px;
-    font-weight: 700;
-`
-    const ButtonNewsActionLink = styled.button`
-    border: none;
-    border-radius: 6px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #E8CABA;
-    padding: 20px 19px;
-    font-size: 12px;
-    font-weight: 500;
-    color: #ffffff;
-    & :hover{
-        background-color: #DBAD94;
-    }
-`
-    const DivCategorySlider = styled.div`
+    const CategoryContainer = styled.div`
     padding: 30px 0;
 `
-    const DivCategoryTitle = styled.div`
+    const CategoryTitleWrapper = styled.div`
     text-align: center;
     font-size: 12px;
     letter-spacing: .7px;
 `
-    const DivCategoryWrapper = styled.div`
+    const CategoryWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     transition: .3s ease-in-out;
 `
-    const ACategoryItem = styled.a`
+    const CategoryItem = styled.a`
     width: 168px;
     height: 103px;
     border: 1px solid #e0e0e0;
@@ -151,50 +123,37 @@ const SliderFourthPart = (props: any) => {
         margin: 0;
     }
 `
+
     return (
         <DivMainPageInnerWrapper>
-
-            <DivNewsWindow>
-                <DivNewsActionWrapper>
-                    <ANewsActionCall>
-                        <H5NewsActionTitle>{newsTitle}</H5NewsActionTitle>
-                        <PNewsActionText>{newsText}</PNewsActionText>
-                        <ButtonNewsActionLink>{newsButton}</ButtonNewsActionLink>
-                    </ANewsActionCall>
-                </DivNewsActionWrapper>
-                <DivNewsInformWrapper>
-                    <div className={"timer"}>
-                    </div>
-                    <ImgNewsInform
-                        src={newsInformImg}/>
-                    <DivNewsInformBottom>
-                        <DivInformTextWrapper>
-                            <H3NewsInformTitle>
-                                {informTitle}
-                            </H3NewsInformTitle>
-                            <PNewsInformText>
-                                {informText}
-                            </PNewsInformText>
-                        </DivInformTextWrapper>
-                        <ButtonInform>
-                            {informButton}
-                        </ButtonInform>
-                    </DivNewsInformBottom>
-                </DivNewsInformWrapper>
-            </DivNewsWindow>
-
-            <DivCategorySlider>
-                <DivCategoryTitle>
+            <NewsContainer>
+                <LeftContainer>
+                    <NewsBackGround src={backgroundURL}/>
+                    <NewsTitle>{newsTitle}</NewsTitle>
+                    <NewsText>{newsText}</NewsText>
+                    <NewsButton href="#">{newsButton}</NewsButton>
+                </LeftContainer>
+                <RightContainer>
+                    <TimerImage src={newsInformImg}/>
+                    <TimerInformWrapper>
+                        <TimerTitle>{informTitle}</TimerTitle>
+                        <TimerText>{informText}</TimerText>
+                        <TimerButton>{informButton}</TimerButton>
+                    </TimerInformWrapper>
+                </RightContainer>
+            </NewsContainer>
+            <CategoryContainer>
+                <CategoryTitleWrapper>
                     <p>{sliderTitle}</p>
-                </DivCategoryTitle>
-                <DivCategoryWrapper>
-                    {props.SliderFourthPartData.map((dialog: {[key: string]: string}) =>
-                        <ACategoryItem href={dialog.link}>
+                </CategoryTitleWrapper>
+                <CategoryWrapper>
+                    {props.SliderFourthPartData.map((dialog: { [key: string]: string }) =>
+                        <CategoryItem href={dialog.link}>
                             <h4>{dialog.text}</h4>
-                        </ACategoryItem>
+                        </CategoryItem>
                     )}
-                </DivCategoryWrapper>
-            </DivCategorySlider>
+                </CategoryWrapper>
+            </CategoryContainer>
         </DivMainPageInnerWrapper>
     )
 }
