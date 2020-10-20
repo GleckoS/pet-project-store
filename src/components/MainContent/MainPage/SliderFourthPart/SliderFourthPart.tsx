@@ -2,7 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
-import Button from "../../../../common/selectors/Button";
+import {Button} from "../../../../common/selectors/StyledComponents";
 
 const newsTitle = "Last Day",
     newsText = "FREE SHIPPING ON $50*",

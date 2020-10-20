@@ -6,7 +6,7 @@ import SliderThirdPart from "./SliderThird_FifthPart/SliderThird_FifthPart";
 import InformPart from "./InformPart/InformPart";
 
 
-const MainPage = (props) => {
+const MainPage = (props: any) => {
     return (
         <React.Fragment>
             <SliderFirstPart SliderFirstPartData={props.SliderFirstPartData}/>

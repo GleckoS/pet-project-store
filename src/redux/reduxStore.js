@@ -1,9 +1,9 @@
 import {combineReducers, createStore} from "redux";
-import SliderFirstPartReducer from "./SlidersReducers/SliderFirstPartReducer";
-import SliderSecondPartReducer from "./SlidersReducers/SliderSecondPartReducer";
-import SliderThirdPartReducer from "./SlidersReducers/SliderThirdPartReducer";
-import SliderFourthPartReducer from "./SlidersReducers/SliderFourthPartReducer";
-import SliderFifthPartReducer from "./SlidersReducers/SliderFifthPartReducer";
+import SliderFirstPartReducer from "./SlidersReducers/MainPageReducers/SliderFirstPartReducer";
+import SliderSecondPartReducer from "./SlidersReducers/MainPageReducers/SliderSecondPartReducer";
+import SliderThirdPartReducer from "./SlidersReducers/MainPageReducers/SliderThirdPartReducer";
+import SliderFourthPartReducer from "./SlidersReducers/MainPageReducers/SliderFourthPartReducer";
+import SliderFifthPartReducer from "./SlidersReducers/MainPageReducers/SliderFifthPartReducer";
 
 let reducers = combineReducers({
     sFirstPartR: SliderFirstPartReducer,

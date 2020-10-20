@@ -13,7 +13,7 @@ render() {
 }
 
 
-let mapStateToProps = (state) => {
+let mapStateToProps = (state: any) => {
     return {
         SliderFirstPartData: state.sFirstPartR.SliderData,
         SliderSecondPartData: state.sSecondPartR.SliderData,

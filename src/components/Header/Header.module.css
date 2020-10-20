@@ -151,6 +151,7 @@ header{
     margin-top: 16px;
     width: 1170px;
     left: -20px;
+    z-index: 10;
 }
 
 .navBar_navList_dropDown_content a {

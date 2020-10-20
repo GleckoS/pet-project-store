@@ -28,8 +28,9 @@ footer {
     z-index: 2;
 
 }
-.slick-slider{
-}
+.slick-track{
+    display: flex!important;
+    }
 .slick-slider:hover .slick-prev:before,
 .slick-slider:hover .slick-next:before{
     display: block !important;

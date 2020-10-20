@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Button from "../selectors/Button";
+import { Button } from "../selectors/StyledComponents";
+
 
 
 interface imgData {

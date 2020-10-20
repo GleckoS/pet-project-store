@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
-import Button from "../../../../common/selectors/Button";
+import { Button } from "../../../../common/selectors/StyledComponents";
 
 const buttonText = "SHOP NOW"
 
@@ -46,14 +46,6 @@ const SliderSecondPart = (props: any) => {
       background-color: #E8CABA;
       transition: .3s linear;
       }
-      &:hover{
-         color: #E8CABA;
-         &::after{
-            width: 60px;
-         height: 2px;
-         transition: .3s linear;
-         }
-      }  
 `
     const ASliderItemLink = styled.a`
     display: flex;
@@ -64,27 +56,22 @@ const SliderSecondPart = (props: any) => {
     margin: 10px;
     padding-top: 10px;
     transition: .3s linear;
+    &:hover{
+        & h3{
+             color: #E8CABA;
+             &::after{
+                width: 60px;
+                height: 2px;
+                transition: .3s linear;
+             }
+        }
+    }
     
 `
-    /*
-    &:hover ${H3SliderText}{
-        color: #E8CABA;
-    }
-    &:hover{
-      ${H3SliderText}{
-        color: #E8CABA;
-      }
-    }
-    &:hover ${H3SliderText}{
-        color: #E8CABA;
-    }
-    */
-
-
     return (
         <DivMainPageInnerWrapper>
             <Slider {...settings}>
-                {props.SliderSecondPartData.map((dialog: {[key: string]: string}) =>
+                {props.SliderSecondPartData.map((dialog: { [key: string]: string }) =>
                     <DivSliderItem>
                         <ASliderItemLink href="#">
                             <ImgSlider src={dialog.img}/>
