@@ -9,6 +9,9 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MainPageContainer from "./components/MainContent/MainPage/MainPageContainer";
 import About from "./components/MainContent/AdditionalPage/About/About";
+import Delivery from "./components/MainContent/AdditionalPage/Delivery Information/Delivery";
+import Privacy from "./components/MainContent/AdditionalPage/Privacy Policy/Privacy";
+import Terms from "./components/MainContent/AdditionalPage/Terms & Conditions/Terms";
 
 function App() {
     return (
@@ -17,7 +20,10 @@ function App() {
 
             <Switch>
                 <Route exact path="/" render={() => <MainPageContainer/>}/>
-                <Route path="/about" render={() => <About/>}/>
+                <Route exact path="/about" render={() => <About/>}/>
+                <Route exact path="/delivery" render={() => <Delivery/>}/>
+                <Route exact path="/privacy" render={() => <Privacy/>}/>
+                <Route exact path="/terms" render={() => <Terms/>}/>
             </Switch>
 
             <Footer/>

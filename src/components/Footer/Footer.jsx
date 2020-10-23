@@ -13,9 +13,9 @@ const Footer = () => {
                     <div>
                         <ul className={style.footerInform_ul}>
                             <li><NavLink to="/about">About</NavLink></li>
-                            <li><NavLink to="#">Delivery Information</NavLink></li>
-                            <li><NavLink to="#">Privacy Policy</NavLink></li>
-                            <li><NavLink to="#">Terms & Conditions</NavLink></li>
+                            <li><NavLink to="/delivery">Delivery Information</NavLink></li>
+                            <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
+                            <li><NavLink to="/terms">Terms & Conditions</NavLink></li>
                             <li><NavLink to="#">Contact us</NavLink></li>
                             <li><NavLink to="#">Returns</NavLink></li>
                             <li><NavLink to="#">Blog</NavLink></li>

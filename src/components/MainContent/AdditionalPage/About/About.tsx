@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
-import {NavLink} from "react-router-dom";
 import FirstFlex from "./FirstFlex/FirstFlex";
 import SecondFlex from "./SecondFlex/SecondFlex";
 import ThirdFlex from "./ThirdFlex/ThirdFlex";
 import AboutSlider from "./Slider/AboutSlider";
-import PageTopInform from "./PageTitle/PageTitle";
+import PageTopInform from "../../../../common/components/PageTitle";
+import {PageContainer} from "../../../../common/selectors/StyledComponents";
 
 const About = () => {
-
 
     const pageTitle = "About",
         secondTitle = "STORE EVENTS",
@@ -113,43 +112,8 @@ const About = () => {
             }
         ]
 
-    const PageContainer = styled.div`
-    max-width: 1170px;
-    margin: 0 auto;
-    text-align: center;
-`
-    const PageDirectionContainer = styled.div`
-    text-align: left;
-    & a{
-        color: black;
-    }
-`
-    const PageDirection = styled.p`
-    font-size: 12px;
-    color: #444;
-`
-    const PageHome = styled(NavLink)`
-    &:hover{
-        color: #DBAD94;
-    }
-`
-    const PageTitleWrapper = styled.div`
-    text-align: center;
-    padding-bottom: 40px;
-`
-    const PageTitleBox = styled.h1`
-    font-size: 24px;
-    position: relative;
-    &::after{
-        content: "";
-        position: absolute;
-        width: 1170px;
-        height: 1px;
-        background-color: #dddddd;
-        bottom: -20px;
-        left:0;
-    }
-`
+
+
     const FlexContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -188,11 +152,6 @@ const About = () => {
     return (
         <PageContainer>
             <PageTopInform
-                PageDirectionContainer={PageDirectionContainer}
-                PageDirection={PageDirection}
-                PageHome={PageHome}
-                PageTitleWrapper={PageTitleWrapper}
-                PageTitleBox={PageTitleBox}
                 pageTitle={pageTitle}
                 informTitle={informTitle}
                 informText={informText}

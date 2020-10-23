@@ -24,7 +24,7 @@ export const Text = styled.p`
     font-weight: 400;
     line-height: 25px;
     letter-spacing: .4px;
-    opacity: 0.7;
+    opacity: 0.8;
     padding-bottom: 10px;
 `
 export const PseudoTitle = styled.h6`
@@ -36,4 +36,9 @@ export const MainTitle = styled.h3`
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0;
+`
+export const PageContainer = styled.div`
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
 `
