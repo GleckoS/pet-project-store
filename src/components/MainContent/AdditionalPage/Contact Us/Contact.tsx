@@ -2,6 +2,7 @@ import React from "react";
 import PageTopInform from "../../../../common/components/PageTitle";
 import {PageContainer} from "../../../../common/selectors/StyledComponents";
 import Location from "./Location/Location";
+import ContactForm from "./ContactForm/ContactForm";
 
 const Contact = () => {
 
@@ -20,6 +21,7 @@ const Contact = () => {
                 width="1170" height="400" frameBorder="0" aria-hidden="false">
             </iframe>
             <Location/>
+            <ContactForm/>
         </PageContainer>
     )
 }
