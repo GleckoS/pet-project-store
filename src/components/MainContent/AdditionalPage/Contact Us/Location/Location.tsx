@@ -80,7 +80,7 @@ const Location = () => {
 `
 
     return (
-        <>
+        <React.Fragment>
             <LocationTitle>
                 <h2>OUR LOCATION</h2>
             </LocationTitle>
@@ -118,7 +118,7 @@ const Location = () => {
                     )
                 }
             </FlexContainer>
-        </>
+        </React.Fragment>
     )
 }
 
