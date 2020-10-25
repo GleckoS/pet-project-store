@@ -46,16 +46,20 @@ const PageTopInform = (props: any) => {
         <>
             <PageDirectionContainer>
                 <PageDirection>
-                    <PageHome to="/">Home </PageHome>{">"}<strong> {props.pageTitle}</strong>
+                    <PageHome to="/">Home </PageHome>{">"}<strong>{props.pageTitle}</strong>
                 </PageDirection>
             </PageDirectionContainer>
 
             <PageTitleWrapper>
                 <PageTitleBox>{props.pageTitle}</PageTitleBox>
             </PageTitleWrapper>
-
-            <H2>{props.informTitle}</H2>
-            <Text>{props.informText}</Text>
+            {props.informTitle
+                ? <>
+                    <H2>{props.informTitle}</H2>
+                    <Text>{props.informText}</Text>
+                </>
+                : null
+            }
         </>
     )
 }

@@ -12,6 +12,7 @@ import About from "./components/MainContent/AdditionalPage/About/About";
 import Delivery from "./components/MainContent/AdditionalPage/Delivery Information/Delivery";
 import Privacy from "./components/MainContent/AdditionalPage/Privacy Policy/Privacy";
 import Terms from "./components/MainContent/AdditionalPage/Terms & Conditions/Terms";
+import Contact from "./components/MainContent/AdditionalPage/Contact Us/Contact";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 <Route exact path="/delivery" render={() => <Delivery/>}/>
                 <Route exact path="/privacy" render={() => <Privacy/>}/>
                 <Route exact path="/terms" render={() => <Terms/>}/>
+                <Route exact path="/contact" render={() => <Contact/>}/>
             </Switch>
 
             <Footer/>

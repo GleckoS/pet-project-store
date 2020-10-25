@@ -1,8 +1,12 @@
 import React from "react";
-import {MainTitle, PageContainer, Text} from "../../../../common/selectors/StyledComponents";
-import styled from "@emotion/styled";
+import {PageContainer} from "../../../../common/selectors/StyledComponents";
+
+import PageTopInform from "../../../../common/components/PageTitle";
+import TermsFlex from "./TermsFlex/TermsFlex";
 
 const Terms = () => {
+
+    const pageTitle = "Terms & Conditions"
 
     const LeftColumnData =
         [
@@ -69,33 +73,19 @@ const Terms = () => {
         ]
 
 
-    const TermsPageContainer = styled(PageContainer)`
-    display: flex;
-    text-align: left;
-`
+
     return (
-        <TermsPageContainer>
-            <div>
-                {
-                    LeftColumnData.map(item =>
-                        <>
-                            <MainTitle>{item.Title}</MainTitle>
-                            <Text>{item.Text}</Text>
-                        </>
-                    )
-                }
-            </div>
-            <div>
-                {
-                    RightColumnData.map(item =>
-                        <>
-                            <MainTitle>{item.Title}</MainTitle>
-                            <Text>{item.Text}</Text>
-                        </>
-                    )
-                }
-            </div>
-        </TermsPageContainer>
+        <PageContainer>
+            <PageTopInform
+                pageTitle={pageTitle}
+                informTitle={null}
+                informText={null}
+            />
+            <TermsFlex
+                LeftColumnData={LeftColumnData}
+                RightColumnData={RightColumnData}
+            />
+        </PageContainer>
     )
 }
 
