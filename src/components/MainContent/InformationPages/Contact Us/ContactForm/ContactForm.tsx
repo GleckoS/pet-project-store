@@ -4,6 +4,11 @@ import {useForm} from "react-hook-form";
 
 const ContactForm = () => {
 
+    const legend = "Contact Form",
+        firstLabel = "YOUR NAME",
+        secondLabel = "E-MAIL ADDRESS",
+        thirdLabel = "ENQUIRY"
+
     const LocationTitle = styled.div`
     text-align: left;
     position: relative;
@@ -78,14 +83,14 @@ const ContactForm = () => {
     return (
         <React.Fragment>
             <LocationTitle>
-                <legend>Contact Form</legend>
+                <legend>{legend}</legend>
             </LocationTitle>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <InputWrapper>
                         <LabelBox>
-                            <label>YOUR NAME</label>
+                            <label>{firstLabel}</label>
                         </LabelBox>
                         <InputBox>
                             <input name="name" ref={register({required: true})}/>
@@ -95,7 +100,7 @@ const ContactForm = () => {
 
                     <InputWrapper>
                         <LabelBox>
-                            <label>E-MAIL ADDRESS</label>
+                            <label>{secondLabel}</label>
                         </LabelBox>
                         <InputBox>
                             <input name="Email" ref={register({required: true})}/>
@@ -105,7 +110,7 @@ const ContactForm = () => {
 
                     <InputWrapper>
                         <LabelBox>
-                            <label>ENQUIRY</label>
+                            <label>{thirdLabel}</label>
                         </LabelBox>
                         <InputBox>
                             <textarea rows={10} name="enquiry" ref={register({required: true})}/>

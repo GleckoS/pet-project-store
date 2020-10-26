@@ -13,7 +13,7 @@ const SliderThirdPart = (props: any) => {
         slidesToScroll: 1,
         draggable: false
     };
-    debugger
+
     const MainPageInnerWrapper = styled.div`
     width: 1170px;
     margin: 0 auto;
@@ -69,15 +69,15 @@ const SliderThirdPart = (props: any) => {
 
     const currentSlider = () => {
         if (current === 1) {
-            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => <SliderElement {...dialog}/>)
+            return props.SliderThirdPartData.map((dialog: dialogData) => <SliderElement {...dialog}/>)
         } else if (current === 2) {
-            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => dialog.bestsellers ?
+            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.bestsellers ?
                 <SliderElement {...dialog}/> : null)
         } else if (current === 3) {
-            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => dialog.featured ?
+            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.featured ?
                 <SliderElement {...dialog}/> : null)
         } else if (current === 4) {
-            return props.SliderThirdPartData.SliderData.map((dialog: dialogData) => dialog.discount ?
+            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.discount ?
                 <SliderElement {...dialog}/> : null)
         }
     }

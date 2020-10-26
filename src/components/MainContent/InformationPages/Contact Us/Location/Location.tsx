@@ -11,7 +11,7 @@ const Location = () => {
                 fBefore: "",
                 sTitle: "Bralette",
                 sText: "My Company Glasgow D04 89GR",
-                sBefore: "",
+                sBefore: ""
             },
             {
                 fTitle: "Telephone",
@@ -27,7 +27,7 @@ const Location = () => {
                 fBefore: "./key.png",
                 sTitle: "Comments",
                 sText: "We are glad to hear from you",
-                sBefore: "./chat.png",
+                sBefore: "./chat.png"
             },
         ]
 

@@ -45,7 +45,6 @@ const SliderFirstPart = (props: any) => {
             background-color: #DBAD94;
         }
 `
-
     return (
         <DivMainPageInnerWrapper>
             <Slider {...settings}>

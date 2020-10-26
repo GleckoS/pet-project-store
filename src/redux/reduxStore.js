@@ -1,19 +1,12 @@
-import {combineReducers, createStore} from "redux";
-import SliderFirstPartReducer from "./SlidersReducers/MainPageReducers/SliderFirstPartReducer";
-import SliderSecondPartReducer from "./SlidersReducers/MainPageReducers/SliderSecondPartReducer";
-import SliderThirdPartReducer from "./SlidersReducers/MainPageReducers/SliderThirdPartReducer";
-import SliderFourthPartReducer from "./SlidersReducers/MainPageReducers/SliderFourthPartReducer";
-import SliderFifthPartReducer from "./SlidersReducers/MainPageReducers/SliderFifthPartReducer";
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import thunkMiddleware from "redux-thunk"
+import SliderDataReducer from "./SliderReducer"
 
 let reducers = combineReducers({
-    sFirstPartR: SliderFirstPartReducer,
-    sSecondPartR: SliderSecondPartReducer,
-    sThirdPartR: SliderThirdPartReducer,
-    sFourthPartR : SliderFourthPartReducer,
-    sFifthPartR: SliderFifthPartReducer
+    sliderReducer: SliderDataReducer
 })
 
-let store = createStore(reducers)
+let store = createStore(reducers, applyMiddleware(thunkMiddleware))
 
 
 

@@ -52,22 +52,36 @@ const Header = () => {
                                 <div className={style.navBar_navList_dropDown_content}>
                                     <div className={style.row}>
                                         <div className={style.column}>
-                                            <h3>Category 1</h3>
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
+                                            <h3>BRA SETS</h3>
+                                            <a href="#">Balconette bras</a>
+                                            <a href="#">Multiway bras</a>
+                                            <a href="#">Full cup bras</a>
+                                            <a href="#">Raw Cut</a>
+                                            <a href="#">Lingerie brands</a>
+                                            <a href="#">Minimiser bras</a>
                                         </div>
                                         <div className={style.column}>
-                                            <h3>Category 2</h3>
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
+                                            <h3>PANTIES</h3>
+                                            <a href="#">Bikini</a>
+                                            <a href="#">Laist-waist</a>
+                                            <a href="#">High-leg</a>
+                                            <a href="#">Cotton1</a>
+                                            <a href="#">Lace-Up</a>
+                                            <a href="#">Dream</a>
                                         </div>
                                         <div className={style.column}>
-                                            <h3>Category 3</h3>
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
+                                            <h3>BRA SEPARATES</h3>
+                                            <a href="#">Stockings</a>
+                                            <a href="#">Vinyl/Latex/Leather</a>
+                                            <a href="#">Sexy lingerie</a>
+                                            <a href="#">New in</a>
+                                        </div>
+                                        <div className={style.column}>
+                                            <h3>BUSTIERS</h3>
+                                            <a href="#">Corsets</a>
+                                            <a href="#">Perfect</a>
+                                            <a href="#">Waist cinchers</a>
+                                            <a href="#">Accessories</a>
                                         </div>
                                     </div>
                                 </div>

@@ -1,18 +1,15 @@
 import React from 'react';
 import './App.css';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch,} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MainPageContainer from "./components/MainContent/MainPage/MainPageContainer";
-import About from "./components/MainContent/AdditionalPage/About/About";
-import Delivery from "./components/MainContent/AdditionalPage/Delivery Information/Delivery";
-import Privacy from "./components/MainContent/AdditionalPage/Privacy Policy/Privacy";
-import Terms from "./components/MainContent/AdditionalPage/Terms & Conditions/Terms";
-import Contact from "./components/MainContent/AdditionalPage/Contact Us/Contact";
+import About from "./components/MainContent/InformationPages/About/About";
+import Delivery from "./components/MainContent/InformationPages/Delivery Information/Delivery";
+import Privacy from "./components/MainContent/InformationPages/Privacy Policy/Privacy";
+import Terms from "./components/MainContent/InformationPages/Terms & Conditions/Terms";
+import Contact from "./components/MainContent/InformationPages/Contact Us/Contact";
+import Template from "./components/MainContent/ItemPage/productPageTemplate";
 
 function App() {
     return (
@@ -20,12 +17,17 @@ function App() {
             <Header/>
 
             <Switch>
+                {/*Main page*/}
                 <Route exact path="/" render={() => <MainPageContainer/>}/>
+                {/*Item page*/}
+                <Route exact path="/first" render={() => <Template/>}/>
+                {/*Inform pages*/}
                 <Route exact path="/about" render={() => <About/>}/>
                 <Route exact path="/delivery" render={() => <Delivery/>}/>
                 <Route exact path="/privacy" render={() => <Privacy/>}/>
                 <Route exact path="/terms" render={() => <Terms/>}/>
                 <Route exact path="/contact" render={() => <Contact/>}/>
+                {/*Other pages*/}
             </Switch>
 
             <Footer/>

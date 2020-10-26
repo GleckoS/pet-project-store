@@ -7,6 +7,7 @@ import InformPart from "./InformPart/InformPart";
 
 
 const MainPage = (props: any) => {
+    debugger
     return (
         <React.Fragment>
             <SliderFirstPart SliderFirstPartData={props.SliderFirstPartData}/>

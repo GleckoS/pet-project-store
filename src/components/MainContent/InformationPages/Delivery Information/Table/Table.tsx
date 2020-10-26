@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import styled from "@emotion/styled";
 import Parser from "html-react-parser";
-import {keyframes} from "@emotion/core";
 
 const Table = () => {
 
