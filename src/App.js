@@ -10,6 +10,7 @@ import Privacy from "./components/MainContent/InformationPages/Privacy Policy/Pr
 import Terms from "./components/MainContent/InformationPages/Terms & Conditions/Terms";
 import Contact from "./components/MainContent/InformationPages/Contact Us/Contact";
 import Template from "./components/MainContent/ItemPage/productPageTemplate";
+import SiteMap from "./components/MainContent/InformationPages/Site Map/SiteMap";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route exact path="/privacy" render={() => <Privacy/>}/>
                 <Route exact path="/terms" render={() => <Terms/>}/>
                 <Route exact path="/contact" render={() => <Contact/>}/>
+                <Route exact path="/sitemap" render={() => <SiteMap/>}/>
                 {/*Other pages*/}
             </Switch>
 
