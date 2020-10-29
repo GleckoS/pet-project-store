@@ -9,8 +9,8 @@ import Delivery from "./components/MainContent/InformationPages/Delivery Informa
 import Privacy from "./components/MainContent/InformationPages/Privacy Policy/Privacy";
 import Terms from "./components/MainContent/InformationPages/Terms & Conditions/Terms";
 import Contact from "./components/MainContent/InformationPages/Contact Us/Contact";
-import Template from "./components/MainContent/ItemPage/productPageTemplate";
 import SiteMap from "./components/MainContent/InformationPages/Site Map/SiteMap";
+import ProductPageContainer from "./components/MainContent/ItemPage/productPageContainer";
 
 function App() {
     return (
@@ -21,7 +21,9 @@ function App() {
                 {/*Main page*/}
                 <Route exact path="/" render={() => <MainPageContainer/>}/>
                 {/*Item page*/}
-                <Route exact path="/first" render={() => <Template/>}/>
+                <Route exact path="/first" render={() => <ProductPageContainer/>}/>
+                <Route exact path="/second" render={() => <ProductPageContainer/>}/>
+                <Route exact path="/third" render={() => <ProductPageContainer/>}/>
                 {/*Inform pages*/}
                 <Route exact path="/about" render={() => <About/>}/>
                 <Route exact path="/delivery" render={() => <Delivery/>}/>
