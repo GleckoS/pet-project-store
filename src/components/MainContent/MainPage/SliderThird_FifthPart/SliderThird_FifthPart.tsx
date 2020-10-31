@@ -29,7 +29,7 @@ const SliderThirdPart = (props: any) => {
     const ChangeSliderList = styled.ul`
     display: flex;
     right: 0;
-    top: 5px;
+    top: -9px;
     position: absolute;
         li{
         padding: 0 5px;
