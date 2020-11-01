@@ -12,9 +12,11 @@ const InformPart = () => {
         secondImg = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-2-370x247.jpg",
         thirdTitle = "SUMMER SALE",
         thirdText = "GET UP TO 60% OFF*",
-        thirdPseudoText = "*Online only. Select styles. Price reflects discount",
-        buttonText = "SHOP NOW"
-
+        thirdPseudoText = `*Online only. Select styles. Price reflects discount`,
+        buttonText = "SHOP NOW",
+        placeHolder = "Your Email Address",
+        formTitle = "SIGN UP TO OUR NEWSLETTER",
+        formButton = 'SUBSCRIBE NOW'
     const FlexBox = styled.div`
     
     display: flex;
@@ -22,7 +24,6 @@ const InformPart = () => {
 
 `
     const FlexItem = styled.div`
-    z-index: -100;
     position: relative;
     width: 33.3%;
     margin: 0 15px;
@@ -31,11 +32,30 @@ const InformPart = () => {
     border-radius: 6px;
 `
     const FlexLink = styled.a`
-    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.6);
+    transition: .3s linear;
+    &:hover{
+        background: rgba(245,231,224,.5);
+            & h3{
+                &::after{
+                width: 20%;
+                }
+            }
+        }
+`
+    const AltFlexLink = styled(FlexLink)`
+    background: transparent;
+    &:hover{
+        background: rgba(0,0,0,.07);
+    }
 `
     const FlexImg = styled.img`
     position: absolute;
-    z-index: -20;
     top: 0;
     left: 0;
     width: 100%;
@@ -43,47 +63,157 @@ const InformPart = () => {
     border-radius: 6px;
     background-image: url(${(props: { img: string | null }) => props.img});
 `
-
+    const FlexContent = styled.div`
+    pointer-events: none;
+    position: absolute;
+    bottom: 35%;
+    width: 100%;
+    text-align: center;
+`
+    const AltFlexContent = styled(FlexContent)`
+    color: #fff;
+`
+    const FlexTitle = styled.p`
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
+`
+    const AltFlexTitle = styled(FlexTitle)`
+    font-size: 14px;
+    font-weight: 700;
+`
+    const FlexText = styled.h3`
+    font-size: 24px;
+    line-height: 1.21em;
+    font-weight: 300;
+    position: relative;
+    padding: 0 10px 14px;
+    margin: 0 0 20px;
+    &::after{
+        content: "";
+        width: 10%;
+        height: 2px;
+        background-color: #000000;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+`
+    const AltFlexText = styled.h3`
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: .3px;
+    margin: 0;
+    padding: 0;
+`
+    const AltFlexPseudoText = styled.h3`
+    padding: 0 15px;
+`
+    const FlexButton = styled(Button)`
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+`
+    const AltFlexButton = styled(FlexButton)`
+    background-color: transparent;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: .5s all ease;
+    }
+    &:hover{
+        background-color: transparent;
+        color: #000;
+        &::after{
+            background-color: #000;
+            width: 0;
+        }
+          
+    }
+`
+    const FormWrapper = styled.div`
+    background-color: #f6f6f6;
+    width: calc(100% - 56px);
+    height: 100px;
+    padding: 27px 16px 39px;
+    margin: 40px 12px;
+    border-radius: 6px;
+    & p{
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 1.2px;
+        color: #7f8187;
+        margin-bottom: 26px;
+    }
+`
+    const InputWrapper = styled.div`
+    text-align: left;
+    display: flex;
+    justify-content: center;
+        & input{
+        width: 411px;
+        display: inline-block;
+        color: #7f8187;
+        height: 35px;
+        padding: 5.5px 10px 5.5px 33px;
+        border: none;
+        background-color: #fff;
+            &:focus{
+            box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
+            }
+`
+    const InputButton = styled(Button)`
+    margin: 0 0 0 20px;
+    height: 100%;
+    padding: 15px;
+`
     return (
         <PageContainer>
             <FlexBox>
                 <FlexItem>
                     <FlexImg img={firstImg}/>
-                    <FlexLink>
-
-                    </FlexLink>
-                    <div>
-                        <p>{firstTitle}</p>
-                        <h3>{firstText}</h3>
-                        <Button>{buttonText}</Button>
-                    </div>
+                    <FlexLink/>
+                    <FlexContent>
+                        <FlexTitle>{firstTitle}</FlexTitle>
+                        <FlexText>{firstText}</FlexText>
+                    </FlexContent>
+                    <FlexButton>{buttonText}</FlexButton>
                 </FlexItem>
                 <FlexItem>
                     <FlexImg img={secondImg}/>
-                    <FlexLink>
-
-                    </FlexLink>
-                    <div>
-                        <p>{secondTitle}</p>
-                        <h3>{secondText}</h3>
-                        <Button>{buttonText}</Button>
-                    </div>
+                    <FlexLink/>
+                    <FlexContent>
+                        <FlexTitle>{secondTitle}</FlexTitle>
+                        <FlexText>{secondText}</FlexText>
+                    </FlexContent>
+                    <FlexButton>{buttonText}</FlexButton>
                 </FlexItem>
                 <FlexItem>
-                    <FlexLink>
-
-                    </FlexLink>
-                    <div>
-                        <p>{thirdTitle}</p>
-                        <h3>{thirdText}</h3>
-                        <p>{thirdPseudoText}</p>
-                        <Button>{buttonText}</Button>
-                    </div>
+                    <AltFlexLink/>
+                    <AltFlexContent>
+                        <AltFlexTitle>{thirdTitle}</AltFlexTitle>
+                        <AltFlexText>{thirdText}</AltFlexText>
+                        <AltFlexPseudoText>{thirdPseudoText}</AltFlexPseudoText>
+                    </AltFlexContent>
+                    <AltFlexButton>{buttonText}</AltFlexButton>
                 </FlexItem>
             </FlexBox>
-            <div>
-
-            </div>
+            <FormWrapper>
+                <p>{formTitle}</p>
+                <form>
+                    <InputWrapper>
+                        <input placeholder={placeHolder}/>
+                        <InputButton>{formButton}</InputButton>
+                    </InputWrapper>
+                </form>
+            </FormWrapper>
         </PageContainer>
     )
 }
