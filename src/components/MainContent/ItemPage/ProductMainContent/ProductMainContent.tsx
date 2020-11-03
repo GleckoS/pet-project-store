@@ -118,10 +118,10 @@ const ProductMainContent = () => {
             </LeftPartContainer>
             <RightPartContainer>
                 <MapWrapper>
-                    {thirdSlider.map(item =>
+                    {/*{thirdSlider.map(item =>
                         <ThirdPartSliderElement {...item}/>
                     )
-                    }
+                    }*/}
                 </MapWrapper>
             </RightPartContainer>
         </MainContentWrapper>
