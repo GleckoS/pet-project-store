@@ -17,14 +17,22 @@ const SliderFirstPart = (props: any) => {
     }
 
     const DivSliderWrapper = styled.div`
-    width: 1170px;
+    max-width: 1170px;
     height: 584px;
     border-radius: 10px;
     background-image: url( ${(props: { img: string }) => props.img});
+    background-size: cover;
+    @media (max-width: 1200px) {
+        width: 940px;
+        height: 465px;
+    }
 `
     const DivMainPageInnerWrapper = styled.div`
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
+    @media (max-width: 1200px) {
+        width: 940px;
+    }
 `
     const H3SliderText = styled.h3`
     padding-top: 110px;

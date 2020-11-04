@@ -15,7 +15,7 @@ import ProductPageContainer from "./components/MainContent/ItemPage/productPageC
 function App() {
     return (
         <Router>
-            <Header/>
+            {/*<Header/>*/}
 
             <Switch>
                 {/*Main page*/}
@@ -34,7 +34,7 @@ function App() {
                 {/*Other pages*/}
             </Switch>
 
-            <Footer/>
+           {/* <Footer/>*/}
         </Router>
     );
 }

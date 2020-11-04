@@ -11,13 +11,39 @@ const SliderThirdPart = (props: any) => {
         speed: 600,
         slidesToShow: 4,
         slidesToScroll: 1,
-        draggable: false
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     const MainPageInnerWrapper = styled.div`
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     padding-top: 5px;
+    @media (max-width: 1200px) {
+        width: 940px;
+    }
     
 `
     const ChangeSliderContainer = styled.div`

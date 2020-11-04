@@ -13,16 +13,42 @@ const SliderSecondPart = (props: any) => {
         speed: 600,
         slidesToShow: 4,
         slidesToScroll: 1,
-        draggable: false
+        draggable: false,
+        responsive: [
+            {
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     }
     const DivMainPageInnerWrapper = styled.div`
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     padding-top: 5px;
+    @media (max-width: 1200px) {
+        width: 940px;
+    }
 `
     const DivSliderItem = styled.div`
     height: 380px;
-    width: 270px;
+    max-width: 100%;
 `
     const ImgSlider = styled.img`
     align-self: center;
@@ -38,7 +64,7 @@ const SliderSecondPart = (props: any) => {
       &::after{
         position: absolute;
       content: "";
-      width: 40px;
+      max-width: 40px;
       height: 2px;
       left: 50%;
       transform: translate(-50%, 0);
@@ -60,7 +86,7 @@ const SliderSecondPart = (props: any) => {
         & h3{
              color: #E8CABA;
              &::after{
-                width: 60px;
+                max-width: 60px;
                 height: 2px;
                 transition: .3s linear;
              }
