@@ -13,17 +13,117 @@ import SiteMap from "./components/MainContent/InformationPages/Site Map/SiteMap"
 import ProductPageContainer from "./components/MainContent/ItemPage/productPageContainer";
 
 function App() {
+
+    const Urls =
+        [
+            {
+                url: "bra-sets"
+            },
+            {
+                url: "balconette-bras"
+            },
+            {
+                url: "multiway-bras"
+            },
+            {
+                url: "full-cup-bras"
+            },
+            {
+                url: "lingerie-brands"
+            },
+            {
+                url: "minimiser-bras"
+            },
+            {
+                url: "panties"
+            },
+            {
+                url: "bikini"
+            },
+            {
+                url: "laist-waist"
+            },
+            {
+                url: "high-leg"
+            },
+            {
+                url: "cotton"
+            },
+            {
+                url: "lace-up"
+            },
+            {
+                url: "dream"
+            },
+            {
+                url: "bra-separates"
+            },
+            {
+                url: "stockings"
+            },
+            {
+                url: "vinyl-latex-leather"
+            },
+            {
+                url: "sexy-lingerie"
+            },
+            {
+                url: "new-in"
+            },
+            {
+                url: "bustiers"
+            },
+            {
+                url: "corsets"
+            },
+            {
+                url: "perfect"
+            },
+            {
+                url: "waist-cinches"
+            },
+            {
+                url: "accessories"
+            },
+            {
+                url: "panties"
+            },
+            {
+                url: "corsets"
+            },
+            {
+                url: "sexy"
+            },
+            {
+                url: "sleep"
+            },
+            {
+                url: "swim"
+            },
+            {
+                url: "stockings"
+            },
+            {
+                url: "accessories"
+            },
+
+        ]
+
     return (
         <Router>
-            {/*<Header/>*/}
+            <Header/>
 
             <Switch>
                 {/*Main page*/}
                 <Route exact path="/" render={() => <MainPageContainer/>}/>
                 {/*Item page*/}
-                <Route exact path="/first" render={() => <ProductPageContainer/>}/>
-                <Route exact path="/second" render={() => <ProductPageContainer/>}/>
-                <Route exact path="/third" render={() => <ProductPageContainer/>}/>
+
+                {
+                    Urls.map(item=>
+                        <Route exact path={"/" + item.url} render={() => <ProductPageContainer url={item.url}/>}/>
+                        )
+                }
+
                 {/*Inform pages*/}
                 <Route exact path="/about" render={() => <About/>}/>
                 <Route exact path="/delivery" render={() => <Delivery/>}/>
@@ -34,7 +134,7 @@ function App() {
                 {/*Other pages*/}
             </Switch>
 
-           {/* <Footer/>*/}
+            <Footer/>
         </Router>
     );
 }

@@ -1,7 +1,18 @@
-import React, {Component} from "react";
+import React from "react";
 import ProductPageTemplate from "./productPageTemplate";
+import {setItemData} from "../../../redux/itemPageReducer";
 
-class ProductPageContainer extends Component{
+type Props =  {
+    url: string
+}
+
+
+class ProductPageContainer extends React.Component<Props, {}>{
+
+    componentDidMount() {
+        setItemData(this.props.url)
+    }
+
     render() {
         return <ProductPageTemplate/>;
     }

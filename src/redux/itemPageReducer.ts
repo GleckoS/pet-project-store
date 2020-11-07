@@ -30,6 +30,7 @@ export const setItemData = (currentPage: string) => {
             .then(res => res.json())
             .then(
                 (response) => {
+                    debugger
                     dispatch(setItemsData(response))
                 }
             )
