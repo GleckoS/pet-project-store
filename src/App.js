@@ -17,6 +17,9 @@ function App() {
     const Urls =
         [
             {
+                url: "bras"
+            },
+            {
                 url: "bra-sets"
             },
             {
@@ -106,7 +109,6 @@ function App() {
             {
                 url: "accessories"
             },
-
         ]
 
     return (

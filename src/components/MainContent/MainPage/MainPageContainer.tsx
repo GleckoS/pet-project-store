@@ -1,33 +1,35 @@
-import React, {Component} from "react";
-import MainPage from "./MainPage";
-import {connect} from "react-redux";
+import React, {Component} from "react"
+import MainPage from "./MainPage"
+import {connect} from "react-redux"
 import {
     setFifthPartData, setFirstPartData,
     setFourthPartData, setSecondPartData,
     setThirdPartData
-} from "../../../redux/SliderReducer";
-import Loading from "../../../common/components/Loading";
+} from "../../../redux/SliderReducer"
+import Loading from "../../../common/components/Loading"
 
+type Props = {
+    setFirstPartData: any,
+    setSecondPartData: any,
+    setThirdPartData: any,
+    setFourthPartData: any,
+    setFifthPartData: any,
+    isFetching: string
+}
 
-class MainPageContainer extends Component {
+class MainPageContainer extends Component<Props, {}> {
 
     componentDidMount() {
-        // @ts-ignore //
         this.props.setFirstPartData()
-        // @ts-ignore //
         this.props.setSecondPartData()
-        // @ts-ignore //
         this.props.setThirdPartData()
-        // @ts-ignore //
         this.props.setFourthPartData()
-        // @ts-ignore //
         this.props.setFifthPartData()
     }
     render() {
         return (
             <>
                 {
-                    // @ts-ignore //
                     !this.props.isFetching
                     ? <MainPage {...this.props}/>
                     : <Loading/>

@@ -11,7 +11,8 @@ const ItemsDataReducer = (state = initialSliderState, action: any) => {
         case SET_ITEMS_DATA: {
             return {
                 ...state,
-                itemsData: action.itemsData
+                itemsData: action.itemsData,
+                isFetching: false
             }
         }
         default: {
@@ -25,12 +26,12 @@ export default ItemsDataReducer
 const setItemsData = (itemsData: object) => ({type: SET_ITEMS_DATA, itemsData})
 
 export const setItemData = (currentPage: string) => {
+
     return (dispatch: any) => {
         fetch(`http://localhost:8000/${currentPage}`)
             .then(res => res.json())
             .then(
                 (response) => {
-                    debugger
                     dispatch(setItemsData(response))
                 }
             )

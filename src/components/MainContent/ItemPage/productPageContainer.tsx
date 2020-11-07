@@ -1,21 +1,45 @@
-import React from "react";
-import ProductPageTemplate from "./productPageTemplate";
-import {setItemData} from "../../../redux/itemPageReducer";
+import React from "react"
+import ProductPageTemplate from "./productPageTemplate"
+import {connect} from "react-redux"
+import {setItemData} from "../../../redux/itemPageReducer"
+import Loading from "../../../common/components/Loading"
 
 type Props =  {
-    url: string
+    setItemData: any,
+    url: string,
+    isFetching: string
 }
-
 
 class ProductPageContainer extends React.Component<Props, {}>{
 
     componentDidMount() {
-        setItemData(this.props.url)
+        this.props.setItemData(this.props.url)
+    }
+    componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>) {
+        this.props.setItemData(this.props.url)
     }
 
     render() {
-        return <ProductPageTemplate/>;
+        return(
+        <>
+            {
+                !this.props.isFetching
+                    ? <ProductPageTemplate {...this.props}/>
+                    : <Loading/>
+            }
+        </>
+        )
     }
 }
 
-export default ProductPageContainer
+let mapStateToProps = (state: any) => {
+    return {
+        isFetching: state.itemPageReducer.isFetching,
+        type: state.itemPageReducer.type,
+        sortBy: state.itemPageReducer.sortBy,
+        itemsData: state.itemPageReducer.itemsData
+    }
+}
+
+export default connect(mapStateToProps, {setItemData})(ProductPageContainer)
+

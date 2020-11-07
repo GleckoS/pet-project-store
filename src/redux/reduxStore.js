@@ -1,9 +1,11 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux"
 import thunkMiddleware from "redux-thunk"
 import SliderDataReducer from "./SliderReducer"
+import ItemsDataReducer from "./itemPageReducer"
 
 let reducers = combineReducers({
-    sliderReducer: SliderDataReducer
+    sliderReducer: SliderDataReducer,
+    itemPageReducer: ItemsDataReducer
 })
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware))
