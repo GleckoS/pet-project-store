@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 import style from "./Header.module.css"
-import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom"
 
 const Header = () => {
 
@@ -189,7 +189,7 @@ const Header = () => {
                         <ul className={style.navBar_navList}>
 
                             <li className={style.navBar_navList_dropDown}>
-                                <NavLink className={style.navBar_navList_dropDown_btn} to="bras">BRAS</NavLink>
+                                <NavLink className={style.navBar_navList_dropDown_btn} to="bras">BRAS {'>'}</NavLink>
                                 <div className={style.navBar_navList_dropDown_content}>
                                     <div className={style.row}>
                                         <div className={style.column}>

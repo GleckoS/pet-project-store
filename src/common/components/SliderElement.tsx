@@ -5,7 +5,7 @@ import { Button } from "../selectors/StyledComponents";
 
 
 interface imgData {
-    [key: string]: string
+    [key: string]: any
 }
 
 const newText = "NEW!",
@@ -32,12 +32,13 @@ const ThirdPartSliderElement = (props: any) => {
     background-image: url(${(props: imgData) => props.img});
     opacity: 0.9;
     border-radius: 10px;
+    z-index: 0;      
     &:hover{
-        background-image: url(${(props: imgData) => props.hover});
-        opacity: 1;
-        background-color: #dddddd;
-    }
+            background-image: url(${(props: imgData) => props.hover});
+            background-color: #dddddd;
+        }
 `
+
     const SliderItemLink = styled.a`
     display: flex;
     flex-direction: column;
@@ -47,7 +48,12 @@ const ThirdPartSliderElement = (props: any) => {
     margin: 10px;
     transition: .3s linear;
     border-radius: 10px;
-
+    position: relative;
+    &:hover{
+        & > div{
+            opacity: 1;
+        }
+    }
 `
     const SliderText = styled.h3`
     font-size: 16px;
@@ -90,12 +96,45 @@ const ThirdPartSliderElement = (props: any) => {
     color: #ffffff;
     z-index: 3;
 `
+    const AdditionalButtons = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 12px;
+    right: 25px;
+    width: 22px;
+    line-height: 22px;
+    transition: .5s all ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    & button{
+        border-radius: 50%;
+        margin: 5px;
+        border: none;
+        background-color: #f7f7f7;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+    &:hover + div{
+            background-image: url(${(props: imgData) => props.hover});
+            background-color: #dddddd;
+        }
+`
+    const Alert = () => {
+        alert("!")
+    }
 
     return (
         <SliderItem>
             <SliderItemLink href="#">
                 {props.new ? <AdditionalNEW>{newText}</AdditionalNEW> : null}
                 {props.discount ? <AdditionalSALE>{saleText}</AdditionalSALE> : null}
+                <AdditionalButtons img={props.img} hover={props.hoverImg}>
+                    <button onClick={Alert}>Л</button>
+                    <button onClick={Alert}>С</button>
+                    <button onClick={Alert}>К</button>
+                </AdditionalButtons>
                 <SliderImg img={props.img} hover={props.hoverImg}/>
             </SliderItemLink>
             <SliderText>{props.text}</SliderText>

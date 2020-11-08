@@ -157,11 +157,6 @@ const SliderFourthPart = (props: any) => {
     font-size: 12px;
     letter-spacing: .7px;
 `
-    const CategoryWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    transition: .3s ease-in-out;
-`
     const CategoryItem = styled.a`
     max-width: 168px;
     height: 103px;
