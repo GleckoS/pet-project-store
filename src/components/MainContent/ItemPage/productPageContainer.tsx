@@ -14,9 +14,13 @@ class ProductPageContainer extends React.Component<Props, {}>{
 
     componentDidMount() {
         this.props.setItemData(this.props.url)
+
     }
-    componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<{}>) {
-        this.props.setItemData(this.props.url)
+    componentDidUpdate() {
+        // @TODO: поправить ререндер
+        if(window.location.pathname != `/${this.props.url}`) {
+            this.props.setItemData(this.props.url)
+        }
     }
 
     render() {
