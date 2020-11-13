@@ -11,6 +11,7 @@ import Terms from "./components/MainContent/InformationPages/Terms & Conditions/
 import Contact from "./components/MainContent/InformationPages/Contact Us/Contact";
 import SiteMap from "./components/MainContent/InformationPages/Site Map/SiteMap";
 import ProductPageContainer from "./components/MainContent/ItemPage/productPageContainer";
+import Login from "./components/MainContent/AccountPages/LoginPage/Login";
 
 function App() {
 
@@ -119,13 +120,11 @@ function App() {
                 {/*Main page*/}
                 <Route exact path="/" render={() => <MainPageContainer/>}/>
                 {/*Item page*/}
-
                 {
-                    Urls.map(item=>
+                    Urls.map(item =>
                         <Route exact path={"/" + item.url} render={() => <ProductPageContainer url={item.url}/>}/>
-                        )
+                    )
                 }
-
                 {/*Inform pages*/}
                 <Route exact path="/about" render={() => <About/>}/>
                 <Route exact path="/delivery" render={() => <Delivery/>}/>
@@ -134,6 +133,9 @@ function App() {
                 <Route exact path="/contact" render={() => <Contact/>}/>
                 <Route exact path="/sitemap" render={() => <SiteMap/>}/>
                 {/*Other pages*/}
+
+                {/*Account pages*/}
+                <Route exact path="/login" render={() => <Login/>}/>
             </Switch>
 
             <Footer/>

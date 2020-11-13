@@ -26,7 +26,6 @@ export default ItemsDataReducer
 const setItemsData = (itemsData: object) => ({type: SET_ITEMS_DATA, itemsData})
 
 export const setItemData = (currentPage: string) => {
-
     return (dispatch: any) => {
         fetch(`http://localhost:8000/${currentPage}`)
             .then(res => res.json())

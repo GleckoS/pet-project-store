@@ -14,6 +14,8 @@ type Props = {
     setThirdPartData: any,
     setFourthPartData: any,
     setFifthPartData: any,
+    RegisterThunk: any,
+    SetUsersThunk: any,
     isFetching: string
 }
 
