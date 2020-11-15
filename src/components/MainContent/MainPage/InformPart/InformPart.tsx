@@ -184,7 +184,7 @@ const InformPart = () => {
                         <FlexTitle>{firstTitle}</FlexTitle>
                         <FlexText>{firstText}</FlexText>
                     </FlexContent>
-                    <FlexButton>{buttonText}</FlexButton>
+                    <FlexButton to="/">{buttonText}</FlexButton>
                 </FlexItem>
                 <FlexItem>
                     <FlexImg img={secondImg}/>
@@ -193,7 +193,7 @@ const InformPart = () => {
                         <FlexTitle>{secondTitle}</FlexTitle>
                         <FlexText>{secondText}</FlexText>
                     </FlexContent>
-                    <FlexButton>{buttonText}</FlexButton>
+                    <FlexButton to="/">{buttonText}</FlexButton>
                 </FlexItem>
                 <FlexItem>
                     <AltFlexLink/>
@@ -202,7 +202,7 @@ const InformPart = () => {
                         <AltFlexText>{thirdText}</AltFlexText>
                         <AltFlexPseudoText>{thirdPseudoText}</AltFlexPseudoText>
                     </AltFlexContent>
-                    <AltFlexButton>{buttonText}</AltFlexButton>
+                    <AltFlexButton to="/">{buttonText}</AltFlexButton>
                 </FlexItem>
             </FlexBox>
             <FormWrapper>
@@ -210,7 +210,7 @@ const InformPart = () => {
                 <form>
                     <InputWrapper>
                         <input placeholder={placeHolder}/>
-                        <InputButton>{formButton}</InputButton>
+                        <InputButton to="/">{formButton}</InputButton>
                     </InputWrapper>
                 </form>
             </FormWrapper>

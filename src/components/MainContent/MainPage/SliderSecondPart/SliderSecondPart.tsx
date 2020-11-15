@@ -102,7 +102,7 @@ const SliderSecondPart = (props: any) => {
                         <ASliderItemLink href="#">
                             <ImgSlider src={dialog.img}/>
                             <H3SliderText>{dialog.text}</H3SliderText>
-                            <Button>{buttonText}</Button>
+                            <Button to="/">{buttonText}</Button>
                         </ASliderItemLink>
                     </DivSliderItem>
                 )}

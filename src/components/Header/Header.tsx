@@ -194,28 +194,28 @@ const Header = () => {
                                     <div className={style.row}>
                                         <div className={style.column}>
                                             {
-                                                firstColumnData.map( item =>
+                                                firstColumnData.map(item =>
                                                     <NavLink to={item.url}>{item.name}</NavLink>
                                                 )
                                             }
                                         </div>
                                         <div className={style.column}>
                                             {
-                                                secondColumnData.map( item =>
+                                                secondColumnData.map(item =>
                                                     <NavLink to={item.url}>{item.name}</NavLink>
                                                 )
                                             }
                                         </div>
                                         <div className={style.column}>
                                             {
-                                                thirdColumnData.map( item =>
+                                                thirdColumnData.map(item =>
                                                     <NavLink to={item.url}>{item.name}</NavLink>
                                                 )
                                             }
                                         </div>
                                         <div className={style.column}>
                                             {
-                                                fourthColumnData.map( item =>
+                                                fourthColumnData.map(item =>
                                                     <NavLink to={item.url}>{item.name}</NavLink>
                                                 )
                                             }
@@ -225,7 +225,7 @@ const Header = () => {
                             </li>
 
                             {
-                                searchData.map( item =>
+                                searchData.map(item =>
                                     <li>
                                         <NavLink to={item.url}>{item.name}</NavLink>
                                     </li>

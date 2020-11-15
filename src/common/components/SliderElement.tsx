@@ -139,7 +139,7 @@ const ThirdPartSliderElement = (props: any) => {
             </SliderItemLink>
             <SliderText>{props.text}</SliderText>
             <SliderPrice>{props.price}</SliderPrice>
-            <Button href="#">SHOP NOW</Button>
+            <Button to="#">SHOP NOW</Button>
         </SliderItem>
     )
 }

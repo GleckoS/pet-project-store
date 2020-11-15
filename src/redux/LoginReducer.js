@@ -62,8 +62,7 @@ export const UnLogInThunk = () => {
 /* Рабочие */
 export const SetUsersThunk = () => {
     return (dispatch) => {
-        fetch(`http://localhost:8000/users`, {
-        })
+        fetch(`http://localhost:8000/users`, {})
             .then(res => res.json())
             .then(
                 (response) => {

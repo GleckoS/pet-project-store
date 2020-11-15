@@ -28,13 +28,14 @@ class MainPageContainer extends Component<Props, {}> {
         this.props.setFourthPartData()
         this.props.setFifthPartData()
     }
+
     render() {
         return (
             <>
                 {
                     !this.props.isFetching
-                    ? <MainPage {...this.props}/>
-                    : <Loading/>
+                        ? <MainPage {...this.props}/>
+                        : <Loading/>
                 }
             </>
         )

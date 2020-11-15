@@ -12,6 +12,7 @@ import Contact from "./components/MainContent/InformationPages/Contact Us/Contac
 import SiteMap from "./components/MainContent/InformationPages/Site Map/SiteMap";
 import ProductPageContainer from "./components/MainContent/ItemPage/productPageContainer";
 import Login from "./components/MainContent/AccountPages/LoginPage/Login";
+import Registration from "./components/MainContent/AccountPages/RegistrationPage/Registration";
 
 function App() {
 
@@ -136,6 +137,7 @@ function App() {
 
                 {/*Account pages*/}
                 <Route exact path="/login" render={() => <Login/>}/>
+                <Route exact path="/register" render={() => <Registration/>}/>
             </Switch>
 
             <Footer/>

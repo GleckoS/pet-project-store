@@ -189,14 +189,14 @@ const SliderFourthPart = (props: any) => {
                     <NewsBackGround src={backgroundURL}/>
                     <NewsTitle>{newsTitle}</NewsTitle>
                     <NewsText>{newsText}</NewsText>
-                    <NewsButton href="#">{newsButton}</NewsButton>
+                    <NewsButton to="/">{newsButton}</NewsButton>
                 </LeftContainer>
                 <RightContainer>
                     <TimerImage src={newsInformImg}/>
                     <TimerInformWrapper>
                         <TimerTitle>{informTitle}</TimerTitle>
                         <TimerText>{informText}</TimerText>
-                        <TimerButton>{informButton}</TimerButton>
+                        <TimerButton to="/">{informButton}</TimerButton>
                     </TimerInformWrapper>
                 </RightContainer>
             </NewsContainer>
