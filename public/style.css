@@ -1,75 +1,102 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
-.slick-dots{
+
+.slick-dots {
     bottom: 10px !important;
 }
+
 .slick-dots li {
     margin: 0 !important;
 }
+
 .slick-dots li button:before {
     color: #000 !important;
 }
-.slick-dots li.slick-active button:before{
+
+.slick-dots li.slick-active button:before {
     color: #DBAD94 !important;
 }
-.slick-dots li button:before{
+
+.slick-dots li button:before {
     font-size: 9px !important;
 }
+
 .slick-dots li button:before,
-.slick-dots li.slick-active button:before{
+.slick-dots li.slick-active button:before {
     opacity: 1 !important;
 }
-.slick-dots li:hover button:before{
+
+.slick-dots li:hover button:before {
     color: #E8CABA !important;
     transition: .2s ease-out;
-}* {
-     font-family: 'Montserrat', sans-serif;
-     text-decoration: none;
-     outline: none;
-     -webkit-transition: all .3s ease;
-     -moz-transition: all .3s ease;
-     -o-transition: all .3s ease;
-     transition: all .3s ease;
- }
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 footer {
     background: #f6f6f6;
     padding: 46px 0 23px;
     margin-top: 10px;
 
 }
+
 .slick-prev:before,
-.slick-next:before{
+.slick-next:before {
     color: black !important;
     display: none;
 }
+
 .slick-next,
-.slick-prev{
+.slick-prev {
     z-index: 2;
 
 }
-.slick-track{
-    display: flex!important;
+
+.slick-track {
+    display: flex !important;
 }
+
 .slick-slider:hover .slick-prev:before,
-.slick-slider:hover .slick-next:before{
+.slick-slider:hover .slick-next:before {
     display: block !important;
 }
+
 html,
-body{
+body {
     padding: 0;
     margin: 0;
 }
+
 /*TODO: repair*/
-.slick-slide div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.slick-slide div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font: 400 14px/24px "Montserrat",sans-serif;
+    color: #4a4a4a;
+    background: #fff;
+}
