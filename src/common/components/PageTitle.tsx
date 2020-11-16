@@ -30,7 +30,7 @@ const PageTopInform = (props: any) => {
     &::after{
         content: "";
         position: absolute;
-        width: 1170px;
+        width: 100%;
         height: 1px;
         background-color: #dddddd;
         bottom: -20px;

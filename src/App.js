@@ -13,6 +13,7 @@ import SiteMap from "./components/MainContent/InformationPages/Site Map/SiteMap"
 import ProductPageContainer from "./components/MainContent/ItemPage/productPageContainer";
 import Login from "./components/MainContent/AccountPages/LoginPage/Login";
 import Registration from "./components/MainContent/AccountPages/RegistrationPage/Registration";
+import MyAccount from "./components/MainContent/AccountPages/MyAccount/MyAccount";
 
 function App() {
 
@@ -136,6 +137,7 @@ function App() {
                 {/*Other pages*/}
 
                 {/*Account pages*/}
+                <Route exact path="/my-account" render={() => <MyAccount/>}/>
                 <Route exact path="/login" render={() => <Login/>}/>
                 <Route exact path="/register" render={() => <Registration/>}/>
             </Switch>
