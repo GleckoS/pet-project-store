@@ -3,8 +3,15 @@ import {PageContainer} from "../../../../common/selectors/StyledComponents";
 import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import {useForm} from "react-hook-form";
 import Forms from "./LoginForm/LoginForm";
+import {connect} from "react-redux";
+import {LogInThunk} from "../../../../redux/LoginReducer";
+import {Redirect} from "react-router-dom"
 
-const Login = () => {
+const Login = (props: any) => {
+
+    /*if(isLogged === true){
+            redirect to my-account
+     }*/
 
     const pageTitle = "login"
 
@@ -27,20 +34,62 @@ const Login = () => {
         }
 
     const {register, handleSubmit} = useForm();
-    const onSubmit = (data: { [key: string]: string }) => console.log(data);
+    const onSubmit = (data: { [key: string]: string }) => {
+        let arrLength = props.userList.length
+        let loginTrue = false
+        let passTrue = false
+        let email = null
+        let id = 0
+        for (let i = 0; i < arrLength; i++) {
 
+            if (data.email === props.userList[i].email) {
+                loginTrue = true
+            }
+            if (loginTrue) {
+                if (data.password === props.userList[i].password) {
+                    passTrue = true
+                    id = i
+                    email = props.userList[i].email
+                    break
+                }
+                break
+            }
+        }
+        if (loginTrue && passTrue) {
+            props.LogInThunk(email, data.password, id)
+            alert("Вход выполнен успешно!")
+        } else {
+            alert("Введён неправильный логин или пароль!")
+        }
+
+
+        props.LogInThunk(data)
+        //TODO: доделать логин
+    }
     return (
-        <PageContainer>
-            <BreadCrumbs pageTitle={pageTitle}/>
-            <Forms
-                left={leftPart}
-                right={rightPart}
-                register={register}
-                handleSubmit={handleSubmit}
-                onSubmit={onSubmit}
-            />
-        </PageContainer>
+        <>
+            {props.isLogged
+                ? <Redirect to="/my-account"/>
+                : <PageContainer>
+                    <BreadCrumbs pageTitle={pageTitle}/>
+                    <Forms
+                        left={leftPart}
+                        right={rightPart}
+                        register={register}
+                        handleSubmit={handleSubmit}
+                        onSubmit={onSubmit}
+                    />
+                </PageContainer>
+            }
+        </>
     )
 }
 
-export default Login
+const MapStateToProps = (state: any) => {
+    return {
+        isLogged: state.loginReducer.isLogged,
+        userList: state.loginReducer.userList
+    }
+}
+
+export default connect(MapStateToProps, {LogInThunk})(Login)

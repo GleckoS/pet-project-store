@@ -52,16 +52,17 @@ const RegistrationForm = (props: any) => {
     line-height: 66px;
 `
 
-    return(
+    return (
         <form onSubmit={props.handleSubmit(props.onSubmit)}>
             <fieldset>
                 <FormPartLegend>{props.legend.first}</FormPartLegend>
-                {props.firstPartData.map((item: {[key: string]: string, rules: any}) =>
+                {props.firstPartData.map((item: { [key: string]: string, rules: any }) =>
                     <FormInputWrapper>
                         <InputLabel>{item.label}</InputLabel>
                         <div>
                             <RegistrationInput name={item.name}
-                                               ref={props.register(...item.rules)}/>
+                                /*props.register(...item.rules)*/
+                                               ref={props.register({required: true})}/>
                             {props.errors[item.name] && <span>{item.alertText}</span>}
                         </div>
                     </FormInputWrapper>
@@ -69,12 +70,13 @@ const RegistrationForm = (props: any) => {
             </fieldset>
             <fieldset>
                 <FormPartLegend>{props.legend.second}</FormPartLegend>
-                {props.secondPartData.map((item: {[key: string]: string, rules: any}) =>
+                {props.secondPartData.map((item: { [key: string]: string, rules: any }) =>
                     <FormInputWrapper>
                         <InputLabel>{item.label}</InputLabel>
                         <div>
-                            <RegistrationInput name={item.name}
-                                               ref={props.register(...item.rules)}/>
+                            <RegistrationInput type="password" name={item.name}
+                                /*props.register(...item.rules)*/
+                                               ref={props.register({required: true})}/>
                             {props.errors[item.name] && <span>{item.alertText}</span>}
                         </div>
                     </FormInputWrapper>
@@ -85,7 +87,8 @@ const RegistrationForm = (props: any) => {
                 <FormInputWrapper>
                     <AltInputLabel>Subscribe</AltInputLabel>
                     <div>
-                        <input type="radio" defaultChecked value="1" name="newsletter" ref={props.register({required: true})}/>
+                        <input type="radio" defaultChecked value="1" name="newsletter"
+                               ref={props.register({required: true})}/>
                         <label>Yes</label>
                         <input type="radio" value="0" name="newsletter" ref={props.register({required: true})}/>
                         <label>No</label>

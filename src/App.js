@@ -14,8 +14,10 @@ import ProductPageContainer from "./components/MainContent/ItemPage/productPageC
 import Login from "./components/MainContent/AccountPages/LoginPage/Login";
 import Registration from "./components/MainContent/AccountPages/RegistrationPage/Registration";
 import MyAccount from "./components/MainContent/AccountPages/MyAccount/MyAccount";
+import {connect} from "react-redux";
+import {SetUsersThunk} from "./redux/LoginReducer";
 
-function App() {
+function App(props) {
 
     const Urls =
         [
@@ -114,6 +116,7 @@ function App() {
             },
         ]
 
+    props.SetUsersThunk()
     return (
         <Router>
             <Header/>
@@ -147,4 +150,9 @@ function App() {
     );
 }
 
-export default App;
+
+const mapStateToProps = () => {
+
+}
+
+export default connect(mapStateToProps, {SetUsersThunk})(App)

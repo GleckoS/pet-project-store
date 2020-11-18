@@ -16,18 +16,18 @@ const Location = () => {
             {
                 fTitle: "Telephone",
                 fText: "(800) 123-4567",
-                fBefore: "./phone.png",
+                fBefore: "./img/phone.png",
                 sTitle: "Fax",
                 sText: "(800) 2345-6789",
-                sBefore: "./fax.png"
+                sBefore: "./img/fax.png"
             },
             {
                 fTitle: "Opening Times",
                 fText: "7 Days a week from 9:00 am to 7:00 pm",
-                fBefore: "./key.png",
+                fBefore: "./img/key.png",
                 sTitle: "Comments",
                 sText: "We are glad to hear from you",
-                sBefore: "./chat.png"
+                sBefore: "./img/chat.png"
             },
         ]
 

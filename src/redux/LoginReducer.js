@@ -1,7 +1,8 @@
 let initialSliderState = {
     isLogged: false,
     accType: null,
-    login: null,
+    name: null,
+    userId: null,
     userList: []
 }
 const LOGIN = "LOGIN",
@@ -14,20 +15,23 @@ const LoginReducer = (state = initialSliderState, action) => {
         case LOGIN: {
             return {
                 ...state,
-                isLogged: !state.isLogged,
-                login: action.login
+                isLogged: true,
+                userId: action.id,
+                name: action.name
             }
         }
         case UN_LOGIN: {
             return {
                 ...state,
-                isLogged: !state.isLogged,
-                login: null
+                isLogged: false,
+                userId: null,
+                name: null
             }
         }
         case SET_USERS: {
             return {
                 ...state,
+                userList: action.userList
             }
         }
         case SET_NEW_USER: {
@@ -43,14 +47,14 @@ const LoginReducer = (state = initialSliderState, action) => {
 
 export default LoginReducer
 
-const logIn = (accType, login) => ({type: LOGIN, accType, login})
+const logIn = (email, password, id) => ({type: LOGIN, email, password, id})
 const unLogIn = () => ({type: UN_LOGIN})
-const setUsers = (userInform) => ({type: SET_USERS, userInform})
+const setUsers = (userList) => ({type: SET_USERS, userList})
 const setNewUser = () => ({type: SET_NEW_USER})
-/* Не Рабочие */
-export const LogInThunk = (accType, login) => {
+
+export const LogInThunk = (email, password, id) => {
     return (dispatch) => {
-        dispatch(logIn(accType, login))
+        dispatch(logIn(email, password, id))
     }
 }
 
@@ -59,14 +63,15 @@ export const UnLogInThunk = () => {
         dispatch(unLogIn())
     }
 }
-/* Рабочие */
+
 export const SetUsersThunk = () => {
     return (dispatch) => {
-        fetch(`http://localhost:8000/users`, {})
+        fetch(`http://localhost:8000/users`, {
+            method: 'GET'
+        })
             .then(res => res.json())
             .then(
                 (response) => {
-                    console.log(response)
                     dispatch(setUsers(response))
                 }
             )
@@ -82,11 +87,17 @@ export const RegisterThunk = (userInform) => {
             },
             body: JSON.stringify(userInform)
         })
-            .then(res => res.json())
             .then(
-                (response) => {
-                    console.log(response)
-                    dispatch(setNewUser(userInform))
+                () => {
+                    fetch(`http://localhost:8000/users`, {
+                        method: 'GET'
+                    })
+                        .then(res => res.json())
+                        .then(
+                            (response) => {
+                                dispatch(setUsers(response))
+                            }
+                        )
                 }
             )
     }

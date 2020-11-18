@@ -21,7 +21,7 @@ const TermsFlex = (props: any) => {
     margin: 30px 0 30px;
     &::before{
       content: "";
-      background-image: url("./ok.png");
+      background-image: url("./img/ok.png");
       position: absolute;
       top: -5px;
       left: 0;

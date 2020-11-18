@@ -77,7 +77,7 @@ const ContactForm = () => {
         enquiry: string
     };
 
-    const {register, handleSubmit, watch, errors} = useForm<Inputs>();
+    const {register, handleSubmit, errors} = useForm<Inputs>();
     const onSubmit = (data: any) => alert(data.name + " | " + data.Email + " | " + data.enquiry);
     // TODO: `use .map`
     return (

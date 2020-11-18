@@ -37,10 +37,17 @@ const LoginForm = (props: any) => {
     position: absolute;
     bottom: 10%;
 `
-    const RightPartButton = styled(Button)`
+    const RightPartButton = styled.button`
+    background-color: #E8CABA;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
     margin: 15px 0;
     text-align: center;
     width: 100px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
 `
     const LoginForm = styled.form`
     display: flex;
@@ -75,11 +82,11 @@ const LoginForm = (props: any) => {
                 <BorderText><strong>{props.right.subTitle}</strong></BorderText>
                 <LoginForm onSubmit={props.handleSubmit(props.onSubmit)}>
                     <label>{props.right.firstLabel}</label>
-                    <LoginInput placeholder="E-mail" name="E-mail" ref={props.register({required: true})}/>
+                    <LoginInput placeholder="E-mail" name="email" ref={props.register({required: true})}/>
                     <label>{props.right.secondLabel}</label>
-                    <LoginInput placeholder="password" name="Password" ref={props.register({required: true})}/>
-                    <RightPartButton to="/" type="submit">{props.right.FirstButton}</RightPartButton>
-                    <NavLink to="/">{props.right.SecondButton}</NavLink>
+                    <LoginInput placeholder="password" name="password" ref={props.register({required: true})}/>
+                    <RightPartButton type="submit">{props.right.firstButton}</RightPartButton>
+                    <NavLink to="/">{props.right.secondButton}</NavLink>
                 </LoginForm>
             </RightPart>
         </FlexWrapper>

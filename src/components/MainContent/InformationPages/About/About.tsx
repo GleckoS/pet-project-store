@@ -26,7 +26,7 @@ const About = () => {
         [
             {
                 Title: "FOR CONVENIENCE OF CHOICE",
-                Img: "./search1.png",
+                Img: "./img/search1.png",
                 Text: "We think about the convenience of your choice. " +
                     "Our products are supplied with star rating that should help hesitant buyers to take a decision. " +
                     "What’s more, you can search our site if you know exactly what you are looking for or use" +
@@ -34,7 +34,7 @@ const About = () => {
             },
             {
                 Title: "DELIVERY TO ALL REGIONS",
-                Img: "./car1.png",
+                Img: "./img/car1.png",
                 Text: "We deliver our goods worldwide. No matter where you live," +
                     " your order will be shipped in time and delivered right to your door or to any" +
                     " other location you have stated. The packages are handled with utmost care, " +
@@ -43,7 +43,7 @@ const About = () => {
             ,
             {
                 Title: "THE HIGHEST QUALITY OF PRODUCTS",
-                Img: "./like1.png",
+                Img: "./img/like1.png",
                 Text: "We guarantee the highest quality of the products we sell. " +
                     "Several decades of successful operation and millions of happy customers let us feel certain about that. " +
                     "Besides, all items we sell pass thorough quality control, " +
@@ -72,22 +72,22 @@ const About = () => {
             {
                 Title: "ROBERT JOHNSON",
                 Text: "Senior salesman with 15 years of experience. He knows everything about the products he offers.",
-                Img: "./article-1.jpg"
+                Img: "./img/article-1.jpg"
             },
             {
                 Title: "JESSICA PRISTON",
                 Text: "Mega positive shop assistant always ready to help you make the right choice and charm you with a smile.",
-                Img: "./article-2.jpg"
+                Img: "./img/article-2.jpg"
             },
             {
                 Title: "SAM KROMSTAIN",
                 Text: "Wholesale manager. Contact him if you want to buy a batch of the products offered at our store.",
-                Img: "./article-3.jpg"
+                Img: "./img/article-3.jpg"
             },
             {
                 Title: "EDNA BARTON",
                 Text: "Quality control manager. Her mission is to check the products we ship and settle quality issues if any.",
-                Img: "./article-4.jpg"
+                Img: "./img/article-4.jpg"
             },
         ]
     const commentarySlider =
@@ -100,7 +100,7 @@ const About = () => {
                     "Told all my friends about your excellent service and the variety of choice." +
                     " I think I’ll be your loyal customer in future as well." +
                     " I wish your store many more years of prosperity.” ",
-                Img: "./commentary.png",
+                Img: "./img/commentary.png",
             },
             {
                 Title: "VIRGINIA UBERT",
@@ -108,7 +108,7 @@ const About = () => {
                     "‘’THANK YOU” to all personnel of this store. You are not only friendly, " +
                     "but deliver really good products in the shortest possible terms. In a word, " +
                     "I am absolutely happy with my purchase and the service. Everything was perfect!”",
-                Img: "./commentary.png",
+                Img: "./img/commentary.png",
             }
         ]
 

@@ -4,8 +4,13 @@ import PageTopInform from "../../../../common/components/PageTitle"
 import {useForm} from "react-hook-form";
 import styled from "@emotion/styled";
 import RegistrationForm from "./RegistrationForm/RegistrationForm";
+import {connect} from "react-redux";
+import {RegisterThunk, SetUsersThunk} from "../../../../redux/LoginReducer";
+import {Redirect} from "react-router-dom";
+import BreadCrumbs from "../../../../common/components/BreadCrubms";
+import MyAccountMainPart from "../MyAccount/MyAccountMainPart/MyAccountMainPart";
 
-const Registration = () => {
+const Registration = (props: any) => {
     const pageTitle = "Register"
 
     const legend =
@@ -45,7 +50,7 @@ const Registration = () => {
             },
             {
                 label: "E-Mail",
-                name: "eMail",
+                name: "email",
                 alertText: "E-Mail Address does not appear to be valid!",
                 rules:
                     [
@@ -99,28 +104,40 @@ const Registration = () => {
         ]
 
 
-
-
     const {register, handleSubmit, errors, watch} = useForm();
     const onSubmit = (data: any) => {
-        console.log(data)
-        alert("1")
+        props.RegisterThunk(data)
+        props.SetUsersThunk()
+
+        //TODO: Redirect onSubmit
+        //TODO: Решить проблему с валидацией
     }
 
     return (
-        <PageContainer>
-            <PageTopInform pageTitle={pageTitle}/>
-            <RegistrationForm
-                legend={legend}
-                firstPartData={firstPartData}
-                secondPartData={secondPartData}
-                register={register}
-                handleSubmit={handleSubmit}
-                errors={errors}
-                onSubmit={onSubmit}
-            />
-        </PageContainer>
+        <>
+            {props.isLogged
+                ? <PageContainer>
+                    <PageTopInform pageTitle={pageTitle}/>
+                    <RegistrationForm
+                        legend={legend}
+                        firstPartData={firstPartData}
+                        secondPartData={secondPartData}
+                        register={register}
+                        handleSubmit={handleSubmit}
+                        errors={errors}
+                        onSubmit={onSubmit}
+                    />
+                </PageContainer>
+                : <Redirect to="/my-account"/>
+            }
+        </>
     )
 }
 
-export default Registration
+const mapStateToProps = (state: any) => {
+    return{
+        isLogged: state.loginReducer.isLogged
+    }
+}
+
+export default connect(mapStateToProps,{RegisterThunk, SetUsersThunk})(Registration)
