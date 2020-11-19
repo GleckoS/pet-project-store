@@ -23,7 +23,8 @@ const MyAccount = (props: any) => {
 
 const MapStateToProps = (state: any) => {
     return{
-        isLogged: state.loginReducer.isLogged
+        isLogged: state.loginReducer.isLogged,
+        /*currentUser: state.loginReducer.currentUser*/
     }
 }
 

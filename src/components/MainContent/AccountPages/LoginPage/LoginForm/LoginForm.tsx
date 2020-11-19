@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import styled from "@emotion/styled";
-import {Button} from "../../../../../common/selectors/StyledComponents";
+import {Button, SubmitButton} from "../../../../../common/selectors/StyledComponents";
 
 const LoginForm = (props: any) => {
 
@@ -37,17 +37,7 @@ const LoginForm = (props: any) => {
     position: absolute;
     bottom: 10%;
 `
-    const RightPartButton = styled.button`
-    background-color: #E8CABA;
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    margin: 15px 0;
-    text-align: center;
-    width: 100px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
+    const RightPartButton = styled(SubmitButton)`
 `
     const LoginForm = styled.form`
     display: flex;

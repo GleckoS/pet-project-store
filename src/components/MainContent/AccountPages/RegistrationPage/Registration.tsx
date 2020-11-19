@@ -116,7 +116,8 @@ const Registration = (props: any) => {
     return (
         <>
             {props.isLogged
-                ? <PageContainer>
+                ? <Redirect to="/my-account"/>
+                : <PageContainer>
                     <PageTopInform pageTitle={pageTitle}/>
                     <RegistrationForm
                         legend={legend}
@@ -128,7 +129,6 @@ const Registration = (props: any) => {
                         onSubmit={onSubmit}
                     />
                 </PageContainer>
-                : <Redirect to="/my-account"/>
             }
         </>
     )

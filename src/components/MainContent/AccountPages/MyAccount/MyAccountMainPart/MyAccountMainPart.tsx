@@ -12,7 +12,7 @@ const MyAccountMainPart = () => {
                     [
                         {
                             title: "Edit your account information",
-                            link: "/"
+                            link: "/edit-acc-inform"
                         },
                         {
                             title: "Change your password",

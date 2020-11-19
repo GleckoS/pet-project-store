@@ -157,7 +157,7 @@ const Header = () => {
                             <span>USD</span>
                         </div>
                         <div className={style.shortInform_panelItem}>
-                            <span><NavLink to="/login">My account</NavLink></span>
+                            <span><NavLink to="/my-account">My account</NavLink></span>
                         </div>
                         <div className={style.shortInform_panelItem}>
                             <span><a href="#">Wishlist</a></span>

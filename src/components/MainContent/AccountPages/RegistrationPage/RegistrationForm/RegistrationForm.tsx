@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import {SubmitButton} from "../../../../../common/selectors/StyledComponents";
 
 const RegistrationForm = (props: any) => {
 
@@ -62,7 +63,7 @@ const RegistrationForm = (props: any) => {
                         <div>
                             <RegistrationInput name={item.name}
                                 /*props.register(...item.rules)*/
-                                               ref={props.register({required: true})}/>
+                                               ref={props.register(...item.rules)}/>
                             {props.errors[item.name] && <span>{item.alertText}</span>}
                         </div>
                     </FormInputWrapper>
@@ -76,7 +77,7 @@ const RegistrationForm = (props: any) => {
                         <div>
                             <RegistrationInput type="password" name={item.name}
                                 /*props.register(...item.rules)*/
-                                               ref={props.register({required: true})}/>
+                                               ref={props.register(...item.rules)}/>
                             {props.errors[item.name] && <span>{item.alertText}</span>}
                         </div>
                     </FormInputWrapper>
@@ -95,7 +96,7 @@ const RegistrationForm = (props: any) => {
                     </div>
                 </FormInputWrapper>
             </fieldset>
-            <input type="submit"/>
+            <SubmitButton type="submit">SUBMIT</SubmitButton>
         </form>
     )
 }

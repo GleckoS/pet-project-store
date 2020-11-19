@@ -43,3 +43,18 @@ export const PageContainer = styled.div`
     margin: 0 auto;
     text-align: center;
 `
+export const SubmitButton = styled.button`
+    background-color: #E8CABA;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 15px 0;
+    text-align: center;
+    width: 100px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    &:hover{
+        background-color: #DBAD94;
+    }
+`

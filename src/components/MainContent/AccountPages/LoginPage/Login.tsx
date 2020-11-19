@@ -9,10 +9,6 @@ import {Redirect} from "react-router-dom"
 
 const Login = (props: any) => {
 
-    /*if(isLogged === true){
-            redirect to my-account
-     }*/
-
     const pageTitle = "login"
 
     const leftPart =
@@ -48,7 +44,7 @@ const Login = (props: any) => {
             if (loginTrue) {
                 if (data.password === props.userList[i].password) {
                     passTrue = true
-                    id = i
+                    id = props.userList[i].id
                     email = props.userList[i].email
                     break
                 }
@@ -57,13 +53,11 @@ const Login = (props: any) => {
         }
         if (loginTrue && passTrue) {
             props.LogInThunk(email, data.password, id)
-            alert("Вход выполнен успешно!")
         } else {
             alert("Введён неправильный логин или пароль!")
         }
 
 
-        props.LogInThunk(data)
         //TODO: доделать логин
     }
     return (

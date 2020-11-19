@@ -1,8 +1,6 @@
 let initialSliderState = {
     isLogged: false,
-    accType: null,
-    name: null,
-    userId: null,
+    currentUser: {},
     userList: []
 }
 const LOGIN = "LOGIN",
@@ -13,19 +11,18 @@ const LOGIN = "LOGIN",
 const LoginReducer = (state = initialSliderState, action) => {
     switch (action.type) {
         case LOGIN: {
+            let newCurrentUser = state.userList.filter(e => e.id === action.id)
             return {
                 ...state,
                 isLogged: true,
-                userId: action.id,
-                name: action.name
+                currentUser: newCurrentUser[0]
             }
         }
         case UN_LOGIN: {
             return {
                 ...state,
                 isLogged: false,
-                userId: null,
-                name: null
+                currentUser: {},
             }
         }
         case SET_USERS: {
