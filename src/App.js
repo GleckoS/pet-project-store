@@ -17,6 +17,7 @@ import MyAccount from "./components/MainContent/AccountPages/MyAccount/MyAccount
 import {connect} from "react-redux";
 import {SetUsersThunk} from "./redux/LoginReducer";
 import EditAccInform from "./components/MainContent/AccountPages/EditAccInform/EditAccInform";
+import ChangePassword from "./components/MainContent/AccountPages/ChangePassword/ChangePassword";
 
 function App(props) {
 
@@ -145,6 +146,7 @@ function App(props) {
                 <Route exact path="/login" render={() => <Login/>}/>
                 <Route exact path="/register" render={() => <Registration/>}/>
                 <Route exact path="/edit-acc-inform" render={() => <EditAccInform/>}/>
+                <Route exact path="/change-password" render={() => <ChangePassword/>}/>
 
             </Switch>
 

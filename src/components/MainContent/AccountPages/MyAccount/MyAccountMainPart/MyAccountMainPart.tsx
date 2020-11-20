@@ -16,7 +16,7 @@ const MyAccountMainPart = () => {
                         },
                         {
                             title: "Change your password",
-                            link: "/"
+                            link: "/change-password"
                         },
                         {
                             title: "Modify your address book entries",
