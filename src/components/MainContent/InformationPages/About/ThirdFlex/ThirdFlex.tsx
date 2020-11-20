@@ -1,5 +1,5 @@
 import React from "react";
-import {MainTitle, PseudoTitle, Text} from "../../../../../common/selectors/StyledComponents";
+import {MainTitle, PseudoTitle} from "../../../../../common/selectors/StyledComponents";
 
 const ThirdFlex = (props: any) => {
     return (
@@ -10,7 +10,7 @@ const ThirdFlex = (props: any) => {
                     <props.AltFlexItem>
                         <img src={item.Img}/>
                         <PseudoTitle>{item.Title}</PseudoTitle>
-                        <Text>{item.Text}</Text>
+                        <props.AboutText>{item.Text}</props.AboutText>
                     </props.AltFlexItem>
                 )}
             </props.FlexContainer>

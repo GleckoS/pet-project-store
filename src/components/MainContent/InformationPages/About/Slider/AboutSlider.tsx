@@ -1,5 +1,5 @@
 import React from "react";
-import {MainTitle, PseudoTitle, Text} from "../../../../../common/selectors/StyledComponents";
+import {MainTitle, PseudoTitle} from "../../../../../common/selectors/StyledComponents";
 import Slider from "react-slick";
 
 const AboutSlider = (props: any) => {
@@ -20,9 +20,9 @@ const AboutSlider = (props: any) => {
                     <props.SliderItem>
                         <props.Commentary src={item.Img}/>
                         <PseudoTitle>{item.Title}</PseudoTitle>
-                        <Text>
+                        <props.AboutText>
                             {item.Text}
-                        </Text>
+                        </props.AboutText>
                     </props.SliderItem>
                 )
                 }

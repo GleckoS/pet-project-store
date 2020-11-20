@@ -1,5 +1,4 @@
 import React from "react";
-import {Text} from "../../../../../common/selectors/StyledComponents";
 
 const FirstFlex = (props: any) => {
     return(
@@ -7,7 +6,7 @@ const FirstFlex = (props: any) => {
             {props.inform.map((item: {[key:string] :string}) =>
                 <props.FlexItem>
                     <props.H5>{item.Title}</props.H5>
-                    <Text>{item.Text}</Text>
+                    <props.AboutText>{item.Text}</props.AboutText>
                 </props.FlexItem>
             )}
         </props.FlexContainer>

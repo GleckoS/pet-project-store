@@ -5,7 +5,7 @@ import SecondFlex from "./SecondFlex/SecondFlex";
 import ThirdFlex from "./ThirdFlex/ThirdFlex";
 import AboutSlider from "./Slider/AboutSlider";
 import PageTopInform from "../../../../common/components/PageTitle";
-import {PageContainer} from "../../../../common/selectors/StyledComponents";
+import {PageContainer, Text} from "../../../../common/selectors/StyledComponents";
 
 const About = () => {
 
@@ -116,15 +116,40 @@ const About = () => {
 
     const FlexContainer = styled.div`
     display: flex;
+    padding: 0 15px;
     justify-content: space-between;
+    @media (max-width: 764px) {
+        display: block;
+    }
 `
     const FlexItem = styled.div`
     width: 370px;
+    @media (max-width: 764px) {
+         margin: 0 auto;
+         width: 100%;
+    }
+       
 `
     const AltFlexItem = styled.div`
     width: 292px;
+    @media (max-width: 764px) {
+        margin: 0 auto;
+        width: 100%;
+    }
     & img{
         border-radius: 8px;
+        @media (max-width: 1196px) {
+        width: 212.5px;
+        height: 212.5px;
+        }
+        @media (max-width: 988px) {
+        width: 157.5px;
+        height: 157.5px;
+        }
+        @media (max-width: 764px) {
+        width: 270px;
+        height: 270px;
+        }
     }
 `
     const Icon = styled.img`
@@ -148,6 +173,10 @@ const About = () => {
     const SliderItem = styled.div`
     max-width: 920px;
 `
+    const AboutText = styled(Text)`
+    padding-bottom: 30px;
+    
+`
 
     return (
         <PageContainer>
@@ -161,6 +190,7 @@ const About = () => {
                 FlexContainer={FlexContainer}
                 FlexItem={FlexItem}
                 H5={H5}
+                AboutText={AboutText}
             />
             <SecondFlex
                 secondTitle={secondTitle}
@@ -168,18 +198,21 @@ const About = () => {
                 FlexContainer={FlexContainer}
                 FlexItem={FlexItem}
                 Icon={Icon}
+                AboutText={AboutText}
             />
             <ThirdFlex
                 thirdTitle={thirdTitle}
                 staff={staff}
                 FlexContainer={FlexContainer}
                 AltFlexItem={AltFlexItem}
+                AboutText={AboutText}
             />
             <AboutSlider
                 fourthTitle={fourthTitle}
                 commentarySlider={commentarySlider}
                 SliderItem={SliderItem}
                 Commentary={Commentary}
+                AboutText={AboutText}
             />
 
         </PageContainer>

@@ -42,6 +42,16 @@ export const PageContainer = styled.div`
     max-width: 1170px;
     margin: 0 auto;
     text-align: center;
+    @media (max-width: 1196px) {
+        max-width: 970px;
+    }
+    @media (max-width: 988px) {
+        max-width: 750px;
+    }
+    @media (max-width: 764px) {
+        width: 100%;
+        padding: 0 15px;
+    }
 `
 export const SubmitButton = styled.button`
     background-color: #E8CABA;
