@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import {useForm} from "react-hook-form";
 
-const ContactForm = () => {
-
-    const legend = "Contact Form",
-        firstLabel = "YOUR NAME",
-        secondLabel = "E-MAIL ADDRESS",
-        thirdLabel = "ENQUIRY"
+const ContactForm = (props: any) => {
 
     const LocationTitle = styled.div`
     text-align: left;
@@ -30,39 +24,47 @@ const ContactForm = () => {
     text-align: left;
     display: flex;
     margin: 30px;
-        & input{
+    @media (max-width: 764px) {
+        display: block;
+    }
+    & input{
         width: inherit;
         height: 35px;
         padding: 5.5px 10px 5.5px 33px;
         border: none;
         background-color: #f2f2f2;
-            &:focus{
+        &:focus{
             box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
-            }
         }
-        & textarea{
+    }
+    & textarea{
         width: inherit;
         padding: 5.5px 10px 5.5px 33px;
         border: none;
         background-color: #f2f2f2;
-            &:focus{
+        &:focus{
             box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
-            }
         }
-        & label{
+    }
+    & label{
         width: 16.6%;
             &::after{
             content: "*";
             color: red;
-            }
         }
-    ;
+    }
 `
     const LabelBox = styled.div`
      width: 20%;
+    @media (max-width: 764px) {
+        width: 90%;
+    }
 `
     const InputBox = styled.div`
      width: 80%;
+    @media (max-width: 764px) {
+       width: 90%;
+    }
 `
     const Submit = styled.input`
     border: none;
@@ -71,53 +73,24 @@ const ContactForm = () => {
     color: #fff;
     border-radius: 6px;
 `
-    type Inputs = {
-        name: string,
-        Email: string,
-        enquiry: string
-    };
 
-    const {register, handleSubmit, errors} = useForm<Inputs>();
-    const onSubmit = (data: any) => alert(data.name + " | " + data.Email + " | " + data.enquiry);
-    // TODO: `use .map`
     return (
         <React.Fragment>
             <LocationTitle>
-                <legend>{legend}</legend>
+                <legend>{props.formLegend}</legend>
             </LocationTitle>
             <div>
-                <form onSubmit={handleSubmit(onSubmit)}>
-
-                    <InputWrapper>
-                        <LabelBox>
-                            <label>{firstLabel}</label>
-                        </LabelBox>
-                        <InputBox>
-                            <input name="name" ref={register({required: true})}/>
-                            {errors.name && <p>This field is required</p>}
-                        </InputBox>
-                    </InputWrapper>
-
-                    <InputWrapper>
-                        <LabelBox>
-                            <label>{secondLabel}</label>
-                        </LabelBox>
-                        <InputBox>
-                            <input name="Email" ref={register({required: true})}/>
-                            {errors.Email && <p>This field is required</p>}
-                        </InputBox>
-                    </InputWrapper>
-
-                    <InputWrapper>
-                        <LabelBox>
-                            <label>{thirdLabel}</label>
-                        </LabelBox>
-                        <InputBox>
-                            <textarea rows={10} name="enquiry" ref={register({required: true})}/>
-                            {errors.enquiry && <p>This field is required</p>}
-                        </InputBox>
-                    </InputWrapper>
-
+                <form onSubmit={props.handleSubmit(props.onSubmit)}>
+                    {props.formData.map((item: any) =>
+                        <InputWrapper>
+                            <LabelBox>
+                                <label>{item.label}</label>
+                            </LabelBox>
+                            <InputBox>
+                                <input name={item.name} ref={props.register()}/>
+                            </InputBox>
+                        </InputWrapper>
+                    )}
                     <Submit type="submit"/>
                 </form>
             </div>

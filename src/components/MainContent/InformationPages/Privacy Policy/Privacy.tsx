@@ -1,7 +1,7 @@
 import React from "react";
-import {MainTitle, PageContainer, Text} from "../../../../common/selectors/StyledComponents";
+import {PageContainer} from "../../../../common/selectors/StyledComponents";
 import PageTopInform from "../../../../common/components/PageTitle";
-import styled from "@emotion/styled";
+import PrivacyInform from "./PrivacyInform/PrivacyInform";
 
 const Privacy = () => {
 
@@ -105,29 +105,7 @@ const Privacy = () => {
             },
         ]
 
-    const InformationContainer = styled.div`
-    text-align: left;
-`
-    const TitleNumber = styled.div`
-    display: flex;
-`
-    const PrivacyMainTitle = styled(MainTitle)`
-    font-weight: 400;
-    color: #777777;
-    &::before{
-    content: ${(props: { id: string }) => "'" + props.id + "'"};
-    border-radius: 50%;
-    background-color: #E8CABA;
-    color: #fff;
-    display: inline-block;
-    margin-right: 15px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    font-size: 16px;
-    }
-`
+
     return (
         <PageContainer>
             <PageTopInform
@@ -135,16 +113,9 @@ const Privacy = () => {
                 informTitle={null}
                 informText={null}
             />
-            {
-                privacyData.map(item =>
-                    <InformationContainer>
-                        <TitleNumber>
-                            <PrivacyMainTitle id={item.id}>{item.title}</PrivacyMainTitle>
-                        </TitleNumber>
-                        <Text>{item.text}</Text>
-                    </InformationContainer>
-                )
-            }
+            <PrivacyInform
+                privacyData={privacyData}
+            />
         </PageContainer>
     )
 }

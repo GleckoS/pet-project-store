@@ -2,34 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import {Text} from "../../../../../common/selectors/StyledComponents";
 
-const Location = () => {
-
-    const LocationData =
-        [
-            {
-                img: "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/logo-175x47.png",
-                fBefore: "",
-                sTitle: "Bralette",
-                sText: "My Company Glasgow D04 89GR",
-                sBefore: ""
-            },
-            {
-                fTitle: "Telephone",
-                fText: "(800) 123-4567",
-                fBefore: "./img/phone.png",
-                sTitle: "Fax",
-                sText: "(800) 2345-6789",
-                sBefore: "./img/fax.png"
-            },
-            {
-                fTitle: "Opening Times",
-                fText: "7 Days a week from 9:00 am to 7:00 pm",
-                fBefore: "./img/key.png",
-                sTitle: "Comments",
-                sText: "We are glad to hear from you",
-                sBefore: "./img/chat.png"
-            },
-        ]
+const Location = (props: any) => {
 
     const Box = styled.div`
     position: relative;
@@ -42,11 +15,24 @@ const Location = () => {
     & h5{
         margin: 0;
     }
+    @media (max-width: 1196px) {
+        max-width: 280px;
+    }
+    @media (max-width: 988px) {
+        max-width: 210px;
+    }
+    @media (max-width: 764px) {
+        width: 100%;
+        padding: 15px 15px;
+    }
 `
     const FlexContainer = styled.div`
     display: flex;
     justify-content: space-between;
     text-align: left;
+    @media (max-width: 764px) {
+        display: block;
+    }
 `
     const Icon = styled.img`
     width: 30px;
@@ -74,9 +60,14 @@ const Location = () => {
 `
     const TextBox = styled.div`
     margin: auto 0;
-    & p{
-        padding: 5px 0;
-    }
+`
+    const ContactText = styled(Text)`
+    padding: 0;
+    font-weight: 400;
+    @media (max-width: 988px) {
+        letter-spacing: 0;
+        font-size: 12px;
+        font-weight: 600;
 `
 
     return (
@@ -86,7 +77,7 @@ const Location = () => {
             </LocationTitle>
             <FlexContainer>
                 {
-                    LocationData.map(item =>
+                    props.LocationData.map((item: any) =>
                         <div>
                             {item.img
                                 ? <Box>
@@ -98,7 +89,7 @@ const Location = () => {
                                     </div>
                                     <TextBox>
                                         <h5>{item.fTitle}</h5>
-                                        <Text>{item.fText}</Text>
+                                        <ContactText>{item.fText}</ContactText>
                                     </TextBox>
                                 </Box>
                             }
@@ -111,7 +102,7 @@ const Location = () => {
                                 </div>
                                 <TextBox>
                                     <h5>{item.sTitle}</h5>
-                                    <Text>{item.sText}</Text>
+                                    <ContactText>{item.sText}</ContactText>
                                 </TextBox>
                             </Box>
                         </div>

@@ -150,7 +150,7 @@ function App(props) {
 
             </Switch>
 
-            {/*<Footer/>*/}
+            <Footer/>
         </Router>
     );
 }

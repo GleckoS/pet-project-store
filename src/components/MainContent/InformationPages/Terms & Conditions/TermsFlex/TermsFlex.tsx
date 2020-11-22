@@ -8,9 +8,15 @@ const TermsFlex = (props: any) => {
     margin-top: -50px;
     display: flex;
     text-align: left;
+    @media(max-width: 764px){
+        display: block;
+    }
     & div{
-      max-width: 600px;
+      max-width: 50%;
       padding: 10px;
+    @media(max-width: 764px){
+        max-width: 100%;
+    }
     }
 `
     const TermsTitle = styled(MainTitle)`

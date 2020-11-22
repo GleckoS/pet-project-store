@@ -1,0 +1,14 @@
+Pages       Media    CSS    REDUX    Structure            AIP ->  all in props                  break points
+                                                          SIC ->  styled in components              1196px
+About         +       +       +        AIP                                                          988px
+                                                                                                    764px
+Contact       +       +       -        SIC
+
+Delivery    >764      +       +        AIP
+
+Privacy       +       +       +        SIC
+
+SiteMap     >764     +/-      -        SIC
+
+Terms         +       +       +        SIC
+

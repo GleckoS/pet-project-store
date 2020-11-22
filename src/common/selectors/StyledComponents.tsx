@@ -50,7 +50,7 @@ export const PageContainer = styled.div`
     }
     @media (max-width: 764px) {
         width: 100%;
-        padding: 0 15px;
+        padding: 0;
     }
 `
 export const SubmitButton = styled.button`
