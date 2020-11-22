@@ -12,3 +12,6 @@ SiteMap     >764     +/-      -        SIC
 
 Terms         +       +       +        SIC
 
+Header        -       -       -         -
+
+Footer      >764     +/-      +        AIP
