@@ -2,28 +2,26 @@ import React from "react";
 import {Button, PageContainer} from "../../../../common/selectors/StyledComponents";
 import styled from "@emotion/styled";
 
-const InformPart = () => {
-
-    const firstTitle = "Special Offer",
-        firstText = "SAVE 50% ON ALL ITEMS",
-        firstImg = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-1-370x247.jpg",
-        secondTitle = "New Arrivals",
-        secondText = "GET AN EXTRA 10% OFF YOUR FIRST ORDER",
-        secondImg = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-2-370x247.jpg",
-        thirdTitle = "SUMMER SALE",
-        thirdText = "GET UP TO 60% OFF*",
-        thirdPseudoText = `*Online only. Select styles. Price reflects discount`,
-        buttonText = "SHOP NOW",
-        placeHolder = "Your Email Address",
-        formTitle = "SIGN UP TO OUR NEWSLETTER",
-        formButton = 'SUBSCRIBE NOW'
-    const FlexBox = styled.div`
+const firstTitle = "Special Offer",
+    firstText = "SAVE 50% ON ALL ITEMS",
+    firstImg = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-1-370x247.jpg",
+    secondTitle = "New Arrivals",
+    secondText = "GET AN EXTRA 10% OFF YOUR FIRST ORDER",
+    secondImg = "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/banner-2-370x247.jpg",
+    thirdTitle = "SUMMER SALE",
+    thirdText = "GET UP TO 60% OFF*",
+    thirdPseudoText = `*Online only. Select styles. Price reflects discount`,
+    buttonText = "SHOP NOW",
+    placeHolder = "Your Email Address",
+    formTitle = "SIGN UP TO OUR NEWSLETTER",
+    formButton = 'SUBSCRIBE NOW'
+const FlexBox = styled.div`
     
     display: flex;
     justify-content: space-evenly;
 
 `
-    const FlexItem = styled.div`
+const FlexItem = styled.div`
     position: relative;
     width: 33.3%;
     margin: 0 15px;
@@ -31,7 +29,7 @@ const InformPart = () => {
     background-color: #E8CABA;
     border-radius: 6px;
 `
-    const FlexLink = styled.a`
+const FlexLink = styled.a`
     position: absolute;
     top: 0;
     left: 0;
@@ -48,13 +46,13 @@ const InformPart = () => {
             }
         }
 `
-    const AltFlexLink = styled(FlexLink)`
+const AltFlexLink = styled(FlexLink)`
     background: transparent;
     &:hover{
         background: rgba(0,0,0,.07);
     }
 `
-    const FlexImg = styled.img`
+const FlexImg = styled.img`
     position: absolute;
     top: 0;
     left: 0;
@@ -63,26 +61,26 @@ const InformPart = () => {
     border-radius: 6px;
     background-image: url(${(props: { img: string | null }) => props.img});
 `
-    const FlexContent = styled.div`
+const FlexContent = styled.div`
     pointer-events: none;
     position: absolute;
     bottom: 35%;
     width: 100%;
     text-align: center;
 `
-    const AltFlexContent = styled(FlexContent)`
+const AltFlexContent = styled(FlexContent)`
     color: #fff;
 `
-    const FlexTitle = styled.p`
+const FlexTitle = styled.p`
     font-size: 12px;
     line-height: 18px;
     font-weight: 300;
 `
-    const AltFlexTitle = styled(FlexTitle)`
+const AltFlexTitle = styled(FlexTitle)`
     font-size: 14px;
     font-weight: 700;
 `
-    const FlexText = styled.h3`
+const FlexText = styled.h3`
     font-size: 24px;
     line-height: 1.21em;
     font-weight: 300;
@@ -100,23 +98,23 @@ const InformPart = () => {
         transform: translateX(-50%);
     }
 `
-    const AltFlexText = styled.h3`
+const AltFlexText = styled.h3`
     font-size: 22px;
     font-weight: 300;
     letter-spacing: .3px;
     margin: 0;
     padding: 0;
 `
-    const AltFlexPseudoText = styled.h3`
+const AltFlexPseudoText = styled.h3`
     padding: 0 15px;
 `
-    const FlexButton = styled(Button)`
+const FlexButton = styled(Button)`
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 `
-    const AltFlexButton = styled(FlexButton)`
+const AltFlexButton = styled(FlexButton)`
     background-color: transparent;
     &::after{
         content: "";
@@ -138,7 +136,7 @@ const InformPart = () => {
           
     }
 `
-    const FormWrapper = styled.div`
+const FormWrapper = styled.div`
     background-color: #f6f6f6;
     width: calc(100% - 56px);
     height: 100px;
@@ -153,7 +151,7 @@ const InformPart = () => {
         margin-bottom: 26px;
     }
 `
-    const InputWrapper = styled.div`
+const InputWrapper = styled.div`
     text-align: left;
     display: flex;
     justify-content: center;
@@ -169,11 +167,14 @@ const InformPart = () => {
             box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
             }
 `
-    const InputButton = styled(Button)`
+const InputButton = styled(Button)`
     margin: 0 0 0 20px;
     height: 100%;
     padding: 15px;
 `
+
+const InformPart = () => {
+
     return (
         <PageContainer>
             <FlexBox>

@@ -121,7 +121,7 @@ function App(props) {
     props.SetUsersThunk()
     return (
         <Router>
-            {/* <Header/>*/}
+            <Header/>
 
             {/*<Switch>
                 Main page
@@ -148,9 +148,9 @@ function App(props) {
                 <Route exact path="/edit-acc-inform" render={() => <EditAccInform/>}/>
                 <Route exact path="/change-password" render={() => <ChangePassword/>}/>
 
-            </Switch>*/}
+            </Switch>
 
-            <Footer/>
+            <Footer/>*/}
         </Router>
     );
 }

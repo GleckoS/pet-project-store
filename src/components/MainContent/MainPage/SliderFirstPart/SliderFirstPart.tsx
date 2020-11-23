@@ -3,20 +3,20 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
+import {PageContainer} from "../../../../common/selectors/StyledComponents";
 
 const buttonText = "SHOP COLLECTION"
 
-const SliderFirstPart = (props: any) => {
-    const settings = {
-        dots: true,
-        arrows: false,
-        speed: 1200,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-    }
+const settings = {
+    dots: true,
+    arrows: false,
+    speed: 1200,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 1,
+}
 
-    const DivSliderWrapper = styled.div`
+const SliderWrapper = styled.div`
     max-width: 1170px;
     height: 584px;
     border-radius: 10px;
@@ -27,14 +27,9 @@ const SliderFirstPart = (props: any) => {
         height: 465px;
     }
 `
-    const DivMainPageInnerWrapper = styled.div`
-    max-width: 1170px;
-    margin: 0 auto;
-    @media (max-width: 1200px) {
-        width: 940px;
-    }
+const Wrapper = styled(PageContainer)`
 `
-    const H3SliderText = styled.h3`
+const Text = styled.h3`
     padding-top: 110px;
     padding-left: 60px;
     font-size: 60px;
@@ -43,7 +38,7 @@ const SliderFirstPart = (props: any) => {
     max-width: 400px;
     line-height: 60px;
 `
-    const ASliderButton = styled.a`
+const Button = styled.a`
     padding: 19px 26px;
     margin-left: 60px;
     color: white;
@@ -53,17 +48,19 @@ const SliderFirstPart = (props: any) => {
             background-color: #DBAD94;
         }
 `
+
+const SliderFirstPart = (props: any) => {
     return (
-        <DivMainPageInnerWrapper>
+        <Wrapper>
             <Slider {...settings}>
                 {props.SliderFirstPartData.map((dialog: { [key: string]: string }) =>
-                    <DivSliderWrapper img={dialog.img}>
-                        <H3SliderText>{dialog.text}</H3SliderText>
-                        <ASliderButton href="#">{buttonText}</ASliderButton>
-                    </DivSliderWrapper>
+                    <SliderWrapper img={dialog.img}>
+                        <Text>{dialog.text}</Text>
+                        <Button href="#">{buttonText}</Button>
+                    </SliderWrapper>
                 )}
             </Slider>
-        </DivMainPageInnerWrapper>
+        </Wrapper>
     )
 }
 

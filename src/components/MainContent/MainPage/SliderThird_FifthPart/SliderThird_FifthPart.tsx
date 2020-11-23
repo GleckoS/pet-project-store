@@ -4,55 +4,49 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
 import SliderElement from "../../../../common/components/SliderElement";
+import {PageContainer} from "../../../../common/selectors/StyledComponents";
 
-const SliderThirdPart = (props: any) => {
-    const settings = {
-        infinite: false,
-        speed: 600,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        draggable: false,
-        responsive: [
-            {
-                breakpoint: 1170,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+const settings = {
+    infinite: false,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false,
+    responsive: [
+        {
+            breakpoint: 1170,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
             }
-        ]
-    };
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+};
 
-    const MainPageInnerWrapper = styled.div`
-    max-width: 1170px;
-    margin: 0 auto;
+const Wrapper = styled(PageContainer)`
     padding-top: 5px;
-    @media (max-width: 1200px) {
-        width: 940px;
-    }
-    
 `
-    const ChangeSliderContainer = styled.div`
+const ChangeContainer = styled.div`
     position: relative;
     border-bottom: 1px solid #F3D8C7;
     display: flex;
     justify-content: space-between;
 `
-    const ChangeSliderList = styled.ul`
+const ChangeList = styled.ul`
     display: flex;
     right: 0;
     top: -9px;
@@ -83,10 +77,12 @@ const SliderThirdPart = (props: any) => {
             }
         }
 `
-    const ChangeSliderTitle = styled.p`
+const ChangeTitle = styled.p`
     font-size: 12px;
     margin-bottom: 5px;
 `
+
+const SliderThirdPart = (props: any) => {
     let [current, setCurrent] = useState(1);
 
     interface dialogData {
@@ -109,10 +105,10 @@ const SliderThirdPart = (props: any) => {
     }
 
     return (
-        <MainPageInnerWrapper>
-            <ChangeSliderContainer>
-                <ChangeSliderTitle>{props.SliderThirdPartData.text}</ChangeSliderTitle>
-                <ChangeSliderList>
+        <Wrapper>
+            <ChangeContainer>
+                <ChangeTitle>{props.SliderThirdPartData.text}</ChangeTitle>
+                <ChangeList>
                     <li className={`${current === 1 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 1)}>
                         <button>New Arrivals
@@ -133,14 +129,14 @@ const SliderThirdPart = (props: any) => {
                         <button>Specials
                         </button>
                     </li>
-                </ChangeSliderList>
-            </ChangeSliderContainer>
+                </ChangeList>
+            </ChangeContainer>
             <Slider {...settings}>
                 {
                     currentSlider()
                 }
             </Slider>
-        </MainPageInnerWrapper>
+        </Wrapper>
     )
 }
 

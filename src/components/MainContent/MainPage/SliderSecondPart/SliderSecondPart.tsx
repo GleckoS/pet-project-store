@@ -3,58 +3,52 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from "@emotion/styled";
-import { Button } from "../../../../common/selectors/StyledComponents";
+import {Button, PageContainer} from "../../../../common/selectors/StyledComponents";
 
 const buttonText = "SHOP NOW"
 
-const SliderSecondPart = (props: any) => {
-    const settings = {
-        infinite: false,
-        speed: 600,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        draggable: false,
-        responsive: [
-            {
-                breakpoint: 1170,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+const settings = {
+    infinite: false,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false,
+    responsive: [
+        {
+            breakpoint: 1170,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
             }
-        ]
-    }
-    const DivMainPageInnerWrapper = styled.div`
-    max-width: 1170px;
-    margin: 0 auto;
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+}
+const Wrapper = styled(PageContainer)`
     padding-top: 5px;
-    @media (max-width: 1200px) {
-        width: 940px;
-    }
 `
-    const DivSliderItem = styled.div`
+const Item = styled.div`
     height: 380px;
     max-width: 100%;
 `
-    const ImgSlider = styled.img`
+const Img = styled.img`
     align-self: center;
     margin: 0 auto;
 `
-    const H3SliderText = styled.h3`
+const Text = styled.h3`
     font-size: 16px;
     color: #000000;
     letter-spacing: .7px;
@@ -73,7 +67,7 @@ const SliderSecondPart = (props: any) => {
       transition: .3s linear;
       }
 `
-    const ASliderItemLink = styled.a`
+const Link = styled.a`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,20 +88,22 @@ const SliderSecondPart = (props: any) => {
     }
     
 `
+
+const SliderSecondPart = (props: any) => {
     return (
-        <DivMainPageInnerWrapper>
+        <Wrapper>
             <Slider {...settings}>
                 {props.SliderSecondPartData.map((dialog: { [key: string]: string }) =>
-                    <DivSliderItem>
-                        <ASliderItemLink href="#">
-                            <ImgSlider src={dialog.img}/>
-                            <H3SliderText>{dialog.text}</H3SliderText>
+                    <Item>
+                        <Link href="#">
+                            <Img src={dialog.img}/>
+                            <Text>{dialog.text}</Text>
                             <Button to="/">{buttonText}</Button>
-                        </ASliderItemLink>
-                    </DivSliderItem>
+                        </Link>
+                    </Item>
                 )}
             </Slider>
-        </DivMainPageInnerWrapper>
+        </Wrapper>
     )
 }
 
