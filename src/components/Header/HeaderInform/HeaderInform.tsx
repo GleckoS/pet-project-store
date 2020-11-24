@@ -32,7 +32,7 @@ const PhoneLink = styled.a`
     }
 `
 
-const HeaderInform = (props: any) => {
+const HeaderInform = () => {
     return(
         <Wrapper>
             <Container>

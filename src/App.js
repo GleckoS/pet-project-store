@@ -123,25 +123,27 @@ function App(props) {
         <Router>
             <Header/>
 
-            {/*<Switch>
-                Main page
+            <Switch>
+
+                {/*Main page*/}
                 <Route exact path="/" render={() => <MainPageContainer/>}/>
-                Item page
+
+                {/*Item page*/}
                 {
                     Urls.map(item =>
                         <Route exact path={"/" + item.url} render={() => <ProductPageContainer url={item.url}/>}/>
                     )
                 }
-                Inform pages
+
+                {/*Inform pages*/}
                 <Route exact path="/about" render={() => <About/>}/>
                 <Route exact path="/delivery" render={() => <Delivery/>}/>
                 <Route exact path="/privacy" render={() => <Privacy/>}/>
                 <Route exact path="/terms" render={() => <Terms/>}/>
                 <Route exact path="/contact" render={() => <Contact/>}/>
                 <Route exact path="/sitemap" render={() => <SiteMap/>}/>
-                Other pages
 
-                Account pages
+                {/*Account pages*/}
                 <Route exact path="/my-account" render={() => <MyAccount/>}/>
                 <Route exact path="/login" render={() => <Login/>}/>
                 <Route exact path="/register" render={() => <Registration/>}/>
@@ -150,7 +152,7 @@ function App(props) {
 
             </Switch>
 
-            <Footer/>*/}
+            <Footer/>
         </Router>
     );
 }
