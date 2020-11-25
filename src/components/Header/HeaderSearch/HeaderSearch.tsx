@@ -6,6 +6,7 @@ import {Images} from "../../../common/textConst/images";
 
 const Wrapper = styled.section`
     margin-bottom: 24px;
+    padding: 0 0 0 10px;
 `
 const SectionContainer = styled(PageContainer)`
     height: 55px;
@@ -16,11 +17,20 @@ const Logo = styled.h1`
     margin: 0;
     width: 285px;
     padding: 0 15px 0 0;
+    @media (max-width: 988px) {
+        width: auto;
+    }
 `
 const Search = styled.div`
     float: left;
     position: relative;
     width: 509px;
+    @media (max-width: 1196px) {
+        width: 278px;
+    }
+    @media (max-width: 988px) {
+        width: 182px;
+    }
 `
 const Input = styled.input`
     width: calc(100% - 60px);
@@ -34,6 +44,7 @@ const Input = styled.input`
     &:focus{
         box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
     }
+   
 `
 const Button = styled.button`
     position: absolute;
@@ -77,6 +88,10 @@ const Shipping = styled(NavLink)`
         bottom: -6px;
         transform: scale(0.45) rotate(50deg);
     }
+    @media (max-width: 988px) {
+        width: 95px;
+        letter-spacing: 0;
+    }
 `
 const Deals = styled(NavLink)`
     display: inline-block;
@@ -101,6 +116,9 @@ const Deals = styled(NavLink)`
         left: -25px;
         bottom: -22px;
         transform: scale(0.25);
+    }
+    @media (max-width: 988px) {
+        width: 95px;
     }
 `
 

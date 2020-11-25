@@ -4,8 +4,7 @@ import {PageContainer} from "../../../common/selectors/StyledComponents";
 import {NavLink} from "react-router-dom";
 
 const Wrapper = styled.section`
-    padding-top: 6px;
-    padding-bottom: 5px;
+    padding: 6px 10px 5px;
     margin-bottom: 24px;
     background: #f6f6f6;
     font-size: 11px;

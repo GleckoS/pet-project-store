@@ -3,45 +3,6 @@ import styled from "@emotion/styled";
 import {PageContainer} from "../../../common/selectors/StyledComponents";
 import {NavLink} from "react-router-dom";
 
-const Wrapper = styled.section`
-    background: #E8CABA;
-    height: 47px;
-    margin-bottom: 24px;
-`
-const Container = styled(PageContainer)`
-    display: flex;
-    justify-content: space-between;
-    height: 47px;
-`
-const Counter = styled.button`
-    border: none;
-    background-color: transparent;
-    height: 100%;
-    cursor: pointer;
-`
-const NavItem = styled.li`
-    display: inline-block;
-    line-height: 47px;
-`
-const Dropdown = styled.li`
-    position: relative;
-    display: inline-block;
-    &:hover{
-        div{
-            display: block;
-        }
-    }
-`
-const DropdownContent = styled.div`
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-`
-
 const mainNavData =
     [
         {
@@ -193,6 +154,74 @@ const Data =
         }
     ]
 
+const Wrapper = styled.section`
+    background: #E8CABA;
+    height: 47px;
+    margin-bottom: 24px;
+`
+const Container = styled(PageContainer)`
+    display: flex;
+    justify-content: space-between;
+    height: 47px;
+`
+const Counter = styled.button`
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    cursor: pointer;
+`
+const NavItem = styled.li`
+    display: inline-block;
+    line-height: 47px;
+`
+const Link = styled(NavLink)`
+    color: #ffffff;
+    font-weight: 600;
+    padding: 20px;
+    &:hover{
+        color: #000000;
+    }
+    @media (max-width: 1196px) {
+        padding: 10px;
+    } 
+`
+const DropItem = styled.li`
+    padding: 0 0 10px;
+`
+const DropLink = styled(NavLink)`
+    color: #000;
+    font-weight: 400; 
+    padding: 5px;
+    &:hover{
+        color: #E8CABA;
+    } 
+`
+const Dropdown = styled.li`
+    position: relative;
+    display: inline-block;
+    &:hover{
+        div{
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+`
+const DropdownContent = styled.div`
+    display: none;
+    transition: 1s ease;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    text-align: left;
+    background-color: #f9f9f9;
+    width: 764px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    height: 0;
+`
+
 const HeaderSearch = () => {
     return (
         <Wrapper>
@@ -200,19 +229,19 @@ const HeaderSearch = () => {
                 <div>
                     <ul>
                         <Dropdown>
-                            <NavLink to="/bras">BRAS</NavLink>
+                            <Link to="/bras">BRAS</Link>
                             <DropdownContent>
                                 {Data.map(item =>
                                     <ul>
                                         {item.list.map(element =>
-                                            <li><NavLink to={element.link}>{element.name}</NavLink></li>
+                                            <DropItem><DropLink to={element.link}>{element.name}</DropLink></DropItem>
                                         )}
                                     </ul>
                                 )}
                             </DropdownContent>
                         </Dropdown>
                         {mainNavData.map(item =>
-                            <NavItem><NavLink to={item.link}>{item.name}</NavLink></NavItem>
+                            <NavItem><Link to={item.link}>{item.name}</Link></NavItem>
                         )}
                     </ul>
                 </div>
