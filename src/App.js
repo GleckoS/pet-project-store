@@ -121,7 +121,7 @@ function App(props) {
     props.SetUsersThunk()
     return (
         <Router>
-            <Header/>
+            {/* <Header/>*/}
 
             <Switch>
 
@@ -152,7 +152,7 @@ function App(props) {
 
             </Switch>
 
-            <Footer/>
+            {/*  <Footer/>*/}
         </Router>
     );
 }
