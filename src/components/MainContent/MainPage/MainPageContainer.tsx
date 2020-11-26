@@ -1,32 +1,20 @@
 import React, {Component} from "react"
 import MainPage from "./MainPage"
 import {connect} from "react-redux"
-import {
-    setFifthPartData, setFirstPartData,
-    setFourthPartData, setSecondPartData,
-    setThirdPartData
-} from "../../../redux/SliderReducer"
+import {setNewsLetter, setSlidersData} from "../../../redux/MainPageReducer"
 import Loading from "../../../common/components/Loading"
 
 type Props = {
-    setFirstPartData: any,
-    setSecondPartData: any,
-    setThirdPartData: any,
-    setFourthPartData: any,
-    setFifthPartData: any,
     RegisterThunk: any,
     SetUsersThunk: any,
+    setSlidersData: any,
     isFetching: string
 }
 
 class MainPageContainer extends Component<Props, {}> {
 
     componentDidMount() {
-        this.props.setFirstPartData()
-        this.props.setSecondPartData()
-        this.props.setThirdPartData()
-        this.props.setFourthPartData()
-        this.props.setFifthPartData()
+        this.props.setSlidersData()
     }
 
     render() {
@@ -45,19 +33,12 @@ class MainPageContainer extends Component<Props, {}> {
 
 let mapStateToProps = (state: any) => {
     return {
-        SliderFirstPartData: state.sliderReducer.SliderFirstPartData,
-        SliderSecondPartData: state.sliderReducer.SliderSecondPartData,
-        SliderThirdPartData: state.sliderReducer.SliderThirdPartData,
-        SliderFourthPartData: state.sliderReducer.SliderFourthPartData,
-        SliderFifthPartData: state.sliderReducer.SliderFifthPartData,
+        SlidersData: state.sliderReducer.SlidersData,
         isFetching: state.sliderReducer.isFetching
     }
 }
 
 export default connect(mapStateToProps, {
-    setFirstPartData,
-    setSecondPartData,
-    setThirdPartData,
-    setFourthPartData,
-    setFifthPartData
+    setNewsLetter,
+    setSlidersData
 })(MainPageContainer)

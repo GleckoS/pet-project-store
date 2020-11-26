@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, PageContainer} from "../../../../common/selectors/StyledComponents";
+import {Button, ErrorMessage, PageContainer, SubmitButton} from "../../../../common/selectors/StyledComponents";
 import styled from "@emotion/styled";
 
 const firstTitle = "Special Offer",
@@ -15,13 +15,12 @@ const firstTitle = "Special Offer",
     placeHolder = "Your Email Address",
     formTitle = "SIGN UP TO OUR NEWSLETTER",
     formButton = 'SUBSCRIBE NOW'
-const FlexBox = styled.div`
-    
+
+const Flex = styled.div`
     display: flex;
     justify-content: space-evenly;
-
 `
-const FlexItem = styled.div`
+const Item = styled.div`
     position: relative;
     width: 33.3%;
     margin: 0 15px;
@@ -29,7 +28,7 @@ const FlexItem = styled.div`
     background-color: #E8CABA;
     border-radius: 6px;
 `
-const FlexLink = styled.a`
+const Link = styled.a`
     position: absolute;
     top: 0;
     left: 0;
@@ -46,13 +45,13 @@ const FlexLink = styled.a`
             }
         }
 `
-const AltFlexLink = styled(FlexLink)`
+const AltLink = styled(Link)`
     background: transparent;
     &:hover{
         background: rgba(0,0,0,.07);
     }
 `
-const FlexImg = styled.img`
+const Img = styled.img`
     position: absolute;
     top: 0;
     left: 0;
@@ -61,26 +60,26 @@ const FlexImg = styled.img`
     border-radius: 6px;
     background-image: url(${(props: { img: string | null }) => props.img});
 `
-const FlexContent = styled.div`
+const Content = styled.div`
     pointer-events: none;
     position: absolute;
     bottom: 35%;
     width: 100%;
     text-align: center;
 `
-const AltFlexContent = styled(FlexContent)`
+const AltContent = styled(Content)`
     color: #fff;
 `
-const FlexTitle = styled.p`
+const Title = styled.p`
     font-size: 12px;
     line-height: 18px;
     font-weight: 300;
 `
-const AltFlexTitle = styled(FlexTitle)`
+const AltTitle = styled(Title)`
     font-size: 14px;
     font-weight: 700;
 `
-const FlexText = styled.h3`
+const Text = styled.h3`
     font-size: 24px;
     line-height: 1.21em;
     font-weight: 300;
@@ -98,23 +97,23 @@ const FlexText = styled.h3`
         transform: translateX(-50%);
     }
 `
-const AltFlexText = styled.h3`
+const AltText = styled.h3`
     font-size: 22px;
     font-weight: 300;
     letter-spacing: .3px;
     margin: 0;
     padding: 0;
 `
-const AltFlexPseudoText = styled.h3`
+const AltPseudoText = styled.h3`
     padding: 0 15px;
 `
-const FlexButton = styled(Button)`
+const FButton = styled(Button)`
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 `
-const AltFlexButton = styled(FlexButton)`
+const AltButton = styled(FButton)`
     background-color: transparent;
     &::after{
         content: "";
@@ -167,52 +166,53 @@ const InputWrapper = styled.div`
             box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
             }
 `
-const InputButton = styled(Button)`
+const InputButton = styled(SubmitButton)`
     margin: 0 0 0 20px;
     height: 100%;
+    width: 160px;
     padding: 15px;
 `
 
-const InformPart = () => {
-
+const InformPart = (props: any) => {
     return (
         <PageContainer>
-            <FlexBox>
-                <FlexItem>
-                    <FlexImg img={firstImg}/>
-                    <FlexLink/>
-                    <FlexContent>
-                        <FlexTitle>{firstTitle}</FlexTitle>
-                        <FlexText>{firstText}</FlexText>
-                    </FlexContent>
-                    <FlexButton to="/">{buttonText}</FlexButton>
-                </FlexItem>
-                <FlexItem>
-                    <FlexImg img={secondImg}/>
-                    <FlexLink/>
-                    <FlexContent>
-                        <FlexTitle>{secondTitle}</FlexTitle>
-                        <FlexText>{secondText}</FlexText>
-                    </FlexContent>
-                    <FlexButton to="/">{buttonText}</FlexButton>
-                </FlexItem>
-                <FlexItem>
-                    <AltFlexLink/>
-                    <AltFlexContent>
-                        <AltFlexTitle>{thirdTitle}</AltFlexTitle>
-                        <AltFlexText>{thirdText}</AltFlexText>
-                        <AltFlexPseudoText>{thirdPseudoText}</AltFlexPseudoText>
-                    </AltFlexContent>
-                    <AltFlexButton to="/">{buttonText}</AltFlexButton>
-                </FlexItem>
-            </FlexBox>
+            <Flex>
+                <Item>
+                    <Img img={firstImg}/>
+                    <Link/>
+                    <Content>
+                        <Title>{firstTitle}</Title>
+                        <Text>{firstText}</Text>
+                    </Content>
+                    <Button to="/">{buttonText}</Button>
+                </Item>
+                <Item>
+                    <Img img={secondImg}/>
+                    <Link/>
+                    <Content>
+                        <Title>{secondTitle}</Title>
+                        <Text>{secondText}</Text>
+                    </Content>
+                    <Button to="/">{buttonText}</Button>
+                </Item>
+                <Item>
+                    <AltLink/>
+                    <AltContent>
+                        <AltTitle>{thirdTitle}</AltTitle>
+                        <AltText>{thirdText}</AltText>
+                        <AltPseudoText>{thirdPseudoText}</AltPseudoText>
+                    </AltContent>
+                    <AltButton to="/">{buttonText}</AltButton>
+                </Item>
+            </Flex>
             <FormWrapper>
                 <p>{formTitle}</p>
-                <form>
+                <form onSubmit={props.handleSubmit(props.onSubmit)}>
                     <InputWrapper>
-                        <input placeholder={placeHolder}/>
-                        <InputButton to="/">{formButton}</InputButton>
+                        <input name="email" placeholder={placeHolder} ref={props.register({ required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}/>
+                        <InputButton type="submit">{formButton}</InputButton>
                     </InputWrapper>
+                    {props.errors.email && <ErrorMessage>Please input correct Email!</ErrorMessage>}
                 </form>
             </FormWrapper>
         </PageContainer>

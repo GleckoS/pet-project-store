@@ -63,9 +63,7 @@ export const UnLogInThunk = () => {
 
 export const SetUsersThunk = () => {
     return (dispatch) => {
-        fetch(`http://localhost:8000/users`, {
-            method: 'GET'
-        })
+        fetch(`http://localhost:8000/users`)
             .then(res => res.json())
             .then(
                 (response) => {

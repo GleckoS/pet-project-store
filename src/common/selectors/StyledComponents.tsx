@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled";
 import {NavLink} from "react-router-dom";
 
-export const Button = styled(NavLink)`
+export const Button = styled(NavLink)` /*link*/
     border: none;
     outline: none;
     color: #ffffff;
@@ -95,4 +95,7 @@ export const InputLabel = styled.label`
         content: "*";
         color: red;
     }
+`
+export const ErrorMessage = styled.span`
+    color: red;
 `

@@ -2,11 +2,11 @@ Pages       Media    CSS    REDUX    Structure            AIP ->  all in props  
                                                           SIC ->  styled in components              1196px
 About         +       +       +        AIP                                                          988px
                                                                                                     764px
-Contact       +       +       -        SIC
+Contact       +       +       -        SIC                                    Планы:
 
-Delivery    >764      +       +        AIP
+Delivery    >764      +       +        AIP                1) Добавить каждому пользователю карзину и вишлист
 
-Privacy       +       +       +        SIC
+Privacy       +       +       +        SIC                2)
 
 SiteMap     >764     +/-      -        SIC
 

@@ -1,6 +1,6 @@
 import {applyMiddleware, combineReducers, createStore} from "redux"
 import thunkMiddleware from "redux-thunk"
-import SliderDataReducer from "./SliderReducer"
+import SliderDataReducer from "./MainPageReducer"
 import ItemsDataReducer from "./itemPageReducer"
 import LoginReducer from "./LoginReducer";
 

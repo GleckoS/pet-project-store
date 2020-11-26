@@ -172,6 +172,11 @@ const Counter = styled.button`
     background-color: transparent;
     height: 100%;
     cursor: pointer;
+    color: #ffffff;
+    font-weight: 600;
+    &:hover{
+        color: #000000;
+    }
 `
 const NavItem = styled.li`
     display: inline-block;
