@@ -158,6 +158,9 @@ const Wrapper = styled.section`
     background: #E8CABA;
     height: 47px;
     margin-bottom: 24px;
+    @media(max-width: 764px){
+        display: none;
+    }
 `
 const Container = styled(PageContainer)`
     display: flex;

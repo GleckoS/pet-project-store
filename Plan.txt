@@ -4,7 +4,7 @@ About         +       +       +        AIP                                      
                                                                                                     764px
 Contact       +       +       -        SIC
 
-Delivery    >764      +       +        AIP              1* -> 2 компонента навигации у 1 д: нон  у 2 д: блок
+Delivery    >764      +       +        AIP
 
 Privacy       +       +       +        SIC
 
@@ -12,6 +12,6 @@ SiteMap     >764     +/-      -        SIC
 
 Terms         +       +       +        SIC
 
-Header      >764 1*  DROP     -        SIC
+Header        +      DROP     -        SIC
 
 Footer      >764     +/-      +        AIP

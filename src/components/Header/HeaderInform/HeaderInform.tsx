@@ -9,6 +9,10 @@ const Wrapper = styled.section`
     background: #f6f6f6;
     font-size: 11px;
     line-height: 16px;
+    @media(max-width: 764px){
+    margin-bottom: 12px;
+    
+    }
 `
 const Container = styled(PageContainer)`
     display: flex;
@@ -21,6 +25,11 @@ const Item = styled.span`
        &:hover{
           color: #E8CABA;
        }
+    }
+`
+const PhoneInf = styled.span`
+    @media(max-width: 764px){
+        display: none;
     }
 `
 const PhoneLink = styled.a`
@@ -37,7 +46,7 @@ const HeaderInform = () => {
             <Container>
                 <div>
                     <span>
-                        24/7  CUSTOMER SERVICE   -
+                        <PhoneInf>24/7  CUSTOMER SERVICE   -</PhoneInf>
                         <PhoneLink href="tel:8001234567"> (800) 123-4567</PhoneLink>
                     </span>
                 </div>

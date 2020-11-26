@@ -6,9 +6,12 @@ import {Images} from "../../../common/textConst/images";
 
 const Wrapper = styled.section`
     margin-bottom: 24px;
-    padding: 0 0 0 10px;
+    padding: 0 10px 0;
+    @media(max-width: 764px){
+        height: 180px;
+    }
 `
-const SectionContainer = styled(PageContainer)`
+const Section = styled(PageContainer)`
     height: 55px;
 `
 const Logo = styled.h1`
@@ -20,6 +23,11 @@ const Logo = styled.h1`
     @media (max-width: 988px) {
         width: auto;
     }
+    @media(max-width: 764px){
+        float: none;
+        width: 175px;
+        margin: 0 auto;
+    }
 `
 const Search = styled.div`
     float: left;
@@ -30,6 +38,11 @@ const Search = styled.div`
     }
     @media (max-width: 988px) {
         width: 182px;
+    }
+    @media(max-width: 764px){
+        float: none;
+        width: calc(100% - 48px);
+        margin-top: 9px;
     }
 `
 const Input = styled.input`
@@ -43,6 +56,11 @@ const Input = styled.input`
     font: 300 12px/16px "Hind",sans-serif;
     &:focus{
         box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
+    }
+    @media(max-width: 764px){
+        float: none;
+        width: 100%;
+        padding: 10px 30px 10px 18px;
     }
    
 `
@@ -63,6 +81,11 @@ const ButtonImg = styled.img`
 const Other = styled.div`
     float: left;
     text-align: left;
+    @media(max-width: 764px){
+        float: none;
+        display: flex;
+        flex-direction: column;
+    }
 `
 const Shipping = styled(NavLink)`
     display: inline-block;
@@ -86,11 +109,23 @@ const Shipping = styled(NavLink)`
         position: absolute;
         left: -10px;
         bottom: -6px;
-        transform: scale(0.45) rotate(50deg);
+        transform: scale(0.45) rotate(40deg);
     }
     @media (max-width: 988px) {
         width: 95px;
         letter-spacing: 0;
+    }
+    @media(max-width: 764px){
+        font-weight: 800;
+        float: none;
+        margin: 9px auto 0;
+        width: calc(100% - 55px);
+        padding: 9px 5px 12px 7%;
+        height: auto;
+        letter-spacing: .8px;
+        &::before{
+            display: none;
+        }
     }
 `
 const Deals = styled(NavLink)`
@@ -120,12 +155,24 @@ const Deals = styled(NavLink)`
     @media (max-width: 988px) {
         width: 95px;
     }
+    @media(max-width: 764px){
+        float: none;
+        margin: 9px auto 0;
+        width: calc(100% - 55px);
+        padding: 9px 5px 12px 7%;
+        height: auto;
+        letter-spacing: .8px;
+        font-weight: 800;
+        &::before{
+            display: none;
+        }
+    }
 `
 
 const HeaderNav = () => {
     return (
         <Wrapper>
-            <SectionContainer>
+            <Section>
                 <Logo>
                     <NavLink to="/"><img alt="logo"
                                          src="https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/logo-175x47.png"/></NavLink>
@@ -142,7 +189,7 @@ const HeaderNav = () => {
                         Free Shipping WORLDWIDE
                     </Shipping>
                 </Other>
-            </SectionContainer>
+            </Section>
         </Wrapper>
     )
 }
