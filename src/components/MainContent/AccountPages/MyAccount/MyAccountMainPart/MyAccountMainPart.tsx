@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import styled from "@emotion/styled";
+import {Images} from "../../../../../common/textConst/images";
 
 const MyAccountMainPart = () => {
 
@@ -24,7 +25,7 @@ const MyAccountMainPart = () => {
                         },
                         {
                             title: "Wishlist",
-                            link: "/"
+                            link: "/wish-list"
                         }
                     ]
             },
@@ -98,7 +99,7 @@ const MyAccountMainPart = () => {
       margin: 0 0 0 20px;
       position: relative;
       &::before{
-          content: url("./img/rightArrow.png");
+          content: url(${Images.rightArrow});
           color: #DBAD94;
           position: absolute;
           left: -20px;

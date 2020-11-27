@@ -11,22 +11,9 @@
       "basket": [],
       "wish": [],
       "id": 1
-    },
-    {
-      "firstName": "Инна",
-      "lastName": "Бринкис",
-      "email": "shevabogdan16@gmail.com",
-      "phoneNumber": "576325417",
-      "password": "123456",
-      "passwordConfirm": "123456",
-      "newsletter": "1",
-      "basket": [],
-      "wish": [],
-      "id": 2
     }
   ],
-  "newsletter": [
-  ],
+  "newsletter": [],
   "sliders": {
     "firstSlider": [
       {

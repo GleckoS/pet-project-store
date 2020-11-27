@@ -7,27 +7,27 @@ import {connect} from "react-redux";
 import {LogInThunk} from "../../../../redux/LoginReducer";
 import {Redirect} from "react-router-dom"
 
+const pageTitle = "login"
+
+const leftPart =
+    {
+        title: "NEW CUSTOMER",
+        subTitle: "Register",
+        text: "By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.",
+        buttonText: "CONTINUE"
+    }
+
+const rightPart =
+    {
+        title: "RETURNING CUSTOMER",
+        subTitle: "I am a returning customer",
+        firstButton: "LOGIN",
+        secondButton: "Forgot password?",
+        firstLabel: "E-mail",
+        secondLabel: "Password"
+    }
+
 const Login = (props: any) => {
-
-    const pageTitle = "login"
-
-    const leftPart =
-        {
-            title: "NEW CUSTOMER",
-            subTitle: "Register",
-            text: "By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.",
-            buttonText: "CONTINUE"
-        }
-
-    const rightPart =
-        {
-            title: "RETURNING CUSTOMER",
-            subTitle: "I am a returning customer",
-            firstButton: "LOGIN",
-            secondButton: "Forgot password?",
-            firstLabel: "E-mail",
-            secondLabel: "Password"
-        }
 
     const {register, handleSubmit} = useForm();
     const onSubmit = (data: { [key: string]: string }) => {
@@ -56,9 +56,6 @@ const Login = (props: any) => {
         } else {
             alert("Введён неправильный логин или пароль!")
         }
-
-
-        //TODO: доделать логин
     }
     return (
         <>

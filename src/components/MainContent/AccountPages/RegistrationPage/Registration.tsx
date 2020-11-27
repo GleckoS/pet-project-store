@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import {PageContainer} from "../../../../common/selectors/StyledComponents"
 import PageTopInform from "../../../../common/components/PageTitle"
 import {useForm} from "react-hook-form";
@@ -105,17 +105,31 @@ const Registration = (props: any) => {
 
 
     const {register, handleSubmit, errors, watch} = useForm();
-    const onSubmit = (data: any) => {
-        props.RegisterThunk(data)
-        props.SetUsersThunk()
+    let [isRegister, setRegister] = useState(false)
 
-        //TODO: Redirect onSubmit
+    const onSubmit = (data: any) => {
+        /*Проверка на уникальность Email  (Вместо back-end)*/
+        let isUnique = true
+        for(let i = 0; i < props.userList.length; i++){
+            debugger
+            if(data.email === props.userList[i].email){
+                isUnique = false
+                break
+            }
+        }
+        if(isUnique){
+            props.RegisterThunk(data)
+            props.SetUsersThunk()
+            setRegister(true)
+        } else{
+            alert("Такой пользователь уже зарегистрирован!")
+        }
         //TODO: Решить проблему с валидацией
     }
 
     return (
         <>
-            {props.isLogged
+            {props.isLogged || isRegister
                 ? <Redirect to="/my-account"/>
                 : <PageContainer>
                     <PageTopInform pageTitle={pageTitle}/>
@@ -136,7 +150,8 @@ const Registration = (props: any) => {
 
 const mapStateToProps = (state: any) => {
     return{
-        isLogged: state.loginReducer.isLogged
+        isLogged: state.loginReducer.isLogged,
+        userList: state.loginReducer.userList
     }
 }
 

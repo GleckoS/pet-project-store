@@ -5,8 +5,7 @@ let initialSliderState = {
 }
 const LOGIN = "LOGIN",
     UN_LOGIN = "UN_LOGIN",
-    SET_USERS = "SET_USERS",
-    SET_NEW_USER = "SET_NEW_USER"
+    SET_USERS = "SET_USERS"
 
 const LoginReducer = (state = initialSliderState, action) => {
     switch (action.type) {
@@ -31,11 +30,6 @@ const LoginReducer = (state = initialSliderState, action) => {
                 userList: action.userList
             }
         }
-        case SET_NEW_USER: {
-            return {
-                ...state
-            }
-        }
         default: {
             return state
         }
@@ -47,7 +41,6 @@ export default LoginReducer
 const logIn = (email, password, id) => ({type: LOGIN, email, password, id})
 const unLogIn = () => ({type: UN_LOGIN})
 const setUsers = (userList) => ({type: SET_USERS, userList})
-const setNewUser = () => ({type: SET_NEW_USER})
 
 export const LogInThunk = (email, password, id) => {
     return (dispatch) => {
@@ -80,7 +73,7 @@ export const RegisterThunk = (userInform) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userInform)
+            body: JSON.stringify({...userInform, wish: [], cart: []})
         })
             .then(
                 () => {
