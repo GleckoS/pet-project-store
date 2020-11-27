@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
-import {PageContainer} from "../../../../common/selectors/StyledComponents";
+import {Button, PageContainer} from "../../../../common/selectors/StyledComponents";
 
 const buttonText = "SHOP COLLECTION"
 
@@ -17,11 +17,13 @@ const settings = {
 }
 
 const SliderWrapper = styled.div`
+    position: relative;
     max-width: 1170px;
     height: 584px;
     border-radius: 10px;
     background-image: url( ${(props: { img: string }) => props.img});
     background-size: cover;
+    background-position: center;
     @media (max-width: 1200px) {
         width: 940px;
         height: 465px;
@@ -30,33 +32,32 @@ const SliderWrapper = styled.div`
 const Wrapper = styled(PageContainer)`
 `
 const Text = styled.h3`
+    text-align: left;
     padding-top: 110px;
-    padding-left: 60px;
-    font-size: 60px;
+    padding-left: 90px;
+    font-size: 68px;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
-    max-width: 400px;
+    max-width: 500px;
     line-height: 60px;
+    margin-bottom: 30px;
+    color: #000000;
 `
-const Button = styled.a`
+const Link = styled(Button)`
+    position: absolute;
+    left: 95px;
+    font-size: 16px;
     padding: 19px 26px;
-    margin-left: 60px;
-    color: white;
-    background-color: #E8CABA;
-    border-radius: 5px;
-        &:hover{
-            background-color: #DBAD94;
-        }
 `
 
 const SliderFirstPart = (props: any) => {
     return (
         <Wrapper>
             <Slider {...settings}>
-                {props.SliderFirstPartData.map((dialog: { [key: string]: string }) =>
+                {props.SliderData.map((dialog: { [key: string]: string }) =>
                     <SliderWrapper img={dialog.img}>
                         <Text>{dialog.text}</Text>
-                        <Button href="#">{buttonText}</Button>
+                        <Link to="#">{buttonText}</Link>
                     </SliderWrapper>
                 )}
             </Slider>

@@ -45,35 +45,43 @@
     "secondSlider": [
       {
         "text": "PUSH-UP",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-1-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-1-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "PANTIES",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-2-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-2-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "HOSIERY",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-3-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-3-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "BRIDAL",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-4-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-4-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "SLEEP",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-5-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-5-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "SWIM",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-6-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-6-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "STOCKINGS",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-7-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-7-240x200.png",
+        "link": "push-up"
       },
       {
         "text": "ACCESSORIES",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-8-240x200.png"
+        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-8-240x200.png",
+        "link": "push-up"
       }
     ],
     "thirdSlider": [

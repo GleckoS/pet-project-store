@@ -16,9 +16,26 @@ const firstTitle = "Special Offer",
     formTitle = "SIGN UP TO OUR NEWSLETTER",
     formButton = 'SUBSCRIBE NOW'
 
+/*
+@media(max-width: 1196px){
+
+}
+@media(max-width: 988px){
+
+}
+@media(max-width: 764px){
+
+}
+*/
+
 const Flex = styled.div`
     display: flex;
     justify-content: space-evenly;
+    color: #000000;
+    @media(max-width: 764px){
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 const Item = styled.div`
     position: relative;
@@ -27,6 +44,18 @@ const Item = styled.div`
     height: 247px;
     background-color: #E8CABA;
     border-radius: 6px;
+    
+    @media(max-width: 1196px){
+        height: 195px;
+    }
+    @media(max-width: 988px){
+        height: 146px;
+    }
+    @media(max-width: 764px){
+        margin: 15px auto;
+        width: 340px;
+        height: 225px;
+    }
 `
 const Link = styled.a`
     position: absolute;
@@ -74,6 +103,9 @@ const Title = styled.p`
     font-size: 12px;
     line-height: 18px;
     font-weight: 300;
+    @media(max-width: 988px){
+        margin-bottom: 0;
+    }
 `
 const AltTitle = styled(Title)`
     font-size: 14px;
@@ -96,6 +128,10 @@ const Text = styled.h3`
         left: 50%;
         transform: translateX(-50%);
     }
+    @media(max-width: 988px) and (min-width: 765px){
+        font-size: 14px;
+        letter-spacing: 0;
+    }
 `
 const AltText = styled.h3`
     font-size: 22px;
@@ -103,22 +139,37 @@ const AltText = styled.h3`
     letter-spacing: .3px;
     margin: 0;
     padding: 0;
+    @media(max-width: 988px) and (min-width: 765px){
+        font-size: 12px;
+    }
 `
 const AltPseudoText = styled.h3`
     padding: 0 15px;
+    @media(max-width: 988px) and (min-width: 765px){
+        margin: 0;
+        line-height: 16px;
+    }
 `
 const FButton = styled(Button)`
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    @media(max-width: 1196px){
+        margin-bottom: 30px;
+    }
+    @media(max-width: 988px) and (min-width: 765px){
+        padding: 3px 15px;
+        margin-bottom: 20px;
+    }
 `
 const AltButton = styled(FButton)`
     background-color: transparent;
+    padding: 0!important;
     &::after{
         content: "";
         width: 100%;
-        height: 2px;
+        height: 1px;
         background-color: #ffffff;
         position: absolute;
         bottom: 5px;
@@ -149,28 +200,46 @@ const FormWrapper = styled.div`
         color: #7f8187;
         margin-bottom: 26px;
     }
+        @media(max-width: 634px){
+        height: 170px;
+    }
 `
 const InputWrapper = styled.div`
     text-align: left;
     display: flex;
-    justify-content: center;
-        & input{
-        width: 411px;
-        display: inline-block;
-        color: #7f8187;
-        height: 35px;
-        padding: 5.5px 10px 5.5px 33px;
-        border: none;
-        background-color: #fff;
-            &:focus{
-            box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
-            }
+    justify-content: center; 
+    @media(max-width: 634px){
+        flex-direction: column;
+    }
+`
+const Input = styled.input`
+    width: 411px;
+    display: inline-block;
+    color: #7f8187;
+    height: 35px;
+    padding: 5.5px 10px 5.5px 33px;
+    border: none;
+    background-color: #fff;
+    &:focus{
+        box-shadow: 0 0 3px 3px rgba(0,0,0,.075);
+    }
+    @media(max-width: 634px){
+        margin: 0 auto;
+        width: 320px;
+    }
+    @media(max-width: 420px){
+        margin: 0 auto;
+        width: 240px;
+    }
 `
 const InputButton = styled(SubmitButton)`
     margin: 0 0 0 20px;
     height: 100%;
     width: 160px;
     padding: 15px;
+    @media(max-width: 634px){
+        margin: 25px auto 5px;
+    }
 `
 
 const InformPart = (props: any) => {
@@ -184,7 +253,7 @@ const InformPart = (props: any) => {
                         <Title>{firstTitle}</Title>
                         <Text>{firstText}</Text>
                     </Content>
-                    <Button to="/">{buttonText}</Button>
+                    <FButton to="/">{buttonText}</FButton>
                 </Item>
                 <Item>
                     <Img img={secondImg}/>
@@ -193,7 +262,7 @@ const InformPart = (props: any) => {
                         <Title>{secondTitle}</Title>
                         <Text>{secondText}</Text>
                     </Content>
-                    <Button to="/">{buttonText}</Button>
+                    <FButton to="/">{buttonText}</FButton>
                 </Item>
                 <Item>
                     <AltLink/>
@@ -209,7 +278,7 @@ const InformPart = (props: any) => {
                 <p>{formTitle}</p>
                 <form onSubmit={props.handleSubmit(props.onSubmit)}>
                     <InputWrapper>
-                        <input name="email" placeholder={placeHolder} ref={props.register({ required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}/>
+                        <Input name="email" placeholder={placeHolder} ref={props.register({ required: true, pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/ })}/>
                         <InputButton type="submit">{formButton}</InputButton>
                     </InputWrapper>
                     {props.errors.email && <ErrorMessage>Please input correct Email!</ErrorMessage>}

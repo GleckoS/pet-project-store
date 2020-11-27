@@ -14,7 +14,7 @@ const newText = "NEW!",
 
 const ThirdPartSliderElement = (props: any) => {
 
-    const SliderItem = styled.div`
+    const Item = styled.div`
     margin: 25px auto;
     height: 390px;
     width: 270px;
@@ -22,24 +22,31 @@ const ThirdPartSliderElement = (props: any) => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media(max-width: 988px){
+        width: 220px;
+    }
 `
-    const SliderImg = styled.div`
+    const Img = styled.div`
     align-self: center;
     margin: 0 auto;
     position: relative;
     width: 270px;
     height: 280px;
     background-image: url(${(props: imgData) => props.img});
+    background-position: center;
     opacity: 0.9;
     border-radius: 10px;
     z-index: 0;      
     &:hover{
             background-image: url(${(props: imgData) => props.hover});
             background-color: #dddddd;
-        }
+    }
+    @media(max-width: 988px) and (min-width: 481px){
+        width: 220px;
+    }
 `
 
-    const SliderItemLink = styled.a`
+    const Link = styled.a`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +62,7 @@ const ThirdPartSliderElement = (props: any) => {
         }
     }
 `
-    const SliderText = styled.h3`
+    const Text = styled.h3`
     font-size: 16px;
     color: #000000;
     letter-spacing: .7px;
@@ -66,7 +73,7 @@ const ThirdPartSliderElement = (props: any) => {
          color: #E8CABA;
       }  
 `
-    const SliderPrice = styled.h4`
+    const Price = styled.h4`
     font-size: 14px;
     color: #000000;
     margin: 0 0 16px;
@@ -84,6 +91,11 @@ const ThirdPartSliderElement = (props: any) => {
     border-radius: 3px;
     color: #ffffff;
     z-index: 3;
+    @media(max-width: 988px) and (min-width: 481px){
+         left: 40px;
+         line-height: 25px;
+         padding: 0 7px;
+    }
 `
     const AdditionalSALE = styled.p`
     position: absolute;
@@ -95,6 +107,11 @@ const ThirdPartSliderElement = (props: any) => {
     border-radius: 3px;
     color: #ffffff;
     z-index: 3;
+    @media(max-width: 988px) and (min-width: 481px){
+         right: 40px;
+         line-height: 25px;
+         padding: 0 7px;
+    }
 `
     const AdditionalButtons = styled.div`
     position: absolute;
@@ -126,8 +143,8 @@ const ThirdPartSliderElement = (props: any) => {
     }
 
     return (
-        <SliderItem>
-            <SliderItemLink href="#">
+        <Item>
+            <Link href="#">
                 {props.new ? <AdditionalNEW>{newText}</AdditionalNEW> : null}
                 {props.discount ? <AdditionalSALE>{saleText}</AdditionalSALE> : null}
                 <AdditionalButtons img={props.img} hover={props.hoverImg}>
@@ -135,12 +152,12 @@ const ThirdPartSliderElement = (props: any) => {
                     <button onClick={Alert}>С</button>
                     <button onClick={Alert}>К</button>
                 </AdditionalButtons>
-                <SliderImg img={props.img} hover={props.hoverImg}/>
-            </SliderItemLink>
-            <SliderText>{props.text}</SliderText>
-            <SliderPrice>{props.price}</SliderPrice>
+                <Img img={props.img} hover={props.hoverImg}/>
+            </Link>
+            <Text>{props.text}</Text>
+            <Price>{props.price}</Price>
             <Button to="#">SHOP NOW</Button>
-        </SliderItem>
+        </Item>
     )
 }
 

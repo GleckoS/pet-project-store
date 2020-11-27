@@ -14,14 +14,14 @@ const settings = {
     draggable: false,
     responsive: [
         {
-            breakpoint: 1170,
+            breakpoint: 1196,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
             }
         },
         {
-            breakpoint: 600,
+            breakpoint: 764,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -39,6 +39,7 @@ const settings = {
 
 const Wrapper = styled(PageContainer)`
     padding-top: 5px;
+    margin-top: 18px;
 `
 const ChangeContainer = styled.div`
     position: relative;
@@ -91,15 +92,15 @@ const SliderThirdPart = (props: any) => {
 
     const currentSlider = () => {
         if (current === 1) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => <SliderElement {...dialog}/>)
+            return props.SliderData.map((dialog: dialogData) => <SliderElement {...dialog}/>)
         } else if (current === 2) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.bestsellers ?
+            return props.SliderData.map((dialog: dialogData) => dialog.bestsellers ?
                 <SliderElement {...dialog}/> : null)
         } else if (current === 3) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.featured ?
+            return props.SliderData.map((dialog: dialogData) => dialog.featured ?
                 <SliderElement {...dialog}/> : null)
         } else if (current === 4) {
-            return props.SliderThirdPartData.map((dialog: dialogData) => dialog.discount ?
+            return props.SliderData.map((dialog: dialogData) => dialog.discount ?
                 <SliderElement {...dialog}/> : null)
         }
     }
@@ -107,7 +108,7 @@ const SliderThirdPart = (props: any) => {
     return (
         <Wrapper>
             <ChangeContainer>
-                <ChangeTitle>{props.SliderThirdPartData.text}</ChangeTitle>
+                <ChangeTitle>{props.SliderData.text}</ChangeTitle>
                 <ChangeList>
                     <li className={`${current === 1 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 1)}>

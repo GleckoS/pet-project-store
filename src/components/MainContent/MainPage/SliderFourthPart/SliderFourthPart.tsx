@@ -59,13 +59,16 @@ const DivMainPageInnerWrapper = styled.div`
 const NewsContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    @media(max-width: 988px){
+        display: block;
+    }
 `
 const LeftContainer = styled.div`
     width: 270px;
     height: 380px;
     position: relative;
     text-align: center;
-    @media (max-width: 1200px) {
+    @media (max-width: 1196px) {
         width: 212px;
         height: 300px;
     }
@@ -77,7 +80,7 @@ const NewsBackGround = styled.img`
     z-index: -1;
     opacity: 0.5;
     border-radius: 6px;
-    @media (max-width: 1200px) {
+    @media (max-width: 1196px) {
         width: 212px;
         height: 300px;
     }
@@ -85,6 +88,9 @@ const NewsBackGround = styled.img`
 const NewsTitle = styled.h5`
     font-size: 11px;
     margin: 100px 0 0 0;
+    @media(max-width: 1196px){ 
+        margin: 50px 0 0 0;
+    }
 `
 const NewsText = styled.p`
     padding: 0 20px;
@@ -99,7 +105,7 @@ const NewsButton = styled(Button)`
 `
 const RightContainer = styled.div`
     position: relative;
-    @media (max-width: 1200px) {
+    @media (max-width: 1196px) {
         width: 700px;
         height: 300px;
     }
@@ -107,7 +113,7 @@ const RightContainer = styled.div`
 const TimerImage = styled.img`
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-    @media (max-width: 1200px) {
+    @media (max-width: 1196px) {
         width: 700px;
         height: 240px;
     }
@@ -120,7 +126,7 @@ const TimerInformWrapper = styled.div`
     bottom: 0;
     height: 81px;
     width: 870px;
-    @media (max-width: 1200px) {
+    @media (max-width: 1196px) {
         width: 700px;
         height: 60px;
     }
@@ -129,7 +135,7 @@ const TimerTitle = styled.h5`
     color: #ffffff;
     font-size: 14px;
     font-weight: 800;
-    margin: 20px 0 0 15px;
+    margin: 5px 0 0 15px;
 `
 const TimerText = styled.p`
     color: #ffffff;
@@ -141,11 +147,14 @@ const TimerText = styled.p`
 const TimerButton = styled(Button)`
     position: absolute;
     right: 20px;
-    top: 26px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: #333333;
     margin: 0;
     &:hover{
         background-color: #000000;
+    }
+    @media(max-width: 1196px){ 
     }
 `
 const CategoryContainer = styled.div`
@@ -205,7 +214,7 @@ const SliderFourthPart = (props: any) => {
                     <p>{sliderTitle}</p>
                 </CategoryTitleWrapper>
                 <Slider {...settings}>
-                    {props.SliderFourthPartData.map((dialog: {[key: string]: string }) =>
+                    {props.SliderData.map((dialog: {[key: string]: string }) =>
                         <CategoryItem href={dialog.link}>
                             <h4>{dialog.text}</h4>
                         </CategoryItem>

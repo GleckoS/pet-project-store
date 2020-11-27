@@ -12,22 +12,22 @@ SiteMap     >764     +/-      -        SIC
 
 Terms         +       +       +        SIC
 
-Header        +      DROP     -        SIC
+Header        +      DROP     -        SIC    *create dropdown menu
 
 Footer      >764     +/-      +        AIP
 
                   Main Page
 
-First         -       -       +        SIC
+First         -       +       +        SIC    *media
 
-Second        -       -       +        SIC
+Second        +       +       +        SIC    *item rework
 
-Third         -       -       +        SIC
+Third         +       +       +        SIC    *search redesign
 
 Fourth        -       -       +        SIC
 
-Fifth         -       -       +        SIC
+Fifth         +       +       +        SIC    *search redesign
 
-Inform        -       -       +        SIC
+Inform        +/-     +       +        SIC
 
                    Item Page

@@ -20,11 +20,11 @@ const MainPage = (props: any) => {
     return (
 
         <React.Fragment>
-            <SliderFirstPart SliderFirstPartData={props.SlidersData.firstSlider}/>
-            <SliderSecondPart SliderSecondPartData={props.SlidersData.secondSlider} />
-            <SliderThirdPart SliderThirdPartData={props.SlidersData.thirdSlider}/>
-            <SliderFourthPart SliderFourthPartData={props.SlidersData.fourthSlider}/>
-            <SliderThirdPart SliderThirdPartData={props.SlidersData.fifthSlider}/>
+            <SliderFirstPart SliderData={props.SlidersData.firstSlider}/>
+            <SliderSecondPart SliderData={props.SlidersData.secondSlider} />
+            <SliderThirdPart SliderData={props.SlidersData.thirdSlider}/>
+            <SliderFourthPart SliderData={props.SlidersData.fourthSlider}/>
+            <SliderThirdPart SliderData={props.SlidersData.fifthSlider}/>
             <InformPart onSubmit={onSubmit} register={register} handleSubmit={handleSubmit} errors={errors}/>
         </React.Fragment>
     )
