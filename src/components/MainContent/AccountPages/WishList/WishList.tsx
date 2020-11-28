@@ -2,7 +2,6 @@ import React from "react";
 import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import {PageContainer} from "../../../../common/selectors/StyledComponents";
 import {connect} from "react-redux";
-import {LogInThunk} from "../../../../redux/LoginReducer";
 import {Redirect} from "react-router-dom";
 import WishTable from "./WishTable/WishTable";
 
@@ -11,16 +10,15 @@ const pageTitle = "Wish List"
 const WishList = (props: any) => {
     return (
         <>
-            <PageContainer>
-                <BreadCrumbs pageTitle={pageTitle}/>
-                <WishTable/>
-            </PageContainer>
-            {/*{props.isLogged
-                ? <Redirect to="/my-account"/>
-                : <PageContainer>
+            {props.isLogged
+                ? <PageContainer>
                     <BreadCrumbs pageTitle={pageTitle}/>
+                    <WishTable
+                        currentUser={props.currentUser}
+                    />
                 </PageContainer>
-            }*/}
+                : <Redirect to="/my-account"/>
+            }
         </>
     )
 }
@@ -28,6 +26,7 @@ const WishList = (props: any) => {
 const MapStateToProps = (state: any) => {
     return {
         isLogged: state.loginReducer.isLogged,
+        currentUser: state.loginReducer.currentUser
     }
 }
 

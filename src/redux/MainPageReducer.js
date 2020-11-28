@@ -1,8 +1,10 @@
 let initialSliderState = {
     SlidersData: [],
+    items: [],
     isFetching: true
 }
-const SET_SLIDERS_DATA = "SET_SLIDERS_DATA"
+const SET_SLIDERS_DATA = "SET_SLIDERS_DATA",
+    SET_ITEMS = "SET_ITEMS"
 
 const SliderDataReducer = (state = initialSliderState, action) => {
     switch (action.type) {
@@ -13,6 +15,13 @@ const SliderDataReducer = (state = initialSliderState, action) => {
                 isFetching: false
             }
         }
+        case SET_ITEMS: {
+            return {
+                ...state,
+                items: action.items
+            }
+        }
+
         default: {
             return state
         }
@@ -21,6 +30,7 @@ const SliderDataReducer = (state = initialSliderState, action) => {
 export default SliderDataReducer
 
 const setAllSlidersData = (slidersData) => ({type: SET_SLIDERS_DATA, slidersData})
+const setItemsData = (items) => ({type: SET_ITEMS, items})
 
 export const setSlidersData = () => {
     return (dispatch) => {
@@ -29,6 +39,17 @@ export const setSlidersData = () => {
             .then(
                 (response) => {
                     dispatch(setAllSlidersData(response))
+                }
+            )
+    }
+}
+export const setItems = () => {
+    return (dispatch) => {
+        fetch(`http://localhost:8000/items`)
+            .then(res => res.json())
+            .then(
+                (response) => {
+                    dispatch(setItemsData(response))
                 }
             )
     }

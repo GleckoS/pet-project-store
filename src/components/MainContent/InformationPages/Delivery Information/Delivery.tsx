@@ -83,27 +83,6 @@ const Delivery = () => {
             }
         ]
 
-    const TableWrapper = styled.table`
-    max-width: 100%;
-    margin: 0 auto;
-    border-spacing: 0;
-    & tr{
-        & th{
-         border: 1px solid #ddd;
-         font-size: 14px;
-         font-weight: 400;
-         opacity: .8;
-         text-align: left;
-         padding: 15px 10px;
-         width: 292.5px;
-        }
-    }
-    & :first-child{
-        background-color: #eee;
-    }
-    
-`
-
 
     return (
         <PageContainer>
@@ -114,7 +93,6 @@ const Delivery = () => {
             />
             <Table
                 tableData={tableData}
-                TableWrapper={TableWrapper}
             />
             <DeliveryBottomInform
                 informTitle={bottomInformTitle}

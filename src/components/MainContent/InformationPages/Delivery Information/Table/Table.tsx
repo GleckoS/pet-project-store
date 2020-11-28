@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "@emotion/styled";
 
 const Table = (props: any) => {
 
@@ -30,9 +31,29 @@ const Table = (props: any) => {
 
     {Parser(html)}
 */
+    const TableWrapper = styled.table`
+    max-width: 100%;
+    margin: 0 auto;
+    border-spacing: 0;
+    & tr{
+        & th{
+         border: 1px solid #ddd;
+         font-size: 14px;
+         font-weight: 400;
+         opacity: .8;
+         text-align: left;
+         padding: 15px 10px;
+         width: 292.5px;
+        }
+    }
+    & :first-child{
+        background-color: #eee;
+    }
+    
+`
 
     return (
-        <props.TableWrapper>
+        <TableWrapper>
             {props.tableData.map((item: any) =>
                 <tr>
                     <th>{item.first}</th>
@@ -41,7 +62,7 @@ const Table = (props: any) => {
                     <th>{item.fourth}</th>
                 </tr>
             )}
-        </props.TableWrapper>
+        </TableWrapper>
     )
 }
 

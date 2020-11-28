@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "@emotion/styled";
-import { Button } from "../selectors/StyledComponents";
-
+import {Button} from "../selectors/StyledComponents";
+import {Images} from "../textConst/images";
+import {Redirect} from "react-router-dom";
 
 
 interface imgData {
@@ -46,7 +47,7 @@ const ThirdPartSliderElement = (props: any) => {
     }
 `
 
-    const Link = styled.a`
+    const Link = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,39 +126,69 @@ const ThirdPartSliderElement = (props: any) => {
     opacity: 0;
     pointer-events: none;
     z-index: 1;
-    & button{
-        border-radius: 50%;
-        margin: 5px;
-        border: none;
-        background-color: #f7f7f7;
-        cursor: pointer;
-        pointer-events: auto;
-    }
     &:hover + div{
             background-image: url(${(props: imgData) => props.hover});
             background-color: #dddddd;
-        }
+    }
 `
-    const Alert = () => {
-        alert("!")
+    const AddButton = styled.button`
+    border-radius: 50%;
+    margin: 5px;
+    border: none;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    pointer-events: auto;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    position: relative;
+    &:hover{
+        background-color: #ededed;
+    }
+`
+    const Icon = styled.img`
+    width: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+`
+    let [isRegister, setRegister] = useState(false)
+
+    const WishAdd = () => {
+        debugger
+        props.isLogged ? props.currentUser.wish.push(props.item) : setRegister(true)
+    }
+    const Zoom = () => {
+
+    }
+    const Compare = () => {
+
     }
 
     return (
-        <Item>
-            <Link href="#">
-                {props.new ? <AdditionalNEW>{newText}</AdditionalNEW> : null}
-                {props.discount ? <AdditionalSALE>{saleText}</AdditionalSALE> : null}
-                <AdditionalButtons img={props.img} hover={props.hoverImg}>
-                    <button onClick={Alert}>Л</button>
-                    <button onClick={Alert}>С</button>
-                    <button onClick={Alert}>К</button>
-                </AdditionalButtons>
-                <Img img={props.img} hover={props.hoverImg}/>
-            </Link>
-            <Text>{props.text}</Text>
-            <Price>{props.price}</Price>
-            <Button to="#">SHOP NOW</Button>
-        </Item>
+        <>
+            {isRegister
+                ? <Redirect to="/login"/>
+                : <Item>
+                    <Link>
+                        {props.item.new ? <AdditionalNEW>{newText}</AdditionalNEW> : null}
+                        {props.item.discount ? <AdditionalSALE>{saleText}</AdditionalSALE> : null}
+                        <AdditionalButtons img={props.item.img} hover={props.item.hoverImg}>
+                            <AddButton onClick={WishAdd}><Icon src={Images.emptyHearth}/></AddButton>
+                            <AddButton onClick={Zoom}><Icon src={Images.zoom}/></AddButton>
+                            <AddButton onClick={Compare}><Icon src={Images.doubleArrows}/></AddButton>
+                        </AdditionalButtons>
+                        <Img img={props.item.img} hover={props.item.hoverImg}/>
+                    </Link>
+                    <Text>{props.item.text}</Text>
+                    <Price>{props.item.price}</Price>
+                    <Button to="#">SHOP NOW</Button>
+                </Item>
+            }
+        </>
+
     )
 }
 

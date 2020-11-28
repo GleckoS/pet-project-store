@@ -11,20 +11,25 @@ import { useForm } from "react-hook-form";
 
 const MainPage = (props: any) => {
 
+
+    let thirdSlider = props.items.filter((e: any) => e.id >= 0 && e.id < 5)
+    let fifthSlider = props.items.filter((e: any) => e.id >= 5)
+
     const { register, handleSubmit, errors, reset} = useForm();
     const onSubmit = (data: {email: string}) => {
         props.setNewsLetter({email: data.email})
         reset()
         alert("Вы успешно подписались!") // TODO: изменить на более приятный вид :)
     }
+
     return (
 
         <React.Fragment>
             <SliderFirstPart SliderData={props.SlidersData.firstSlider}/>
             <SliderSecondPart SliderData={props.SlidersData.secondSlider} />
-            <SliderThirdPart SliderData={props.SlidersData.thirdSlider}/>
+            <SliderThirdPart SliderData={thirdSlider} currentUser={props.currentUser} isLogged={props.isLogged}/>
             <SliderFourthPart SliderData={props.SlidersData.fourthSlider}/>
-            <SliderThirdPart SliderData={props.SlidersData.fifthSlider}/>
+            <SliderThirdPart SliderData={fifthSlider} currentUser={props.currentUser} isLogged={props.isLogged}/>
             <InformPart onSubmit={onSubmit} register={register} handleSubmit={handleSubmit} errors={errors}/>
         </React.Fragment>
     )

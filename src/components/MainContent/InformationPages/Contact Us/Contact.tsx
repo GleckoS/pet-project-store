@@ -4,63 +4,69 @@ import {PageContainer} from "../../../../common/selectors/StyledComponents";
 import Location from "./Location/Location";
 import ContactForm from "./ContactForm/ContactForm";
 import {useForm} from "react-hook-form";
+import {connect} from "react-redux";
+import {sendContact} from "../../../../redux/informPageReducer";
 
-const Contact = () => {
+const pageTitle = "Contact Us"
 
-    const pageTitle = "Contact Us"
-
-    const formLegend = "Contact Form",
-        formData =
-            [
-                {
-                    label: "YOUR NAME",
-                    name: "name"
-                },
-                {
-                    label: "E-MAIL ADDRESS",
-                    name: "eMail"
-                },
-                {
-                    label: "ENQUIRY",
-                    name: "enquiry"
-                },
-            ]
-
-    const LocationData =
+const formLegend = "Contact Form",
+    formData =
         [
             {
-                img: "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/logo-175x47.png",
-                fBefore: "",
-                sTitle: "Bralette",
-                sText: "My Company Glasgow D04 89GR",
-                sBefore: ""
+                label: "YOUR NAME",
+                name: "name"
             },
             {
-                fTitle: "Telephone",
-                fText: "(800) 123-4567",
-                fBefore: "./img/phone.png",
-                sTitle: "Fax",
-                sText: "(800) 2345-6789",
-                sBefore: "./img/fax.png"
+                label: "E-MAIL ADDRESS",
+                name: "email"
             },
             {
-                fTitle: "Opening Times",
-                fText: "7 Days a week from 9:00 am to 7:00 pm",
-                fBefore: "./img/key.png",
-                sTitle: "Comments",
-                sText: "We are glad to hear from you",
-                sBefore: "./img/chat.png"
+                label: "ENQUIRY",
+                name: "enquiry"
             },
         ]
 
-    type Inputs = {
-        name: string,
-        Email: string,
-        enquiry: string
-    };
+const LocationData =
+    [
+        {
+            img: "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/logo-175x47.png",
+            fBefore: "",
+            sTitle: "Bralette",
+            sText: "My Company Glasgow D04 89GR",
+            sBefore: ""
+        },
+        {
+            fTitle: "Telephone",
+            fText: "(800) 123-4567",
+            fBefore: "./img/phone.png",
+            sTitle: "Fax",
+            sText: "(800) 2345-6789",
+            sBefore: "./img/fax.png"
+        },
+        {
+            fTitle: "Opening Times",
+            fText: "7 Days a week from 9:00 am to 7:00 pm",
+            fBefore: "./img/key.png",
+            sTitle: "Comments",
+            sText: "We are glad to hear from you",
+            sBefore: "./img/chat.png"
+        },
+    ]
 
-    const {register, handleSubmit} = useForm<Inputs>();
-    const onSubmit = (data: any) => alert(data.name + " | " + data.Email + " | " + data.enquiry);
+type Inputs = {
+    name: string,
+    email: string,
+    enquiry: string
+}
+const Contact = (props: any) => {
+
+
+    const {register, handleSubmit} = useForm<Inputs>()
+
+    const onSubmit = (data: any) => {
+        alert(data.name + " | " + data.email + " | " + data.enquiry)
+        props.sendContact(data)
+    }
 
     return (
         <PageContainer>
@@ -87,4 +93,8 @@ const Contact = () => {
     )
 }
 
-export default Contact
+const MapStateToProps = () => {
+    return {}
+}
+
+export default connect(MapStateToProps, {sendContact})(Contact)

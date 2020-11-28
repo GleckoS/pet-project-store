@@ -10,10 +10,134 @@
       "newsletter": "1",
       "basket": [],
       "wish": [],
-      "id": 1
+      "id": 0
     }
   ],
   "newsletter": [],
+  "contactRequest": [],
+  "items": [
+    {
+      "text": "Grace Lingerie Nude",
+      "price": "$50.00",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
+      "new": false,
+      "discount": false,
+      "featured": false,
+      "bestsellers": true,
+      "id": 0
+    },
+    {
+      "text": "Grace Lingerie Black",
+      "price": "$75.00",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-22-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-24-270x280.png",
+      "new": false,
+      "discount": true,
+      "featured": true,
+      "bestsellers": false,
+      "id": 1
+    },
+    {
+      "text": "Dani Lingerie NudeBlack",
+      "price": "$21.60",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-13-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-14-270x280.png",
+      "new": false,
+      "discount": true,
+      "featured": true,
+      "bestsellers": false,
+      "id": 2
+    },
+    {
+      "text": "Casie Lingerie",
+      "price": "$60.00",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-10-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-12-270x280.png",
+      "new": false,
+      "discount": false,
+      "featured": false,
+      "bestsellers": true,
+      "id": 3
+    },
+    {
+      "text": "Carla Lingerie",
+      "price": "$22.40",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-7-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-9-270x280.png",
+      "new": false,
+      "discount": true,
+      "featured": true,
+      "bestsellers": true,
+      "id": 4
+    },
+    {
+      "text": "Brigit Lingerie",
+      "price": "$19.60",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
+      "new": false,
+      "discount": false,
+      "featured": true,
+      "bestsellers": false,
+      "id": 5
+    },
+    {
+      "text": "Viviana Lingerie",
+      "price": "$19.95",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-58-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-59-270x280.png",
+      "new": true,
+      "discount": false,
+      "featured": false,
+      "bestsellers": false,
+      "id": 6
+    },
+    {
+      "text": "Saskiia Lingerie",
+      "price": "$17.00",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-49-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-51-270x280.png",
+      "new": true,
+      "discount": true,
+      "featured": false,
+      "bestsellers": false,
+      "id": 7
+    },
+    {
+      "text": "Odessa Lingerie",
+      "price": "$35.00",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-46-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-48-270x280.png",
+      "new": true,
+      "discount": false,
+      "featured": false,
+      "bestsellers": true,
+      "id": 8
+    },
+    {
+      "text": "Iana Lingerie ",
+      "price": "$72.00",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
+      "new": false,
+      "discount": false,
+      "featured": false,
+      "bestsellers": false,
+      "id": 9
+    },
+    {
+      "text": "Adlina Lingerie",
+      "price": "$19.20",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-1-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-3-270x280.png",
+      "new": false,
+      "discount": true,
+      "featured": true,
+      "bestsellers": false,
+      "id": 10
+    }
+  ],
   "sliders": {
     "firstSlider": [
       {
@@ -71,68 +195,6 @@
         "link": "push-up"
       }
     ],
-    "thirdSlider": [
-      {
-        "text": "Viviana Lingerie",
-        "price": "$19.95",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-58-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-59-270x280.png",
-        "new": true,
-        "discount": false,
-        "featured": false,
-        "bestsellers": false
-      },
-      {
-        "text": "Saskiia Lingerie",
-        "price": "$17.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-49-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-51-270x280.png",
-        "new": true,
-        "discount": true,
-        "featured": false,
-        "bestsellers": false
-      },
-      {
-        "text": "Odessa Lingerie",
-        "price": "$35.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-46-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-48-270x280.png",
-        "new": true,
-        "discount": false,
-        "featured": false,
-        "bestsellers": true
-      },
-      {
-        "text": "Iana Lingerie ",
-        "price": "$72.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": false,
-        "bestsellers": false
-      },
-      {
-        "text": "Grace Lingerie Nude",
-        "price": "$50.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": false,
-        "bestsellers": true
-      },
-      {
-        "text": "Adlina Lingerie",
-        "price": "$19.20",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-1-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-3-270x280.png",
-        "new": false,
-        "discount": true,
-        "featured": true,
-        "bestsellers": false
-      }
-    ],
     "fourthSlider": [
       {
         "text": "SLIPS & SKIRTS",
@@ -158,268 +220,9 @@
         "text": "STOCKINGS",
         "link": "/stockings"
       }
-    ],
-    "fifthSlider": [
-      {
-        "text": "Grace Lingerie Nude",
-        "price": "$50.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": false,
-        "bestsellers": true
-      },
-      {
-        "text": "Grace Lingerie Black",
-        "price": "$75.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-22-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-24-270x280.png",
-        "new": false,
-        "discount": true,
-        "featured": true,
-        "bestsellers": false
-      },
-      {
-        "text": "Dani Lingerie NudeBlack",
-        "price": "$21.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-13-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-14-270x280.png",
-        "new": false,
-        "discount": true,
-        "featured": true,
-        "bestsellers": false
-      },
-      {
-        "text": "Casie Lingerie",
-        "price": "$60.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-10-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-12-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": false,
-        "bestsellers": true
-      },
-      {
-        "text": "Carla Lingerie",
-        "price": "$22.40",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-7-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-9-270x280.png",
-        "new": false,
-        "discount": true,
-        "featured": true,
-        "bestsellers": true
-      },
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
     ]
   },
-  "firstSlider": [
-    {
-      "text": "The Hottest Collection",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/slide-1-1170x584.jpg"
-    },
-    {
-      "text": "Summer New Arrivals",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/slide-2-1170x584.jpg"
-    },
-    {
-      "text": "Only Top Lingerie",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/slide-3-1170x584.jpg"
-    }
-  ],
-  "secondSlider": [
-    {
-      "text": "PUSH-UP",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-1-240x200.png"
-    },
-    {
-      "text": "PANTIES",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-2-240x200.png"
-    },
-    {
-      "text": "HOSIERY",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-3-240x200.png"
-    },
-    {
-      "text": "BRIDAL",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-4-240x200.png"
-    },
-    {
-      "text": "SLEEP",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-5-240x200.png"
-    },
-    {
-      "text": "SWIM",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-6-240x200.png"
-    },
-    {
-      "text": "STOCKINGS",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-7-240x200.png"
-    },
-    {
-      "text": "ACCESSORIES",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-8-240x200.png"
-    }
-  ],
-  "thirdSlider": [
-    {
-      "text": "Viviana Lingerie",
-      "price": "$19.95",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-58-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-59-270x280.png",
-      "new": true,
-      "discount": false,
-      "featured": false,
-      "bestsellers": false
-    },
-    {
-      "text": "Saskiia Lingerie",
-      "price": "$17.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-49-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-51-270x280.png",
-      "new": true,
-      "discount": true,
-      "featured": false,
-      "bestsellers": false
-    },
-    {
-      "text": "Odessa Lingerie",
-      "price": "$35.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-46-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-48-270x280.png",
-      "new": true,
-      "discount": false,
-      "featured": false,
-      "bestsellers": true
-    },
-    {
-      "text": "Iana Lingerie ",
-      "price": "$72.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
-      "new": false,
-      "discount": false,
-      "featured": false,
-      "bestsellers": false
-    },
-    {
-      "text": "Grace Lingerie Nude",
-      "price": "$50.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
-      "new": false,
-      "discount": false,
-      "featured": false,
-      "bestsellers": true
-    },
-    {
-      "text": "Adlina Lingerie",
-      "price": "$19.20",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-1-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-3-270x280.png",
-      "new": false,
-      "discount": true,
-      "featured": true,
-      "bestsellers": false
-    }
-  ],
-  "fourthSlider": [
-    {
-      "text": "SLIPS & SKIRTS",
-      "link": "/slips"
-    },
-    {
-      "text": "BABYDOLLS",
-      "link": "/babydolls"
-    },
-    {
-      "text": "BODYSUITS",
-      "link": "/bodysuits"
-    },
-    {
-      "text": "CORSETS & BUSTIERS",
-      "link": "/corsets"
-    },
-    {
-      "text": "SEXY LINGERIE",
-      "link": "/sexy"
-    },
-    {
-      "text": "STOCKINGS",
-      "link": "/stockings"
-    }
-  ],
-  "fifthSlider": [
-    {
-      "text": "Grace Lingerie Nude",
-      "price": "$50.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
-      "new": false,
-      "discount": false,
-      "featured": false,
-      "bestsellers": true
-    },
-    {
-      "text": "Grace Lingerie Black",
-      "price": "$75.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-22-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-24-270x280.png",
-      "new": false,
-      "discount": true,
-      "featured": true,
-      "bestsellers": false
-    },
-    {
-      "text": "Dani Lingerie NudeBlack",
-      "price": "$21.60",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-13-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-14-270x280.png",
-      "new": false,
-      "discount": true,
-      "featured": true,
-      "bestsellers": false
-    },
-    {
-      "text": "Casie Lingerie",
-      "price": "$60.00",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-10-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-12-270x280.png",
-      "new": false,
-      "discount": false,
-      "featured": false,
-      "bestsellers": true
-    },
-    {
-      "text": "Carla Lingerie",
-      "price": "$22.40",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-7-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-9-270x280.png",
-      "new": false,
-      "discount": true,
-      "featured": true,
-      "bestsellers": true
-    },
-    {
-      "text": "Brigit Lingerie",
-      "price": "$19.60",
-      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-      "new": false,
-      "discount": false,
-      "featured": true,
-      "bestsellers": false
-    }
-  ],
+
   "bras": {
     "productTitle": "BRAS",
     "productImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-1-240x200.png",
@@ -427,18 +230,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "bra-sets": {
     "productTitle": "BRA SETS",
@@ -447,18 +239,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "balconette-bras": {
     "productTitle": "BALCONETTE BRAS",
@@ -467,18 +248,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "multiway-bras": {
     "productTitle": "MULTIWAY BRAS",
@@ -487,18 +257,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "full-cup-bras": {
     "productTitle": "FULL CUP BRAS",
@@ -507,18 +266,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "lingerie-brands": {
     "productTitle": "LINGERIE BRANDS",
@@ -527,18 +275,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "minimiser-bras": {
     "productTitle": "MINIMISER BRAS",
@@ -547,18 +284,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "panties": {
     "productTitle": "PANTIES",
@@ -567,18 +293,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "bikini": {
     "productTitle": "BIKINI",
@@ -587,18 +302,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "laist-waist": {
     "productTitle": "LAIST-WAIST",
@@ -607,18 +311,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "high-leg": {
     "productTitle": "HIGH-LEG",
@@ -627,18 +320,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "cotton": {
     "productTitle": "COTTON",
@@ -647,18 +329,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "lace-up": {
     "productTitle": "LACE-UP",
@@ -667,18 +338,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "dream": {
     "productTitle": "DREAM",
@@ -687,18 +347,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "bra-separates": {
     "productTitle": "BRA SEPARATES",
@@ -707,18 +356,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "stockings": {
     "productTitle": "STOCKINGS",
@@ -727,18 +365,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "vinyl-latex-leather": {
     "productTitle": "VINYL/LATEX/LEATHER",
@@ -747,18 +374,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "sexy-lingerie": {
     "productTitle": "SEXY LINGERIE",
@@ -767,18 +383,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "new-in": {
     "productTitle": "NEW IN",
@@ -787,18 +392,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "bustiers": {
     "productTitle": "BUSTIERS",
@@ -807,18 +401,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "corsets": {
     "productTitle": "CORSETS",
@@ -827,18 +410,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "perfect": {
     "productTitle": "PERFECT",
@@ -847,18 +419,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "waist-cinches": {
     "productTitle": "WAIST CINCHES",
@@ -867,18 +428,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "accessories": {
     "productTitle": "ACCESSORIES",
@@ -887,18 +437,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "sexy": {
     "productTitle": "SEXY",
@@ -907,18 +446,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "sleep": {
     "productTitle": "SLEEP",
@@ -927,18 +455,7 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   },
   "swim": {
     "productTitle": "SWIM",
@@ -947,17 +464,6 @@
     "productInformPartTwo": "Our store has a great choice of wonderful lingerie and you will be amazed by its variety. Our vendors and manufacturers guarantee the high quality of our goods. So you can buy goods of premium quality by a fair price. We cooperate with the great number of fashion houses and you can find many unique and original products here.",
     "productInformPartThree": "You’ll be surprised by the variety and the quality of our materials. We always stay in touch with the latest fashion tendencies - that is why our goods are so popular and we have a great number of faithful customers all over the country. Our company has a perfect reputation and a great experience and our clients’ testimonials can prove this fact.",
     "productInformPartFour": "We care about our clients and never let them down. We often provide different promos and you can get a good benefit. If you have some questions you can address our superb 24/7 online support system.",
-    "items": [
-      {
-        "text": "Brigit Lingerie",
-        "price": "$19.60",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-4-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-5-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": true,
-        "bestsellers": false
-      }
-    ]
+    "items": []
   }
 }

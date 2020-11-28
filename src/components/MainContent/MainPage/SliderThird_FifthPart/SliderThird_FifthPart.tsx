@@ -86,22 +86,18 @@ const ChangeTitle = styled.p`
 const SliderThirdPart = (props: any) => {
     let [current, setCurrent] = useState(1);
 
-    interface dialogData {
-        [key: string]: string
-    }
-
     const currentSlider = () => {
         if (current === 1) {
-            return props.SliderData.map((dialog: dialogData) => <SliderElement {...dialog}/>)
+            return props.SliderData.map((item: {[key: string]: string}) => <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/>)
         } else if (current === 2) {
-            return props.SliderData.map((dialog: dialogData) => dialog.bestsellers ?
-                <SliderElement {...dialog}/> : null)
+            return props.SliderData.map((item: {[key: string]: string}) => item.bestsellers ?
+                <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/> : null)
         } else if (current === 3) {
-            return props.SliderData.map((dialog: dialogData) => dialog.featured ?
-                <SliderElement {...dialog}/> : null)
+            return props.SliderData.map((item: {[key: string]: string}) => item.featured ?
+                <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/> : null)
         } else if (current === 4) {
-            return props.SliderData.map((dialog: dialogData) => dialog.discount ?
-                <SliderElement {...dialog}/> : null)
+            return props.SliderData.map((item: {[key: string]: string}) => item.discount ?
+                <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/> : null)
         }
     }
 
@@ -112,23 +108,19 @@ const SliderThirdPart = (props: any) => {
                 <ChangeList>
                     <li className={`${current === 1 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 1)}>
-                        <button>New Arrivals
-                        </button>
+                        <button>New Arrivals</button>
                     </li>
                     <li className={`${current === 2 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 2)}>
-                        <button>Bestsellers
-                        </button>
+                        <button>Bestsellers</button>
                     </li>
                     <li className={`${current === 3 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 3)}>
-                        <button>Featured
-                        </button>
+                        <button>Featured</button>
                     </li>
                     <li className={`${current === 4 ? 'active' : ''}`}
                         onClick={() => setCurrent(current = 4)}>
-                        <button>Specials
-                        </button>
+                        <button>Specials</button>
                     </li>
                 </ChangeList>
             </ChangeContainer>

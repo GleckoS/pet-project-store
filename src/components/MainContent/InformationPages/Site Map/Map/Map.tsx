@@ -8,6 +8,7 @@ const Map = () => {
     justify-content: space-around;
     text-align: left;
     color: #515151;
+    padding: 0 15px;
     & div{
         width: 50%;
         & ul{
@@ -34,6 +35,9 @@ const Map = () => {
                 padding-left: 50px;
             }
         }
+    }
+    @media(max-width: 764px){
+        display: block;
     }
 `
 

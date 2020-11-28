@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import {PageContainer} from "../../../common/selectors/StyledComponents";
 import {NavLink} from "react-router-dom";
+import {Images} from "../../../common/textConst/images";
 
 const Wrapper = styled.section`
     padding: 6px 10px 5px;
@@ -11,7 +12,6 @@ const Wrapper = styled.section`
     line-height: 16px;
     @media(max-width: 764px){
     margin-bottom: 12px;
-    
     }
 `
 const Container = styled(PageContainer)`
@@ -19,12 +19,18 @@ const Container = styled(PageContainer)`
     justify-content: space-between;
 `
 const Item = styled.span`
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
+    position: relative;
     a{
        color: #000000; 
-       &:hover{
-          color: #E8CABA;
-       }
+    }
+    &:hover{
+        a{
+            color: #E8CABA;
+        }
+        img{
+            color: #E8CABA;
+        }
     }
 `
 const PhoneInf = styled.span`
@@ -39,9 +45,23 @@ const PhoneLink = styled.a`
           color: #E8CABA;
     }
 `
+const Icon = styled.img`
+    width: 11px;
+    position: absolute;
+    left: 16px;
+    bottom: 50%;
+    transform: translateY(50%);
+`
+const Link = styled(NavLink)`
+    @media(max-width: 764px){
+        span{
+            display: none;
+        }
+    }
+`
 
 const HeaderInform = () => {
-    return(
+    return (
         <Wrapper>
             <Container>
                 <div>
@@ -53,8 +73,8 @@ const HeaderInform = () => {
                 <div>
                     <Item>ENGLISH</Item>
                     <Item>US Dollar</Item>
-                    <Item><NavLink to="/my-account">My Account</NavLink></Item>
-                    <Item><NavLink to="/wish">Wishlist</NavLink></Item>
+                    <Item><Link to="/my-account"><Icon src={Images.user}/><span>My Account</span></Link></Item>
+                    <Item><Link to="/wish"><Icon src={Images.hearth}/><span>Wishlist</span></Link></Item>
                 </div>
             </Container>
         </Wrapper>
