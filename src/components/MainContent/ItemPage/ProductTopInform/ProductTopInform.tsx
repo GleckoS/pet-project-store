@@ -35,6 +35,9 @@ const ProductTopInform = (props: any) => {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    @media(max-width: 764px){
+        display: block;
+    }
 `
     const DescriptionContainer = styled.div`
     transition: all 1s;
@@ -57,6 +60,10 @@ const ProductTopInform = (props: any) => {
         bottom: 0;
         height: 27px;
         background: #fff;
+    }
+    @media(max-width: 764px){
+        padding: 0 15px;
+        width: calc(100% - 30px);
     }
 `
     const More = styled.button`

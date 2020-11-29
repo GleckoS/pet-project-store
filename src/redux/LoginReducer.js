@@ -66,6 +66,13 @@ export const SetUsersThunk = () => {
     }
 }
 
+export const UpdateUser = () => {
+    /* Заменить пользователя в userList на нового */
+    return (dispatch) => {
+
+    }
+}
+
 export const RegisterThunk = (userInform) => {
     return (dispatch) => {
         fetch(`http://localhost:8000/users`, {

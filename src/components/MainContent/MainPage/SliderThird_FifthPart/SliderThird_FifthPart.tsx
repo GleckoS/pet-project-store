@@ -89,13 +89,16 @@ const SliderThirdPart = (props: any) => {
     const currentSlider = () => {
         if (current === 1) {
             return props.SliderData.map((item: {[key: string]: string}) => <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/>)
-        } else if (current === 2) {
+        }
+        if (current === 2) {
             return props.SliderData.map((item: {[key: string]: string}) => item.bestsellers ?
                 <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/> : null)
-        } else if (current === 3) {
+        }
+        if (current === 3) {
             return props.SliderData.map((item: {[key: string]: string}) => item.featured ?
                 <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/> : null)
-        } else if (current === 4) {
+        }
+        if (current === 4) {
             return props.SliderData.map((item: {[key: string]: string}) => item.discount ?
                 <SliderElement isLogged={props.isLogged} currentUser={props.currentUser} item={item}/> : null)
         }

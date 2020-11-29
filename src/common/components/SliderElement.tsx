@@ -13,9 +13,7 @@ const newText = "NEW!",
     saleText = "SALE!"
 
 
-const ThirdPartSliderElement = (props: any) => {
-
-    const Item = styled.div`
+const Item = styled.div`
     margin: 25px auto;
     height: 390px;
     width: 270px;
@@ -27,7 +25,7 @@ const ThirdPartSliderElement = (props: any) => {
         width: 220px;
     }
 `
-    const Img = styled.div`
+const Img = styled.div`
     align-self: center;
     margin: 0 auto;
     position: relative;
@@ -47,7 +45,7 @@ const ThirdPartSliderElement = (props: any) => {
     }
 `
 
-    const Link = styled.div`
+const Link = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +61,7 @@ const ThirdPartSliderElement = (props: any) => {
         }
     }
 `
-    const Text = styled.h3`
+const Text = styled.h3`
     font-size: 16px;
     color: #000000;
     letter-spacing: .7px;
@@ -74,7 +72,7 @@ const ThirdPartSliderElement = (props: any) => {
          color: #E8CABA;
       }  
 `
-    const Price = styled.h4`
+const Price = styled.h4`
     font-size: 14px;
     color: #000000;
     margin: 0 0 16px;
@@ -82,7 +80,7 @@ const ThirdPartSliderElement = (props: any) => {
     font-weight: 400;
 `
 
-    const AdditionalNEW = styled.p`
+const AdditionalNEW = styled.p`
     position: absolute;
     top: 8px;
     transform: translateX(300%);
@@ -98,7 +96,7 @@ const ThirdPartSliderElement = (props: any) => {
          padding: 0 7px;
     }
 `
-    const AdditionalSALE = styled.p`
+const AdditionalSALE = styled.p`
     position: absolute;
     top: 8px;
     transform: translateX(-300%);
@@ -114,7 +112,7 @@ const ThirdPartSliderElement = (props: any) => {
          padding: 0 7px;
     }
 `
-    const AdditionalButtons = styled.div`
+const AdditionalButtons = styled.div`
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -131,7 +129,7 @@ const ThirdPartSliderElement = (props: any) => {
             background-color: #dddddd;
     }
 `
-    const AddButton = styled.button`
+const AddButton = styled.button`
     border-radius: 50%;
     margin: 5px;
     border: none;
@@ -146,7 +144,7 @@ const ThirdPartSliderElement = (props: any) => {
         background-color: #ededed;
     }
 `
-    const Icon = styled.img`
+const Icon = styled.img`
     width: 14px;
     position: absolute;
     left: 50%;
@@ -154,11 +152,17 @@ const ThirdPartSliderElement = (props: any) => {
     transform: translate(-50%, -50%);
     
 `
+
+
+const ThirdPartSliderElement = (props: any) => {
+
     let [isRegister, setRegister] = useState(false)
 
     const WishAdd = () => {
-        debugger
-        props.isLogged ? props.currentUser.wish.push(props.item) : setRegister(true)
+        props.isLogged
+            ? props.currentUser.wish.push(props.item) && alert("successful")
+            : setRegister(true)
+        /*   props.UpdateUser()*/
     }
     const Zoom = () => {
 
@@ -188,7 +192,6 @@ const ThirdPartSliderElement = (props: any) => {
                 </Item>
             }
         </>
-
     )
 }
 
