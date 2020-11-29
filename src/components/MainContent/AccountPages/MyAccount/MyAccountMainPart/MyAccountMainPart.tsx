@@ -46,7 +46,7 @@ const MyAccountMainPart = () => {
                             link: "/"
                         },
                         {
-                            title: "Wishlist",
+                            title: "Returns",
                             link: "/"
                         },
                         {

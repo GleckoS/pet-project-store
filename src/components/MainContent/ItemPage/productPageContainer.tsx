@@ -1,15 +1,16 @@
 import React from "react"
 import ProductPageTemplate from "./productPageTemplate"
 import {connect} from "react-redux"
-import {setItemData} from "../../../redux/itemPageReducer"
+import {setAnotherItemThunk, setItemData} from "../../../redux/itemPageReducer"
 import Loading from "../../../common/components/Loading"
 import {setItems} from "../../../redux/MainPageReducer";
 
 type Props = {
-    setItemData: any,
     url: string,
     isFetching: string,
-    setItems: any
+    setItemData: any,
+    setItems: any,
+    setAnotherItemThunk: any
 }
 
 class ProductPageContainer extends React.Component<Props, {}> {
@@ -20,9 +21,14 @@ class ProductPageContainer extends React.Component<Props, {}> {
         this.props.setItemData(this.props.url)
     }
 
-    componentDidUpdate() {
-        // @TODO: поправить ререндер
-        // @TODO: на каждом открытии заново загружаеться фото
+
+    // @TODO: поправить ререндер
+    // @TODO: на каждом открытии заново загружаеться фот
+    componentDidUpdate(prevProps: Readonly<Props>) {
+        if (prevProps.url !== this.props.url) {
+            this.props.setAnotherItemThunk()
+            this.props.setItemData(this.props.url)
+        }
     }
 
     render() {
@@ -41,8 +47,8 @@ class ProductPageContainer extends React.Component<Props, {}> {
 let mapStateToProps = (state: any) => {
     return {
         isFetching: state.itemPageReducer.isFetching,
-        type: state.itemPageReducer.type,
-        sortBy: state.itemPageReducer.sortBy,
+/*        type: state.itemPageReducer.type,
+        sortBy: state.itemPageReducer.sortBy,*/
         itemsData: state.itemPageReducer.itemsData,
         items: state.sliderReducer.items,
         currentUser: state.loginReducer.currentUser,
@@ -50,5 +56,5 @@ let mapStateToProps = (state: any) => {
     }
 }
 
-export default connect(mapStateToProps, {setItemData, setItems})(ProductPageContainer)
+export default connect(mapStateToProps, {setItemData, setItems, setAnotherItemThunk})(ProductPageContainer)
 

@@ -52,9 +52,6 @@ function App(props) {
                 url: "bikini"
             },
             {
-                url: "laist-waist"
-            },
-            {
                 url: "high-leg"
             },
             {

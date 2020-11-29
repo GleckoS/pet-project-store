@@ -3,9 +3,10 @@ import HeaderNav from "./HeaderNav/HeaderNav";
 import HeaderSearch from "./HeaderSearch/HeaderSearch";
 import HeaderInform from "./HeaderInform/HeaderInform";
 import HeaderAltNav from "./HeaderAltNav/HeaderAltNav";
+import {connect} from "react-redux";
 
 
-const Header = () => {
+const Header = (props: any) => {
 
     return(
         <header>
@@ -16,9 +17,16 @@ const Header = () => {
             <HeaderSearch
             />
             <HeaderNav
+                currentUser={props.currentUser}
             />
         </header>
     )
 }
 
-export default Header
+const MapStateToProps = (state: any) => {
+    return{
+        currentUser: state.loginReducer.currentUser
+    }
+}
+
+export default  connect(MapStateToProps, {})(Header)

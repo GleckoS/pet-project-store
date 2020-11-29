@@ -45,27 +45,23 @@ const Data =
                     },
                     {
                         name: "Balconette bras",
-                        link: "/bra-sets"
+                        link: "balconette-bras"
                     },
                     {
                         name: "Multiway bras",
-                        link: "/bra-sets"
+                        link: "/multiway-bras"
                     },
                     {
                         name: "Full cup bras",
-                        link: "/bra-sets"
-                    },
-                    {
-                        name: "Raw Cut",
-                        link: "/bra-sets"
+                        link: "/full-cup-bras"
                     },
                     {
                         name: "Lingerie brands",
-                        link: "/bra-sets"
+                        link: "/lingerie-brands"
                     },
                     {
                         name: "Minimiser bras",
-                        link: "/bra-sets"
+                        link: "/minimiser-bras"
                     },
                 ]
         },
@@ -74,31 +70,27 @@ const Data =
                 [
                     {
                         name: "PANTIES",
-                        link: "/bra-sets"
+                        link: "/panties"
                     },
                     {
                         name: "Bikini",
-                        link: "/bra-sets"
-                    },
-                    {
-                        name: "Least-waist",
-                        link: "/bra-sets"
+                        link: "/bikini"
                     },
                     {
                         name: "High-leg",
-                        link: "/bra-sets"
+                        link: "/high-leg"
                     },
                     {
                         name: "Cotton",
-                        link: "/bra-sets"
+                        link: "/cotton"
                     },
                     {
                         name: "Lace-Up",
-                        link: "/bra-sets"
+                        link: "/lace-up"
                     },
                     {
                         name: "Dream",
-                        link: "/bra-sets"
+                        link: "/dream"
                     },
                 ]
         },
@@ -107,23 +99,23 @@ const Data =
                 [
                     {
                         name: "BRA SEPARATES",
-                        link: "/bra-sets"
+                        link: "/bra-separates"
                     },
                     {
                         name: "Stockings",
-                        link: "/bra-sets"
+                        link: "stockings"
                     },
                     {
                         name: "Vinyl/Latex/Leather",
-                        link: "/bra-sets"
+                        link: "/vinyl-latex-leather"
                     },
                     {
                         name: "Sexy lingerie",
-                        link: "/bra-sets"
+                        link: "/sexy-lingerie"
                     },
                     {
                         name: "New in",
-                        link: "/bra-sets"
+                        link: "/new-in"
                     }
                 ]
         },
@@ -132,23 +124,19 @@ const Data =
                 [
                     {
                         name: "BUSTIERS",
-                        link: "/bra-sets"
+                        link: "/bustiers"
                     },
                     {
                         name: "Corsets",
-                        link: "/bra-sets"
+                        link: "/corsets"
                     },
                     {
                         name: "Perfect",
-                        link: "/bra-sets"
-                    },
-                    {
-                        name: "Waist cinchers",
-                        link: "/bra-sets"
+                        link: "/perfect"
                     },
                     {
                         name: "Accessories",
-                        link: "/bra-sets"
+                        link: "/accessories"
                     }
                 ]
         }
@@ -230,7 +218,8 @@ const DropdownContent = styled.div`
     height: 0;
 `
 
-const HeaderSearch = () => {
+const HeaderSearch = (props: any) => {
+    debugger
     return (
         <Wrapper>
             <Container>
@@ -254,9 +243,10 @@ const HeaderSearch = () => {
                     </ul>
                 </div>
                 <div>
-                    <Counter>
-                        0 item(s)
-                    </Counter>
+                    {props.currentUser[0]
+                        ? <Counter>{props.currentUser.cart.length + "item(s)"}</Counter>
+                        : <Counter>{"0 item(s)"}</Counter>
+                    }
                 </div>
             </Container>
         </Wrapper>

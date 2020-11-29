@@ -209,6 +209,7 @@ const ProductMainContent = (props:any) => {
     let [show, setShow] =useState("6")
 
     let Slider = props.items.filter((e: any) => e.id < show)
+    let BestSeller = props.items.filter((e: any) => e.id === 10)
 
     const changeShow = (value: string) => {
         setShow(value)
@@ -221,7 +222,8 @@ const ProductMainContent = (props:any) => {
                     <H4>BESTSELLERS</H4>
                 </div>
                 <div>
-                    <SliderElement item={{}}/>
+
+                    <SliderElement item={BestSeller[0]}/>
                 </div>
             </LeftPartContainer>
             <RightPartContainer>
