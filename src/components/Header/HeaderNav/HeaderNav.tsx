@@ -218,8 +218,7 @@ const DropdownContent = styled.div`
     height: 0;
 `
 
-const HeaderSearch = (props: any) => {
-    debugger
+const HeaderNav = (props: any) => {
     return (
         <Wrapper>
             <Container>
@@ -253,4 +252,5 @@ const HeaderSearch = (props: any) => {
     )
 }
 
-export default HeaderSearch
+export default HeaderNav
+

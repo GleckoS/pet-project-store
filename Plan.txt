@@ -2,7 +2,7 @@ Pages       Media    CSS    REDUX    Structure            AIP ->  all in props  
                                                           SIC ->  styled in components              1196px
 About         +       +       +        AIP                                                          988px
                                                                                                     764px
-Contact       +       +       +        SIC                                    Планы:
+Contact       +       +       +        SIC                                    Планы:                480px (В редких случаях)
 
 Delivery    >764      +       +        SIC                1) Обдумать лучший способ проверки корзины пользователя
 
@@ -10,7 +10,7 @@ Privacy       +       +       +        SIC                2) Переписыв�
 
 SiteMap       +       +       -        SIC                3) Доделать: Order History, Downloads, Reward Points,
                                                               Transaction, Payment, Modify..., Returns, affiliate,
-Terms         +       +       +        SIC                      NewsLetter
+Terms         +       +       +        SIC                      NewsLetter, Все функции товаров, все функции itemPage
 
 Header        +      DROP     -        SIC                4) Header dropdown, Footer links
 
@@ -18,17 +18,17 @@ Footer      >764     +/-      -        AIP                5) БОЛЬШЕ @media
 
                   Main Page
 
-First         -       +       +        SIC    *media
+First         +       +       +        SIC    *media
 
 Second        +       +       +        SIC    *item rework
 
 Third         +       +       +        SIC    *search redesign
 
-Fourth        -       -       +        SIC
+Fourth        +       +       +        SIC    *timer create
 
 Fifth         +       +       +        SIC    *search redesign
 
-Inform        +/-     +       +        SIC
+Inform        +       +       +        SIC
 
                    Item Page
 

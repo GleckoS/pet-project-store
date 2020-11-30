@@ -33,7 +33,7 @@ const ProductTopInform = (props: any) => {
 `
     const FlexBox = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 30px;
     @media(max-width: 764px){
         display: block;

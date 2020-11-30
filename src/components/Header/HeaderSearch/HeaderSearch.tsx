@@ -169,7 +169,7 @@ const Deals = styled(NavLink)`
     }
 `
 
-const HeaderNav = () => {
+const HeaderSearch = () => {
     return (
         <Wrapper>
             <Section>
@@ -193,4 +193,4 @@ const HeaderNav = () => {
         </Wrapper>
     )
 }
-export default HeaderNav
+export default HeaderSearch

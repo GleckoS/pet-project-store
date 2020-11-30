@@ -2,7 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from '@emotion/styled'
-import {Button} from "../../../../common/selectors/StyledComponents";
+import {Button, PageContainer} from "../../../../common/selectors/StyledComponents";
 import Slider from "react-slick";
 
 const newsTitle = "Last Day",
@@ -25,14 +25,14 @@ const settings = {
     infinite: true,
     responsive: [
         {
-            breakpoint: 1200,
+            breakpoint: 1196,
             settings: {
                 slidesToShow: 5,
                 slidesToScroll: 1,
             }
         },
         {
-            breakpoint: 768,
+            breakpoint: 988,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -48,22 +48,17 @@ const settings = {
     ]
 }
 
-const DivMainPageInnerWrapper = styled.div`
-    width: 1170px;
-    margin: 0 auto;
+const Wrapper = styled(PageContainer)`
     padding-top: 5px;
-    @media (max-width: 1200px) {
-        width: 940px;
-    }
 `
-const NewsContainer = styled.div`
+const Container = styled.div`
     display: flex;
     justify-content: space-between;
-    @media(max-width: 988px){
+    @media(max-width: 764px){
         display: block;
     }
 `
-const LeftContainer = styled.div`
+const Left = styled.div`
     width: 270px;
     height: 380px;
     position: relative;
@@ -71,6 +66,14 @@ const LeftContainer = styled.div`
     @media (max-width: 1196px) {
         width: 212px;
         height: 300px;
+    }
+    @media(max-width: 988px){
+        width: 220px;
+        height: 310px;
+        margin: 0 15px;
+    }
+    @media(max-width: 764px){
+        margin: 0 auto 30px;
     }
 `
 const NewsBackGround = styled.img`
@@ -80,16 +83,19 @@ const NewsBackGround = styled.img`
     z-index: -1;
     opacity: 0.5;
     border-radius: 6px;
-    @media (max-width: 1196px) {
-        width: 212px;
-        height: 300px;
-    }
+    width: 100%;
+    height: 100%;
 `
 const NewsTitle = styled.h5`
     font-size: 11px;
     margin: 100px 0 0 0;
     @media(max-width: 1196px){ 
-        margin: 50px 0 0 0;
+        margin: 75px 0 0 0;
+        font-weight: 800;
+    }
+    @media(max-width: 764px){
+        margin: 0;
+        padding: 75px 0 0;
     }
 `
 const NewsText = styled.p`
@@ -97,25 +103,48 @@ const NewsText = styled.p`
     margin-top: 10px;
     font-size: 26px;
     font-weight: 200;
+    @media(max-width: 1196px){
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 5px;
+    }
 `
 const NewsButton = styled(Button)`
     font-weight: 700;
     letter-spacing: .8px;
     padding: 12px 20px;
 `
-const RightContainer = styled.div`
+const Right = styled.div`
     position: relative;
     @media (max-width: 1196px) {
         width: 700px;
         height: 300px;
+    }
+    @media(max-width: 988px){
+        width: 470px;
+        height: 310px;
+        margin: 0 15px;
+    }
+    @media(max-width: 764px){
+        max-width: 100%;
+        width: auto;
+        height: auto;
     }
 `
 const TimerImage = styled.img`
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     @media (max-width: 1196px) {
-        width: 700px;
+        max-width: 700px;
         height: 240px;
+    }
+    @media(max-width: 988px){
+        max-width: 470px;
+        height: 161px;
+    }
+    @media(max-width: 764px){
+        max-width: 100%;
+        height: auto;
     }
 `
 const TimerInformWrapper = styled.div`
@@ -130,19 +159,51 @@ const TimerInformWrapper = styled.div`
         width: 700px;
         height: 60px;
     }
+    @media(max-width: 988px){
+        width: 470px;
+        height: 149px;
+    }
+    @media(max-width: 764px){
+        width: calc(100% - 58px);
+        height: 40px;
+        padding: 19px 29px 23px 29px;
+        position: relative;
+        margin-top: -10px;
+    }
 `
 const TimerTitle = styled.h5`
     color: #ffffff;
     font-size: 14px;
     font-weight: 800;
-    margin: 5px 0 0 15px;
+    margin: 15px 0 0 15px;
+    @media(max-width: 1196px){
+        font-size: 12px;
+        line-height: 10px;
+    }
+    @media(max-width: 988px){
+        text-align: left;
+        margin: 60px 0 0 15px;
+    }
+    @media(max-width: 764px){
+        margin: 0;
+    }
 `
 const TimerText = styled.p`
     color: #ffffff;
     margin: 0 0 0 15px;
     font-size: 22px;
     font-weight: 600;
- 
+    @media(max-width: 1196px){
+        font-size: 18px;
+    }
+    @media(max-width: 988px){
+        text-align: left;
+        font-size: 16px;
+    }
+    @media(max-width: 764px){
+        margin: 0;
+        width: 68%;
+    }
 `
 const TimerButton = styled(Button)`
     position: absolute;
@@ -192,23 +253,23 @@ const CategoryItem = styled.a`
 
 const SliderFourthPart = (props: any) => {
     return (
-        <DivMainPageInnerWrapper>
-            <NewsContainer>
-                <LeftContainer>
+        <Wrapper>
+            <Container>
+                <Left>
                     <NewsBackGround src={backgroundURL}/>
                     <NewsTitle>{newsTitle}</NewsTitle>
                     <NewsText>{newsText}</NewsText>
                     <NewsButton to="/">{newsButton}</NewsButton>
-                </LeftContainer>
-                <RightContainer>
+                </Left>
+                <Right>
                     <TimerImage src={newsInformImg}/>
                     <TimerInformWrapper>
                         <TimerTitle>{informTitle}</TimerTitle>
                         <TimerText>{informText}</TimerText>
                         <TimerButton to="/">{informButton}</TimerButton>
                     </TimerInformWrapper>
-                </RightContainer>
-            </NewsContainer>
+                </Right>
+            </Container>
             <CategoryContainer>
                 <CategoryTitleWrapper>
                     <p>{sliderTitle}</p>
@@ -221,7 +282,7 @@ const SliderFourthPart = (props: any) => {
                     )}
                 </Slider>
             </CategoryContainer>
-        </DivMainPageInnerWrapper>
+        </Wrapper>
     )
 }
 export default SliderFourthPart
