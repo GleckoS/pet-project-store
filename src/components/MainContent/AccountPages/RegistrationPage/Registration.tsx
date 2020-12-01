@@ -11,6 +11,7 @@ import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import MyAccountMainPart from "../MyAccount/MyAccountMainPart/MyAccountMainPart";
 
 const Registration = (props: any) => {
+
     const pageTitle = "Register"
 
     const legend =
@@ -102,7 +103,6 @@ const Registration = (props: any) => {
                     ]
             }
         ]
-
 
     const {register, handleSubmit, errors, watch} = useForm();
     let [isRegister, setRegister] = useState(false)

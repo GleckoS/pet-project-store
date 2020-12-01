@@ -77,6 +77,7 @@ const ThirdSectionData =
             name: '7 Days a week from 9:00 am to 7:00 pm'
         }
     ]
+
 const FooterInformWrapper = styled.footer`
     display: flex;
     justify-content: space-between;
@@ -121,6 +122,14 @@ const AltListWrapper = styled.section`
 const ListElement = styled.li`
     width: 100%;
     padding: 3px 0;
+    a{
+        color: #000;
+    }
+    &:hover{
+        a{
+            color: #E8CABA;
+        }
+    }
     @media (max-width: 1196px) {
         padding: 0;
     } 
@@ -143,6 +152,21 @@ const LastSection = styled.section`
         display: block;
         width: 25%;
     }    
+`
+const Social = styled.ul`
+    display: flex;
+    li{
+    padding-right: 20px;
+        a{
+            transition: .1ms linear;
+            color: #000;
+        }
+        &:hover{
+            a{
+                color: #E8CABA;
+            }
+        }  
+    }
 `
 
 const Footer = () => {
@@ -170,6 +194,7 @@ const Footer = () => {
                     ListElement={ListElement}
                     ListLink={ListLink}
                     Section={LastSection}
+                    Social={Social}
                 />
             </FooterInformWrapper>
         </footer>

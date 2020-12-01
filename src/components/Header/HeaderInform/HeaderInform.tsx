@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import {PageContainer} from "../../../common/selectors/StyledComponents";
 import {NavLink} from "react-router-dom";
 import {Images} from "../../../common/textConst/images";
+import {AiFillHeart, FaUserAlt} from "react-icons/all";
 
 const Wrapper = styled.section`
     padding: 6px 10px 5px;
@@ -45,14 +46,12 @@ const PhoneLink = styled.a`
           color: #E8CABA;
     }
 `
-const Icon = styled.img`
-    width: 11px;
-    position: absolute;
-    left: 16px;
-    bottom: 50%;
-    transform: translateY(50%);
-`
-const Link = styled(NavLink)`
+
+const Link = styled(NavLink)` 
+    transition: all .1ms linear;
+    svg{
+        transition: all .1ms linear;
+    }
     @media(max-width: 764px){
         span{
             display: none;
@@ -73,8 +72,8 @@ const HeaderInform = () => {
                 <div>
                     <Item>ENGLISH</Item>
                     <Item>US Dollar</Item>
-                    <Item><Link to="/my-account"><Icon src={Images.user}/><span>My Account</span></Link></Item>
-                    <Item><Link to="/wish"><Icon src={Images.hearth}/><span>Wishlist</span></Link></Item>
+                    <Item><Link to="/my-account"><FaUserAlt/><span> My Account</span></Link></Item>
+                    <Item><Link to="/wish"><AiFillHeart/><span> Wishlist</span></Link></Item>
                 </div>
             </Container>
         </Wrapper>

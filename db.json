@@ -11,6 +11,18 @@
       "cart": [],
       "wish": [],
       "id": 0
+    },
+    {
+      "firstName": "Инна",
+      "lastName": "Бринкис",
+      "email": "innasalo2@gmail.com",
+      "phoneNumber": "576325417",
+      "password": "123456",
+      "passwordConfirm": "123456",
+      "newsletter": "0",
+      "cart": [],
+      "wish": [],
+      "id": 1
     }
   ],
   "newsletter": [],
@@ -222,7 +234,6 @@
       }
     ]
   },
-
   "bras": {
     "productTitle": "BRAS",
     "productImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-1-240x200.png",

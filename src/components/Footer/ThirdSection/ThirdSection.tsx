@@ -1,19 +1,22 @@
 import React from "react";
 
 const ThirdFooterSection = (props: any) => {
+
+    const {AltListWrapper, ListElement, ThirdSectionData} = props
+
     return(
-        <props.AltListWrapper>
+        <AltListWrapper>
             <div>
                 <h3>CONTACT US</h3>
             </div>
             <div>
                 <ul>
-                    {props.ThirdSectionData.map((item: {[key: string]: string}) =>
-                        <props.ListElement>{item.name}</props.ListElement>
+                    {ThirdSectionData.map((item: {[key: string]: string}) =>
+                        <ListElement>{item.name}</ListElement>
                     )}
                 </ul>
             </div>
-        </props.AltListWrapper>
+        </AltListWrapper>
     )
 }
 

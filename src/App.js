@@ -19,6 +19,7 @@ import {SetUsersThunk} from "./redux/LoginReducer";
 import EditAccInform from "./components/MainContent/AccountPages/EditAccInform/EditAccInform";
 import ChangePassword from "./components/MainContent/AccountPages/ChangePassword/ChangePassword";
 import WishList from "./components/MainContent/AccountPages/WishList/WishList";
+import NewsLetter from "./components/MainContent/AccountPages/NewsLetter/NewsLetter";
 
 function App(props) {
 
@@ -119,7 +120,7 @@ function App(props) {
     props.SetUsersThunk()
     return (
         <Router>
-            {/*<Header/>*/}
+            <Header/>
 
             <Switch>
 
@@ -148,10 +149,11 @@ function App(props) {
                 <Route exact path="/edit-acc-inform" render={() => <EditAccInform/>}/>
                 <Route exact path="/change-password" render={() => <ChangePassword/>}/>
                 <Route exact path="/wish-list" render={() => <WishList/>}/>
+                <Route exact path="/news-letter" render={() => <NewsLetter/>}/>
 
             </Switch>
 
-            {/*<Footer/>*/}
+            <Footer/>
         </Router>
     );
 }

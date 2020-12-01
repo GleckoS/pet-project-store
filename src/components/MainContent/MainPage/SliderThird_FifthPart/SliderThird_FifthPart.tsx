@@ -6,37 +6,6 @@ import styled from "@emotion/styled";
 import SliderElement from "../../../../common/components/SliderElement";
 import {PageContainer} from "../../../../common/selectors/StyledComponents";
 
-const settings = {
-    infinite: false,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    draggable: false,
-    responsive: [
-        {
-            breakpoint: 1196,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 764,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-};
-
 const Wrapper = styled(PageContainer)`
     padding-top: 5px;
     margin-top: 18px;
@@ -50,7 +19,7 @@ const ChangeContainer = styled.div`
 const ChangeList = styled.ul`
     display: flex;
     right: 0;
-    top: -9px;
+    top: -10px;
     position: absolute;
         li{
         padding: 0 5px;
@@ -82,6 +51,79 @@ const ChangeTitle = styled.p`
     font-size: 12px;
     margin-bottom: 5px;
 `
+const Next = styled.div`
+    padding: 10px;
+    transition: .3s linear;
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    opacity: 0;
+    &::before{
+        color: #DBAD94;
+    }
+    @media(max-width: 988px){
+        opacity: 1;
+    }
+`
+const Prev = styled.div`
+    padding: 10px;
+    transition: .3s linear;
+    position: absolute;
+    top: 35%;
+    left: 10px;
+    opacity: 0;
+    &::before{
+        color: #DBAD94;
+        border-radius: 0;
+    }
+    @media(max-width: 988px){
+        opacity: 1;
+    }
+`
+function SampleNextArrow(props: any) {
+    return (
+        <Next className={props.className} onClick={props.onClick}/>
+    )
+}
+
+function SamplePrevArrow(props: any) {
+    return (
+        <Prev className={props.className} onClick={props.onClick}/>
+    )
+}
+
+const settings = {
+    infinite: false,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false,
+    nextArrow: <SampleNextArrow/>,
+    prevArrow: <SamplePrevArrow/>,
+    responsive: [
+        {
+            breakpoint: 1196,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 764,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+}
 
 const SliderThirdPart = (props: any) => {
     let [current, setCurrent] = useState(1);

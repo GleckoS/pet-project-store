@@ -82,6 +82,9 @@ const ProductTopInform = (props: any) => {
     const ProductIcon = styled.img`
     background-color: #f7f7f7;
 `
+    const IconContainer = styled.div`
+    padding: 0 15px;
+`
 
 
     return (
@@ -92,9 +95,9 @@ const ProductTopInform = (props: any) => {
                 </PageDirection>
             </PageDirectionContainer>
             <FlexBox>
-                <div>
+                <IconContainer>
                     <ProductIcon src={props.productImg}/>
-                </div>
+                </IconContainer>
                 <DescriptionContainer>
                     <ProductInformationContainer isOpened={isOpened}>
                         <MainTitle>{props.productTitle}</MainTitle>

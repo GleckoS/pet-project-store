@@ -1,20 +1,22 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 
 const FirstFooterSection = (props: any) => {
+
+    const {ListWrapper, ListElement, ListLink, FirstSectionData} = props
+
     return(
-        <props.ListWrapper>
+        <ListWrapper>
             <div>
                 <h3>INFORMATION</h3>
             </div>
             <div>
                 <ul>
-                    {props.FirstSectionData.map((item: {[key: string]: string}) =>
-                        <props.ListElement><props.ListLink to={item.path}>{item.name}</props.ListLink></props.ListElement>
+                    {FirstSectionData.map((item: {[key: string]: string}) =>
+                        <ListElement><ListLink to={item.path}>{item.name}</ListLink></ListElement>
                     )}
                 </ul>
             </div>
-        </props.ListWrapper>
+        </ListWrapper>
     )
 }
 

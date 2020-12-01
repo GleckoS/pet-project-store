@@ -1,6 +1,6 @@
 let initialSliderState = {
     isLogged: false,
-    currentUser: {},
+    currentUser: null,
     userList: []
 }
 const LOGIN = "LOGIN",
@@ -14,7 +14,7 @@ const LoginReducer = (state = initialSliderState, action) => {
             return {
                 ...state,
                 isLogged: true,
-                currentUser: newCurrentUser[0]
+                currentUser: {...newCurrentUser[0]}
             }
         }
         case UN_LOGIN: {
@@ -66,10 +66,28 @@ export const SetUsersThunk = () => {
     }
 }
 
-export const UpdateUser = () => {
-    /* Заменить пользователя в userList на нового */
+export const UpdateUserThunk = (currentUser) => {
     return (dispatch) => {
-
+        fetch(`http://localhost:8000/users/${currentUser.id}`,{
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+        })
+            .then(
+                () => {
+                    fetch(`http://localhost:8000/users`, {
+                        method: 'GET'
+                    })
+                        .then(res => res.json())
+                        .then(
+                            (response) => {
+                                dispatch(setUsers(response))
+                            }
+                        )
+                }
+            )
     }
 }
 

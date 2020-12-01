@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import SliderElement from "../../../../common/components/SliderElement";
 import styled from "@emotion/styled";
+import {ImMenu, ImTable2} from "react-icons/all";
 
 const sortOptions =
     [
@@ -51,87 +52,22 @@ const showOptions =
         },
     ]
 
-
-
-const thirdSlider = [
-    {
-        "text": "Viviana Lingerie",
-        "price": "$19.95",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-58-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-59-270x280.png",
-        "new": true,
-        "discount": false,
-        "featured": false,
-        "bestsellers": false
-    },
-    {
-        "text": "Saskiia Lingerie",
-        "price": "$17.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-49-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-51-270x280.png",
-        "new": true,
-        "discount": true,
-        "featured": false,
-        "bestsellers": false
-    },
-    {
-        "text": "Odessa Lingerie",
-        "price": "$35.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-46-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-48-270x280.png",
-        "new": true,
-        "discount": false,
-        "featured": false,
-        "bestsellers": true
-    },
-    {
-        "text": "Iana Lingerie ",
-        "price": "$72.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-28-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": false,
-        "bestsellers": false
-    },
-    {
-        "text": "Grace Lingerie Nude",
-        "price": "$50.00",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
-        "new": false,
-        "discount": false,
-        "featured": false,
-        "bestsellers": true
-    },
-    {
-        "text": "Adlina Lingerie",
-        "price": "$19.20",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-1-270x280.png",
-        "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-3-270x280.png",
-        "new": false,
-        "discount": true,
-        "featured": true,
-        "bestsellers": false
-    }
-]
-
-const MainContentWrapper = styled.div`
-    height: 1000px;
+const Wrapper = styled.div`
+    display: flex;
 `
 const LeftPartContainer = styled.aside`
     width: calc(25% - 30px);
     padding: 0 15px;
-    float: left;
-    
+   
 `
 const RightPartContainer = styled.div`
     width: calc(75% - 30px);
     padding: 0 15px;
-    float: left;
     height: 100%;
 `
 const MapWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
 `
 const H4 = styled.h4`
     text-align: left;
@@ -144,7 +80,7 @@ const H4 = styled.h4`
         content: "";
         height: 1px;
         width: 100%;
-        background-color: #515151;
+        background-color: #e6e6e6;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -162,7 +98,7 @@ const Settings = styled.div`
         content: "";
         width: 100%;
         height: 1px;
-        background-color: #4a4a4a;
+        background-color: #e6e6e6;
         position: absolute;
         top: 0;
     }
@@ -170,7 +106,7 @@ const Settings = styled.div`
         content: "";
         width: 100%;
         height: 1px;
-        background-color: #4a4a4a;
+        background-color: #e6e6e6;
         position: absolute;
         bottom: 0;
     }
@@ -188,6 +124,10 @@ const ViewChange = styled.button`
     width: 35px;
     padding: 0;
     margin-right: 10px;
+    transition: .1s linear!important;
+    svg{
+        transition: .1s linear!important;
+    }
     &:hover{
         color: #E8CABA;
     }
@@ -201,28 +141,32 @@ const Select = styled.select`
 const Item = styled.div`
     width: 270px;
     padding: 0 6px;
-    float: left;
 `
+
+function getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
+}
 
 const ProductMainContent = (props:any) => {
 
     let [show, setShow] =useState("6")
 
-    let Slider = props.items.filter((e: any) => e.id < show)
-    let BestSeller = props.items.filter((e: any) => e.id === 10)
-
     const changeShow = (value: string) => {
         setShow(value)
     }
 
+    let Slider = props.items.filter((e: any) => e.id < show)
+
+    let a = getRandomInt(props.items.length)
+    let BestSeller = props.items.filter((e: any) => e.id === a)
+
     return (
-        <MainContentWrapper>
+        <Wrapper>
             <LeftPartContainer>
                 <div>
                     <H4>BESTSELLERS</H4>
                 </div>
                 <div>
-
                     <SliderElement item={BestSeller[0]}/>
                 </div>
             </LeftPartContainer>
@@ -230,10 +174,10 @@ const ProductMainContent = (props:any) => {
                 <Settings>
                     <Sort>
                         <ViewChange>
-                            B
+                            <ImMenu/>
                         </ViewChange>
                         <ViewChange>
-                            S
+                            <ImTable2/>
                         </ViewChange>
                         <span>
                             {"Sort By: "}
@@ -263,7 +207,7 @@ const ProductMainContent = (props:any) => {
                     )}
                 </MapWrapper>
             </RightPartContainer>
-        </MainContentWrapper>
+        </Wrapper>
     )
 }
 

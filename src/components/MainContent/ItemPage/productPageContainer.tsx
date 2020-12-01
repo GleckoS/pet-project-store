@@ -15,15 +15,11 @@ type Props = {
 
 class ProductPageContainer extends React.Component<Props, {}> {
 
-
     componentDidMount() {
         this.props.setItems()
         this.props.setItemData(this.props.url)
     }
 
-
-    // @TODO: поправить ререндер
-    // @TODO: на каждом открытии заново загружаеться фот
     componentDidUpdate(prevProps: Readonly<Props>) {
         if (prevProps.url !== this.props.url) {
             this.props.setAnotherItemThunk()

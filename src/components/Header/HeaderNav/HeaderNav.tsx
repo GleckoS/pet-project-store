@@ -242,8 +242,8 @@ const HeaderNav = (props: any) => {
                     </ul>
                 </div>
                 <div>
-                    {props.currentUser[0]
-                        ? <Counter>{props.currentUser.cart.length + "item(s)"}</Counter>
+                    {props.currentUser
+                        ? <Counter>{props.currentUser.cart.length + " item(s)"}</Counter>
                         : <Counter>{"0 item(s)"}</Counter>
                     }
                 </div>

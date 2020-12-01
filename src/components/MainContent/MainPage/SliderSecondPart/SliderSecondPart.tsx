@@ -8,36 +8,6 @@ import {NavLink} from "react-router-dom";
 
 const buttonText = "SHOP NOW"
 
-const settings = {
-    infinite: false,
-    speed: 600,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    draggable: false,
-    responsive: [
-        {
-            breakpoint: 1196,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 764,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-}
 const Wrapper = styled(PageContainer)`
     padding-top: 5px;
 `
@@ -90,6 +60,80 @@ const Link = styled(NavLink)`
     }
     
 `
+const Next = styled.div`
+    padding: 10px;
+    transition: .3s linear;
+    position: absolute;
+    top:  50%;
+    right: 10px;
+    opacity: 0;
+    &::before{
+        color: #DBAD94;
+    }
+    @media(max-width: 988px){
+        opacity: 1;
+    }
+`
+const Prev = styled.div`
+    padding: 10px;
+    transition: .3s linear;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    opacity: 0;
+    &::before{
+        color: #DBAD94;
+        border-radius: 0;
+    }
+    @media(max-width: 988px){
+        opacity: 1;
+    }
+`
+
+function SampleNextArrow(props: any) {
+    return (
+        <Next className={props.className} onClick={props.onClick}/>
+    )
+}
+
+function SamplePrevArrow(props: any) {
+    return (
+        <Prev className={props.className} onClick={props.onClick}/>
+    )
+}
+
+const settings = {
+    infinite: false,
+    speed: 600,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false,
+    nextArrow: <SampleNextArrow/>,
+    prevArrow: <SamplePrevArrow/>,
+    responsive: [
+        {
+            breakpoint: 1196,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 764,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+}
 
 const SliderSecondPart = (props: any) => {
     return (

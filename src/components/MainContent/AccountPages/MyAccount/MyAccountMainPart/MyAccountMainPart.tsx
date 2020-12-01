@@ -60,22 +60,12 @@ const MyAccountMainPart = () => {
                     ]
             },
             {
-                title: "MY AFFILIATE ACCOUNT",
-                list:
-                    [
-                        {
-                            title: "Register for an affiliate account",
-                            link: "/"
-                        }
-                    ]
-            },
-            {
                 title: "NEWSLETTER",
                 list:
                     [
                         {
                             title: "Newsletter",
-                            link: "/"
+                            link: "/news-letter"
                         }
                     ]
             },
@@ -83,7 +73,7 @@ const MyAccountMainPart = () => {
 
     const AccountNavWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     text-align: left;
     li{
       margin: 10px 0;
@@ -110,18 +100,21 @@ const MyAccountMainPart = () => {
       }
     }
 `
+    const Item = styled.div`
+    padding: 0 60px 0 0;
+`
 
     return (
         <AccountNavWrapper>
             {account.map(item =>
-                <div>
+                <Item>
                     <h2>{item.title}</h2>
                     <ul>
                         {item.list.map( e =>
                             <li><NavLink to={e.link}>{e.title}</NavLink></li>
                         )}
                     </ul>
-                </div>
+                </Item>
             )}
         </AccountNavWrapper>
     )
