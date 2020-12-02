@@ -2,10 +2,14 @@ import React from "react"
 import {PageContainer} from "../../../common/selectors/StyledComponents"
 import ProductTopInform from "./ProductTopInform/ProductTopInform"
 import ProductMainContent from "./ProductMainContent/ProductMainContent"
+import BreadCrumbs from "../../../common/components/BreadCrubms";
 
 const ProductPageTemplate = (props: any) => {
     return (
         <PageContainer>
+            <BreadCrumbs
+                pageTitle={props.itemsData.productTitle}
+            />
             <ProductTopInform
                 productTitle={props.itemsData.productTitle}
                 productImg={props.itemsData.productImg}

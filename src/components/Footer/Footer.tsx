@@ -53,10 +53,6 @@ const SecondSectionData =
             path: '/certificates'
         },
         {
-            name: 'Affiliates',
-            path: '/affiliates'
-        },
-        {
             name: 'Site map',
             path: '/sitemap'
         }

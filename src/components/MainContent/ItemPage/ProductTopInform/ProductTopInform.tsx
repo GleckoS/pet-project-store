@@ -89,11 +89,6 @@ const ProductTopInform = (props: any) => {
 
     return (
         <>
-            <PageDirectionContainer>
-                <PageDirection>
-                    <PageHome to="/">Home </PageHome>{">"}<strong>{props.pageTitle}</strong>
-                </PageDirection>
-            </PageDirectionContainer>
             <FlexBox>
                 <IconContainer>
                     <ProductIcon src={props.productImg}/>

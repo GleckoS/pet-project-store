@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import {NavLink} from "react-router-dom";
 import {AiFillHome} from "react-icons/all";
 
-const BreadCrumbs = (props: any) => {
+const AccountBreadCrumbs = (props: any) => {
 
     const PageDirectionContainer = styled.div`
     text-align: left;
@@ -16,6 +16,9 @@ const BreadCrumbs = (props: any) => {
     color: #444;
 `
     const PageHome = styled(NavLink)`
+    svg{
+        transition: .001ms linear;
+    }
     &:hover{
         color: #DBAD94;
     }
@@ -23,10 +26,10 @@ const BreadCrumbs = (props: any) => {
     return(
         <PageDirectionContainer>
             <PageDirection>
-                <PageHome to="/"><AiFillHome/></PageHome>{"  >  "}<strong>{props.pageTitle}</strong>
+                <PageHome to="/"><AiFillHome/></PageHome>{"  >  "}<PageHome to="/my-account">Account</PageHome>{"  >  "}<strong>{props.pageTitle}</strong>
             </PageDirection>
         </PageDirectionContainer>
     )
 }
 
-export default BreadCrumbs
+export default AccountBreadCrumbs

@@ -1,9 +1,9 @@
 import React from "react";
-import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import {PageContainer} from "../../../../common/selectors/StyledComponents";
 import {connect} from "react-redux";
 import {Redirect} from "react-router-dom";
 import WishTable from "./WishTable/WishTable";
+import AccountBreadCrumbs from "../../../../common/components/AccountBreadCrumbs";
 
 const pageTitle = "Wish List"
 
@@ -12,7 +12,7 @@ const WishList = (props: any) => {
         <>
             {props.isLogged
                 ? <PageContainer>
-                    <BreadCrumbs pageTitle={pageTitle}/>
+                    <AccountBreadCrumbs pageTitle={pageTitle}/>
                     <WishTable
                         currentUser={props.currentUser}
                     />

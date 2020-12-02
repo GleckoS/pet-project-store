@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 
 const MyAccount = (props: any) => {
 
-    const pageTitle = "My Account"
+    const pageTitle = "Account"
     return (
         <>
             {props.isLogged

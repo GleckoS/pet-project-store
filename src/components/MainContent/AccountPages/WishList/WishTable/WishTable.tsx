@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import {FaShoppingCart, FaTrash} from "react-icons/all";
 
 const TableWrapper = styled.table`
     max-width: 100%;
@@ -21,9 +22,35 @@ const TableWrapper = styled.table`
     }
     
 `
+const ActionsWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    background-color: transparent!important;
+`
+const Action = styled.button`
+    border: none;
+    background-color: transparent!important;
+    padding: 10px;
+    margin: 0 auto;
+    svg{
+        font-size: 2em;
+        background-color: transparent!important;
+    }
+    &:hover{
+        svg{
+            color: #E8CABA;
+        } 
+    }
+`
 
 const WishTable = (props: any) => {
-    debugger
+
+    const Delete = () => {
+
+    }
+    const ToCart = () => {
+
+    }
     return (
         <TableWrapper>
             {props.currentUser.wish[0]
@@ -51,10 +78,10 @@ const WishTable = (props: any) => {
                     {props.currentUser.wish.map((item: any) =>
                         <tr>
                             <th>
-                                {item.img}
+                                <img src={item.img}/>
                             </th>
                             <th>
-                                {item.name}
+                                {item.text}
                             </th>
                             <th>
                                 {item.model}
@@ -66,7 +93,10 @@ const WishTable = (props: any) => {
                                 {item.price}
                             </th>
                             <th>
-                                <button>delete</button>
+                                <ActionsWrapper>
+                                    <Action onClick={() => {Delete()}}><FaTrash/></Action>
+                                    <Action onClick={() => {ToCart()}}><FaShoppingCart/></Action>
+                                </ActionsWrapper>
                             </th>
                         </tr>
                     )}

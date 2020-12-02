@@ -4,6 +4,7 @@ import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import ChangePasswordForm from "./ChangePasswordForm/ChangePasswordForm";
 import {useForm} from "react-hook-form";
 import {connect} from "react-redux";
+import AccountBreadCrumbs from "../../../../common/components/AccountBreadCrumbs";
 
 const ChangePassword = (props: any) => {
 
@@ -29,7 +30,7 @@ const ChangePassword = (props: any) => {
 
     return(
         <PageContainer>
-            <BreadCrumbs pageTitle={pageTitle}/>
+            <AccountBreadCrumbs pageTitle={pageTitle}/>
             <ChangePasswordForm
                 onSubmit={onSubmit}
                 register={register}

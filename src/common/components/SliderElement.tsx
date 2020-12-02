@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import {Button} from "../selectors/StyledComponents";
 import {Images} from "../textConst/images";
 import {Redirect} from "react-router-dom";
+import {connect} from "react-redux";
+import {UpdateUserThunk} from "../../redux/LoginReducer";
 
 
 interface imgData {
@@ -160,9 +162,9 @@ const ThirdPartSliderElement = (props: any) => {
 
     const WishAdd = () => {
         props.isLogged
-            ? props.currentUser.wish.push(props.item) && alert("successful")
+            ? props.currentUser.wish.push(props.item) && props.UpdateUserThunk(props.currentUser)
             : setRegister(true)
-        /*   props.UpdateUser()*/
+
     }
     const Zoom = () => {
 
@@ -195,4 +197,10 @@ const ThirdPartSliderElement = (props: any) => {
     )
 }
 
-export default ThirdPartSliderElement
+const MapStateToProps = (state: any) => {
+    return{
+        currentUser: state.loginReducer.currentUser
+    }
+}
+
+export default connect(MapStateToProps,{UpdateUserThunk})(ThirdPartSliderElement)

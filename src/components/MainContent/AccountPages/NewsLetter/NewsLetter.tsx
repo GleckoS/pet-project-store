@@ -6,6 +6,7 @@ import NewsLetterForm from "./NewsLetterForm/NewsLetterForm";
 import {useForm} from "react-hook-form";
 import {Redirect} from "react-router-dom";
 import {UpdateUserThunk} from "../../../../redux/LoginReducer";
+import AccountBreadCrumbs from "../../../../common/components/AccountBreadCrumbs";
 
 const pageTitle = "Newsletter"
 
@@ -24,10 +25,8 @@ const NewsLetter = (props: any) => {
         <>
             {isConfirmed && props.isLogged
                 ? <PageContainer>
-                    <PageTopInform
+                    <AccountBreadCrumbs
                         pageTitle={pageTitle}
-                        informTitle={null}
-                        informText={null}
                     />
                     <NewsLetterForm
                         register={register}

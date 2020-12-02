@@ -9,6 +9,7 @@ import {RegisterThunk, SetUsersThunk} from "../../../../redux/LoginReducer";
 import {Redirect} from "react-router-dom";
 import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import MyAccountMainPart from "../MyAccount/MyAccountMainPart/MyAccountMainPart";
+import AccountBreadCrumbs from "../../../../common/components/AccountBreadCrumbs";
 
 const Registration = (props: any) => {
 
@@ -132,7 +133,7 @@ const Registration = (props: any) => {
             {props.isLogged || isRegister
                 ? <Redirect to="/my-account"/>
                 : <PageContainer>
-                    <PageTopInform pageTitle={pageTitle}/>
+                    <AccountBreadCrumbs pageTitle={pageTitle}/>
                     <RegistrationForm
                         legend={legend}
                         firstPartData={firstPartData}

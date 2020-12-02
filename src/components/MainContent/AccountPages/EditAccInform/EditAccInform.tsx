@@ -4,6 +4,7 @@ import BreadCrumbs from "../../../../common/components/BreadCrubms";
 import EditForm from "./EditForm/EditForm";
 import {connect} from "react-redux";
 import {useForm} from "react-hook-form";
+import AccountBreadCrumbs from "../../../../common/components/AccountBreadCrumbs";
 
 const EditAccInform = (props: any) => {
 
@@ -41,7 +42,7 @@ const EditAccInform = (props: any) => {
 
     return(
         <PageContainer>
-            <BreadCrumbs pageTitle={pageTitle}/>
+            <AccountBreadCrumbs pageTitle={pageTitle}/>
             <EditForm
                 onSubmit={onSubmit}
                 register={register}

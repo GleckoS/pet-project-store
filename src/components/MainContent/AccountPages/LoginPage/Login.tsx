@@ -6,6 +6,7 @@ import Forms from "./LoginForm/LoginForm";
 import {connect} from "react-redux";
 import {LogInThunk} from "../../../../redux/LoginReducer";
 import {Redirect} from "react-router-dom"
+import AccountBreadCrumbs from "../../../../common/components/AccountBreadCrumbs";
 
 const pageTitle = "login"
 
@@ -62,7 +63,7 @@ const Login = (props: any) => {
             {props.isLogged
                 ? <Redirect to="/my-account"/>
                 : <PageContainer>
-                    <BreadCrumbs pageTitle={pageTitle}/>
+                    <AccountBreadCrumbs pageTitle={pageTitle}/>
                     <Forms
                         left={leftPart}
                         right={rightPart}

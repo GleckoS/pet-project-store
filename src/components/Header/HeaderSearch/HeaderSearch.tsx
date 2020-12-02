@@ -182,7 +182,7 @@ const HeaderSearch = () => {
                     <Button><ButtonImg alt="search button" src={Images.search2}/></Button>
                 </Search>
                 <Other>
-                    <Deals to="/deals">
+                    <Deals to="/news-letter">
                         Daily Deals & Offers
                     </Deals>
                     <Shipping to="/delivery">
