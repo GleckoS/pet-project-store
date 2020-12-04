@@ -54,6 +54,21 @@
           "featured": true,
           "bestsellers": false,
           "id": 2
+        },
+        {
+          "text": "Grace Lingerie Nude",
+          "price": "$50.00",
+          "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-25-270x280.png",
+          "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-26-270x280.png",
+          "model": "Deluxe",
+          "brand": "Simone Perele",
+          "stock": "In Stock",
+          "rewardPoints": "0",
+          "new": false,
+          "discount": false,
+          "featured": false,
+          "bestsellers": true,
+          "id": 0
         }
       ],
       "id": 0
