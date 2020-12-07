@@ -6,7 +6,7 @@ Contact       +       +       +        SIC                                    П
 
 Delivery    >764      +       +        SIC                1) Обдумать лучший способ проверки корзины пользователя
 
-Privacy       +       +       +        SIC                2) Переписывать пользоваьеля из локал в глобал  arr1.map(obj => arr2.find(e => e.id === obj.id) || obj);
+Privacy       +       +       +        SIC                2)Доделать анимацию + выпадающую навигацию
 
 SiteMap       +       +       -        SIC                3) Доделать: Order History, Downloads, Reward Points,
                                                               Transaction, Payment, Modify..., Returns,

@@ -70,8 +70,6 @@ const HeaderInform = () => {
                     </span>
                 </div>
                 <div>
-                    <Item>ENGLISH</Item>
-                    <Item>US Dollar</Item>
                     <Item><Link to="/my-account"><FaUserAlt/><span> My Account</span></Link></Item>
                     <Item><Link to="/wish"><AiFillHeart/><span> Wishlist</span></Link></Item>
                 </div>

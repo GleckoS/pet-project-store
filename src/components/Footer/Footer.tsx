@@ -61,13 +61,16 @@ const SecondSectionData =
 const ThirdSectionData =
     [
         {
-            name: 'My Company Glasgow D04 89GR'
+            name: 'My Company Glasgow D04 89GR',
+            link: '/https://www.google.com/maps/?q=40.6700,+-73.9400'
         },
         {
-            name: '(800) 123-4567'
+            name: '(800) 123-4567',
+            link: 'tel:8001234567'
         },
         {
-            name: 'livedemo-admin@templatemonster.me'
+            name: 'shevabogdan16@gmail.com',
+            link: 'mailto:shevabogdan16@gmail.com'
         },
         {
             name: '7 Days a week from 9:00 am to 7:00 pm'

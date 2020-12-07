@@ -12,7 +12,9 @@ const ThirdFooterSection = (props: any) => {
             <div>
                 <ul>
                     {ThirdSectionData.map((item: {[key: string]: string}) =>
-                        <ListElement>{item.name}</ListElement>
+                        item.link
+                            ? <ListElement><a href={item.link}>{item.name}</a></ListElement>
+                            : <ListElement>{item.name}</ListElement>
                     )}
                 </ul>
             </div>

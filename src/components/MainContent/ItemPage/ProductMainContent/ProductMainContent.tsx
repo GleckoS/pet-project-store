@@ -149,7 +149,7 @@ function getRandomInt(max: number) {
 
 const ProductMainContent = (props:any) => {
 
-    let [show, setShow] =useState("6")
+    let [show, setShow] = useState("6")
 
     const changeShow = (value: string) => {
         setShow(value)
