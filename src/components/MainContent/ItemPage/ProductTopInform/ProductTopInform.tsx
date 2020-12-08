@@ -15,22 +15,6 @@ const ProductTopInform = (props: any) => {
         }
     }
 
-
-    const PageDirectionContainer = styled.div`
-    text-align: left;
-    & a{
-        color: black;
-    }
-`
-    const PageDirection = styled.p`
-    font-size: 12px;
-    color: #444;
-`
-    const PageHome = styled(NavLink)`
-    &:hover{
-        color: #DBAD94;
-    }
-`
     const FlexBox = styled.div`
     display: flex;
     justify-content: space-evenly;
