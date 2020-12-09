@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "@emotion/styled";
 import {PageContainer} from "../../../common/selectors/StyledComponents";
 import {RiShoppingBagFill} from "react-icons/all";

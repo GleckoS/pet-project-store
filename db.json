@@ -253,6 +253,36 @@
       "featured": true,
       "bestsellers": false,
       "id": 10
+    },
+    {
+      "text": "Kaity Lingerie BlackPink",
+      "price": "$26.40",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-31-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-33-270x280.png",
+      "model": "Premium",
+      "brand": "Victoria’s Secret",
+      "stock": "In Stock",
+      "rewardPoints": "0",
+      "new": true,
+      "discount": true,
+      "featured": true,
+      "bestsellers": false,
+      "id": 11
+    },
+    {
+      "text": "MARISELA LINGERIE BLACK",
+      "price": "$38.40",
+      "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-34-270x280.png",
+      "hoverImg": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/products/product-36-270x280.png",
+      "model": "Collectible",
+      "brand": "Triumph",
+      "stock": "In Stock",
+      "rewardPoints": "100",
+      "new": true,
+      "discount": true,
+      "featured": true,
+      "bestsellers": false,
+      "id": 12
     }
   ],
   "sliders": {
@@ -272,44 +302,29 @@
     ],
     "secondSlider": [
       {
-        "text": "PUSH-UP",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-1-240x200.png",
-        "link": "push-up"
-      },
-      {
         "text": "PANTIES",
         "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-2-240x200.png",
-        "link": "push-up"
-      },
-      {
-        "text": "HOSIERY",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-3-240x200.png",
-        "link": "push-up"
-      },
-      {
-        "text": "BRIDAL",
-        "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-4-240x200.png",
-        "link": "push-up"
+        "link": "panties"
       },
       {
         "text": "SLEEP",
         "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-5-240x200.png",
-        "link": "push-up"
+        "link": "sleep"
       },
       {
         "text": "SWIM",
         "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-6-240x200.png",
-        "link": "push-up"
+        "link": "swim"
       },
       {
         "text": "STOCKINGS",
         "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-7-240x200.png",
-        "link": "push-up"
+        "link": "stockings"
       },
       {
         "text": "ACCESSORIES",
         "img": "https://livedemo00-opencart.template-help.com/opencart_prod-18464/image/cache/catalog/category/category-8-240x200.png",
-        "link": "push-up"
+        "link": "accessories"
       }
     ],
     "fourthSlider": [
