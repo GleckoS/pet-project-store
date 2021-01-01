@@ -7,31 +7,38 @@ const mainNavData =
     [
         {
             name: "PANTIES",
-            link: "/panties"
+            link: "/panties",
+            id: '1'
         },
         {
             name: "CORSETS",
-            link: "/corsets"
+            link: "/corsets",
+            id: '2'
         },
         {
             name: "SEXY",
-            link: "/sexy"
+            link: "/sexy",
+            id: '3'
         },
         {
             name: "SLEEP",
-            link: "/sleep"
+            link: "/sleep",
+            id: '4'
         },
         {
             name: "SWIM",
-            link: "/swim"
+            link: "/swim",
+            id: '5'
         },
         {
             name: "STOCKINGS",
-            link: "/stockings"
+            link: "/stockings",
+            id: '6'
         },
         {
             name: "ACCESSORIES",
-            link: "/accessories"
+            link: "/accessories",
+            id: '7'
         },
     ]
 const Data =
@@ -41,27 +48,33 @@ const Data =
                 [
                     {
                         name: "BRA SETS",
-                        link: "/bra-sets"
+                        link: "/bra-sets",
+                        id: '8'
                     },
                     {
                         name: "Balconette bras",
-                        link: "balconette-bras"
+                        link: "balconette-bras",
+                        id: '9'
                     },
                     {
                         name: "Multiway bras",
-                        link: "/multiway-bras"
+                        link: "/multiway-bras",
+                        id: '10'
                     },
                     {
                         name: "Full cup bras",
-                        link: "/full-cup-bras"
+                        link: "/full-cup-bras",
+                        id: '11'
                     },
                     {
                         name: "Lingerie brands",
-                        link: "/lingerie-brands"
+                        link: "/lingerie-brands",
+                        id: '12'
                     },
                     {
                         name: "Minimiser bras",
-                        link: "/minimiser-bras"
+                        link: "/minimiser-bras",
+                        id: '13'
                     },
                 ]
         },
@@ -70,27 +83,33 @@ const Data =
                 [
                     {
                         name: "PANTIES",
-                        link: "/panties"
+                        link: "/panties",
+                        id: '14'
                     },
                     {
                         name: "Bikini",
-                        link: "/bikini"
+                        link: "/bikini",
+                        id: '15'
                     },
                     {
                         name: "High-leg",
-                        link: "/high-leg"
+                        link: "/high-leg",
+                        id: '16'
                     },
                     {
                         name: "Cotton",
-                        link: "/cotton"
+                        link: "/cotton",
+                        id: '17'
                     },
                     {
                         name: "Lace-Up",
-                        link: "/lace-up"
+                        link: "/lace-up",
+                        id: '18'
                     },
                     {
                         name: "Dream",
-                        link: "/dream"
+                        link: "/dream",
+                        id: '19'
                     },
                 ]
         },
@@ -99,23 +118,28 @@ const Data =
                 [
                     {
                         name: "BRA SEPARATES",
-                        link: "/bra-separates"
+                        link: "/bra-separates",
+                        id: '20'
                     },
                     {
                         name: "Stockings",
-                        link: "stockings"
+                        link: "stockings",
+                        id: '21'
                     },
                     {
                         name: "Vinyl/Latex/Leather",
-                        link: "/vinyl-latex-leather"
+                        link: "/vinyl-latex-leather",
+                        id: '22'
                     },
                     {
                         name: "Sexy lingerie",
-                        link: "/sexy-lingerie"
+                        link: "/sexy-lingerie",
+                        id: '23'
                     },
                     {
                         name: "New in",
-                        link: "/new-in"
+                        link: "/new-in",
+                        id: '24'
                     }
                 ]
         },
@@ -124,19 +148,23 @@ const Data =
                 [
                     {
                         name: "BUSTIERS",
-                        link: "/bustiers"
+                        link: "/bustiers",
+                        id: '25'
                     },
                     {
                         name: "Corsets",
-                        link: "/corsets"
+                        link: "/corsets",
+                        id: '26'
                     },
                     {
                         name: "Perfect",
-                        link: "/perfect"
+                        link: "/perfect",
+                        id: '27'
                     },
                     {
                         name: "Accessories",
-                        link: "/accessories"
+                        link: "/accessories",
+                        id: '28'
                     }
                 ]
         }
@@ -224,20 +252,20 @@ const HeaderNav = (props: any) => {
             <Container>
                 <div>
                     <ul>
-                        <Dropdown>
+                        <Dropdown key="0">
                             <Link to="/bras">BRAS</Link>
                             <DropdownContent>
                                 {Data.map(item =>
                                     <ul>
-                                        {item.list.map(element =>
-                                            <DropItem><DropLink to={element.link}>{element.name}</DropLink></DropItem>
+                                        {item.list.map(item =>
+                                            <DropItem key={item.id}><DropLink to={item.link}>{item.name}</DropLink></DropItem>
                                         )}
                                     </ul>
                                 )}
                             </DropdownContent>
                         </Dropdown>
                         {mainNavData.map(item =>
-                            <NavItem><Link to={item.link}>{item.name}</Link></NavItem>
+                            <NavItem key={item.id}><Link to={item.link}>{item.name}</Link></NavItem>
                         )}
                     </ul>
                 </div>

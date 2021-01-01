@@ -156,7 +156,7 @@ const Icon = styled.img`
 `
 
 
-const ThirdPartSliderElement = (props: any) => {
+const SliderElement = (props: any) => {
 
     let [isRegister, setRegister] = useState(false)
 
@@ -203,4 +203,4 @@ const MapStateToProps = (state: any) => {
     }
 }
 
-export default connect(MapStateToProps,{UpdateUserThunk})(ThirdPartSliderElement)
+export default connect(MapStateToProps,{UpdateUserThunk})(SliderElement)

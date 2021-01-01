@@ -33,9 +33,9 @@
     "uuid": "^8.3.1"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "start": "react-scripts start",
     "mock": "json-server --watch db.json --port 8000",
-    "serve": "concurrently \"npm run dev\" \"npm run mock\"",
+    "dev": "concurrently \"npm run start\" \"npm run mock\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

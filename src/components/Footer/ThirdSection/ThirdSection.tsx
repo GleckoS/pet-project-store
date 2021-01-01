@@ -1,23 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 
 const ThirdFooterSection = (props: any) => {
 
-    const {AltListWrapper, ListElement, ThirdSectionData} = props
+    const {AltListWrapper, ListElement, ThirdSectionData, Content, Title} = props
+
+    const [isOpened, setOpened] = useState(false)
+
+    const open = () => {
+        setOpened(!isOpened)
+    }
 
     return(
         <AltListWrapper>
-            <div>
+            <Title onClick={() => {open()}}>
                 <h3>CONTACT US</h3>
-            </div>
-            <div>
+            </Title>
+            <Content isOpened={isOpened}>
                 <ul>
                     {ThirdSectionData.map((item: {[key: string]: string}) =>
                         item.link
-                            ? <ListElement><a href={item.link}>{item.name}</a></ListElement>
-                            : <ListElement>{item.name}</ListElement>
+                            ? <ListElement key={item.id}><a href={item.link}>{item.name}</a></ListElement>
+                            : <ListElement key={item.id}>{item.name}</ListElement>
                     )}
                 </ul>
-            </div>
+            </Content>
         </AltListWrapper>
     )
 }
