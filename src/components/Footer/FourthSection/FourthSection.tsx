@@ -1,27 +1,28 @@
-import React, {useState} from "react";
+import React from "react";
 import {NavLink} from "react-router-dom";
 import {AiOutlineTwitter, BiRss, FaFacebookF, FaGooglePlusG, FaPinterest} from "react-icons/all";
 
 const FourthFooterSection = (props: any) => {
 
-    const {ListElement, Section, Social, Title, Content} = props
+    const {
+        ListElement,
+        Section,
+        Social,
+        Title,
+        Content,
+        open,
+        isOpened_1,
+        isOpened_2,
+        setOpened_1,
+        setOpened_2
+    } = props
 
-    const [isOpened_1, setOpened_1] = useState(false)
 
-    const open_1 = () => {
-        setOpened_1(!isOpened_1)
-    }
-
-    const [isOpened_2, setOpened_2] = useState(false)
-
-    const open_2 = () => {
-        setOpened_2(!isOpened_2)
-    }
 
     return (
         <Section>
             <div>
-                <Title onClick={() => {open_1()}}>
+                <Title onClick={() => {open(setOpened_1, isOpened_1)}}>
                     <h3>MORE WAYS TO SHOP</h3>
                 </Title>
                 <Content isOpened={isOpened_1}>
@@ -32,7 +33,7 @@ const FourthFooterSection = (props: any) => {
                 </Content>
             </div>
             <div>
-                <Title onClick={() => {open_2()}}>
+                <Title onClick={() => {open(setOpened_2, isOpened_2)}}>
                     <h3>GET CONNECTED</h3>
                 </Title>
                 <Content isOpened={isOpened_2}>

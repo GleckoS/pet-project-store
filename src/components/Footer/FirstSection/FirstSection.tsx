@@ -1,18 +1,22 @@
-import React, {useState} from "react";
+import React from "react";
 
 const FirstFooterSection = (props: any) => {
 
-    const {ListWrapper, ListElement, ListLink, FirstSectionData, Content, Title} = props
-
-    const [isOpened, setOpened] = useState(false)
-
-    const open = () => {
-        setOpened(!isOpened)
-    }
+    const {
+        ListWrapper,
+        ListElement,
+        ListLink,
+        FirstSectionData,
+        Content,
+        Title,
+        open,
+        isOpened,
+        setOpened
+    } = props
 
     return(
         <ListWrapper>
-            <Title onClick={() => {open()}}>
+            <Title onClick={() => {open(setOpened, isOpened)}}>
                 <h3>INFORMATION</h3>
             </Title>
             <Content isOpened={isOpened}>

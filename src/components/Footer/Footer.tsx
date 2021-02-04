@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import styled from "@emotion/styled"
 import FirstSection from "./FirstSection/FirstSection";
 import SecondSection from "./SecondSection/SecondSection";
@@ -233,6 +233,18 @@ const Content = styled.div`
 `
 
 const Footer = () => {
+
+
+    const [isOpened_1, setOpened_1] = useState(false),
+        [isOpened_2, setOpened_2] = useState(false),
+        [isOpened_3, setOpened_3] = useState(false),
+        [isOpened_4, setOpened_4] = useState(false),
+        [isOpened_5, setOpened_5] = useState(false)
+
+    const open = (func: any, value: any) => {
+        func(!value)
+    }
+
     return (
         <footer>
             <FooterInformWrapper>
@@ -243,6 +255,9 @@ const Footer = () => {
                     FirstSectionData={FirstSectionData}
                     Title={Title}
                     Content={Content}
+                    open={open}
+                    isOpened={isOpened_1}
+                    setOpened={setOpened_1}
                 />
                 <SecondSection
                     ListWrapper={ListWrapper}
@@ -251,6 +266,9 @@ const Footer = () => {
                     ListLink={ListLink}
                     Title={Title}
                     Content={Content}
+                    open={open}
+                    isOpened={isOpened_2}
+                    setOpened={setOpened_2}
                 />
                 <ThirdSection
                     AltListWrapper={AltListWrapper}
@@ -258,6 +276,9 @@ const Footer = () => {
                     ListElement={ListElement}
                     Title={Title}
                     Content={Content}
+                    open={open}
+                    isOpened={isOpened_3}
+                    setOpened={setOpened_3}
                 />
                 <FourthSection
                     ListElement={ListElement}
@@ -266,6 +287,11 @@ const Footer = () => {
                     Social={Social}
                     Title={Title}
                     Content={Content}
+                    open={open}
+                    isOpened_1={isOpened_4}
+                    isOpened_2={isOpened_5}
+                    setOpened_1={setOpened_4}
+                    setOpened_2={setOpened_5}
                 />
             </FooterInformWrapper>
         </footer>
